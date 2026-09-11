@@ -1,0 +1,6 @@
+outs:
+- md5: b7636055c68a7723cbab3333ee59531c.dir
+  size: 197057
+  nfiles: 800
+  hash: md5
+  path: pasta
