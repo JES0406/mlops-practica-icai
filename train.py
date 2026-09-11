@@ -17,9 +17,9 @@ with mlflow.start_run():
 		X, y, test_size=0.3, random_state=42
 	)
       	# Inicializar y entrenar el modelo
-     	model = RandomForestClassifier(n_estimators=100, random_state=42)
+	model = RandomForestClassifier(n_estimators=100, random_state=42)
 	model.fit(X_train, y_train)
-     	# Realizar predicciones y calcular la precisión
+	# Realizar predicciones y calcular la precisión
 	y_pred = model.predict(X_test)
 	accuracy = accuracy_score(y_test, y_pred)
 	# Guardar el modelo entrenado en un archivo .pkl
