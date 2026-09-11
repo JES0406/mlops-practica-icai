@@ -1,18 +1,11 @@
 """Train a small CNN to classify pasta shapes (spaghetti/tagliatelle/fusilli/penne).
 
 Run generate_pasta.py first to build data/pasta/<class>/*.png.
-
-MLflow logging is local-only here (no dagshub.init call) — point the tracking
-URI at DagsHub yourself before running, e.g.:
-    import dagshub
-    dagshub.init(repo_owner=..., repo_name=..., mlflow=True)
 """
 import argparse
 import glob
 import os
 
-import mlflow
-import mlflow.pytorch
 import numpy as np
 import torch
 import torch.nn as nn
@@ -70,36 +63,29 @@ def run(epochs, lr, batch_size, seed=42):
     opt = torch.optim.Adam(model.parameters(), lr=lr)
     loss_fn = nn.CrossEntropyLoss()
 
-    with mlflow.start_run():
-        mlflow.log_params({"epochs": epochs, "lr": lr, "batch_size": batch_size})
+    for epoch in range(epochs):
+        model.train()
+        total_loss = 0.0
+        for x, y in train_loader:
+            opt.zero_grad()
+            loss = loss_fn(model(x), y)
+            loss.backward()
+            opt.step()
+            total_loss += loss.item() * x.size(0)
+        train_loss = total_loss / n_train
 
-        for epoch in range(epochs):
-            model.train()
-            total_loss = 0.0
-            for x, y in train_loader:
-                opt.zero_grad()
-                loss = loss_fn(model(x), y)
-                loss.backward()
-                opt.step()
-                total_loss += loss.item() * x.size(0)
-            train_loss = total_loss / n_train
+        model.eval()
+        correct = 0
+        with torch.no_grad():
+            for x, y in val_loader:
+                preds = model(x).argmax(1)
+                correct += (preds == y).sum().item()
+        val_acc = correct / n_val
 
-            model.eval()
-            correct = 0
-            with torch.no_grad():
-                for x, y in val_loader:
-                    preds = model(x).argmax(1)
-                    correct += (preds == y).sum().item()
-            val_acc = correct / n_val
+        print(f"epoch {epoch+1}/{epochs}  train_loss={train_loss:.4f}  val_acc={val_acc:.4f}")
 
-            mlflow.log_metric("train_loss", train_loss, step=epoch)
-            mlflow.log_metric("val_accuracy", val_acc, step=epoch)
-            print(f"epoch {epoch+1}/{epochs}  train_loss={train_loss:.4f}  val_acc={val_acc:.4f}")
-
-        example_input, _ = next(iter(val_loader))
-        mlflow.pytorch.log_model(model, "pasta-cnn", input_example=example_input[:1].numpy())
-        print(f"final val_accuracy={val_acc:.4f}")
-        return val_acc
+    print(f"final val_accuracy={val_acc:.4f}")
+    return val_acc
 
 
 if __name__ == "__main__":
