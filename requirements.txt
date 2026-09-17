@@ -2,5 +2,9 @@ scikit-learn==1.3.0
 pandas==2.2.2
 numpy==1.26.4
 dvc==3.32.0
+<<<<<<< HEAD
 torch
 pillow
+=======
+mlflow
+>>>>>>> parent of bd9ebdb (Add pasta-shape CNN: synthetic dataset + training script)
