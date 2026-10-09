@@ -16,7 +16,7 @@ jobs:
         with:
           python-version: "3.11"
 
-        - run: pip install dvc
+      - run: pip install dvc
 
       - run: |
           dvc remote modify origin --local auth basic
