@@ -1,0 +1,77 @@
+name: MLOps with CML
+
+on: [push, pull_request]
+
+permissions:
+  contents: write
+  pull-requests: write
+
+jobs:
+  train-and-report:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v3
+        with:
+          fetch-depth: 0
+
+      - name: DVC and Python setup
+        uses: iterative/setup-dvc@v1
+
+      - name: Setup Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.11'
+
+      - name: Configure Git
+        run: |
+          git config --global user.email "JES0406@users.noreply.github.com"
+          git config --global user.name "JES0406"
+
+      - name: Restore DVC Cache
+        uses: actions/cache@v3
+        with:
+          path: ~/.cache/dvc
+          key: dvc-cache-${{ hashFiles('dvc.yaml', 'dvc.lock') }}
+          restore-keys: |
+            dvc-cache-
+
+      - name: DVC Pull
+        env:
+          DAGSHUB_USERNAME: ${{ secrets.DAGSHUB_USERNAME }}
+          DAGSHUB_API_KEY: ${{ secrets.DAGSHUB_API_KEY }}
+        # Las credenciales de Dagshub son necesarias para acceder al almacenamiento remoto
+        run: |
+          dvc remote modify origin --local auth basic
+          dvc remote modify origin --local user $DAGSHUB_USERNAME
+          dvc remote modify origin --local password $DAGSHUB_API_KEY
+          dvc pull -r origin
+
+      - name: Install dependencies
+        run: |
+          python3 -m pip install --upgrade pip
+          pip install pyyaml
+          pip install -r requirements.txt
+
+      - uses: iterative/setup-cml@v1
+
+      - name: Run training script
+        env:
+          MLFLOW_TRACKING_USERNAME: ${{ secrets.DAGSHUB_USERNAME }}
+          MLFLOW_TRACKING_PASSWORD: ${{ secrets.DAGSHUB_API_KEY }}
+          MLFLOW_TRACKING_URI: ${{ secrets.MLFLOW_TRACKING_URI || 'https://dagshub.com/JES0406/mlops-practica-icai.mlflow' }}
+        run: |
+          # DVC repro ejecutará la etapa "train" y, por lo tanto, el script train.py.
+          dvc repro
+
+      - name: CML report
+        env:
+          REPO_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          echo "## Métricas" > report.md
+          dvc metrics show --md >> report.md
+          echo "## Parámetros" >> report.md
+          dvc params diff --all --md >> report.md
+          echo "## Matriz de confusión" >> report.md
+          echo '![](./confusion_matrix.png "Matriz de confusión")' >> report.md
+          cml comment create report.md
