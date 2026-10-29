@@ -53,6 +53,12 @@ jobs:
           pip install pyyaml
           pip install -r requirements.txt
 
+      # setup-cml instala @dvcorg/cml con npm; con el Node 22 del runner falla al compilar canvas
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
       - uses: iterative/setup-cml@v1
 
       - name: Run training script
