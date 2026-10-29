@@ -16,7 +16,7 @@ jobs:
           fetch-depth: 0
 
       - name: DVC and Python setup
-        uses: iterative/setup-dvc@v1
+        uses: iterative/setup-dvc@175771be1dc3d119268e00a896b52a4b77decb5e # v1
 
       - name: Setup Python
         uses: actions/setup-python@v4
@@ -59,7 +59,7 @@ jobs:
         with:
           node-version: '20'
 
-      - uses: iterative/setup-cml@v1
+      - uses: iterative/setup-cml@c12d348676d386bad14b3d4c4440f4a40ed9ef07 # v1
 
       - name: Run training script
         env:
