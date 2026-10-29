@@ -79,5 +79,14 @@ jobs:
           echo "## Parámetros" >> report.md
           dvc params diff --all --md >> report.md
           echo "## Matriz de confusión" >> report.md
-          echo '![](./confusion_matrix.png "Matriz de confusión")' >> report.md
+          # El servicio de imágenes de CML (asset.cml.dev) ya no responde: la imagen
+          # se sube como artifact del workflow y queda registrada en MLflow
+          echo "Ver artifact \`confusion-matrix\` del workflow y el run en MLflow (DagsHub)." >> report.md
+          cat report.md >> "$GITHUB_STEP_SUMMARY"
           cml comment create report.md
+
+      - name: Upload confusion matrix
+        uses: actions/upload-artifact@v4
+        with:
+          name: confusion-matrix
+          path: confusion_matrix.png
