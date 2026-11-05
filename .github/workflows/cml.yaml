@@ -59,7 +59,10 @@ jobs:
         with:
           node-version: '20'
 
-      - uses: iterative/setup-cml@c12d348676d386bad14b3d4c4440f4a40ed9ef07 # v1
+      # FIX TEMPORAL BUG ACTIONS CML: instalar CML a mano en vez de iterative/setup-cml
+      - name: Install CML manually
+        run: |
+          npm install -g @dvcorg/cml
 
       - name: Run training script
         env:
@@ -90,3 +93,64 @@ jobs:
         with:
           name: confusion-matrix
           path: confusion_matrix.png
+
+  deploy-to-gke:
+    needs: train-and-report
+    # En un PR el workflow se dispara dos veces (push + pull_request): desplegar solo en push
+    if: github.event_name == 'push'
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: DVC and Python setup
+        uses: iterative/setup-dvc@175771be1dc3d119268e00a896b52a4b77decb5e # v1
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - id: 'auth'
+        name: Authenticate to Google Cloud
+        uses: 'google-github-actions/auth@v2'
+        with:
+          credentials_json: '${{ secrets.GCP_SA_KEY }}'
+
+      - name: Set up gcloud CLI and kubectl
+        uses: 'google-github-actions/setup-gcloud@v2'
+        with:
+          version: 'latest'
+          install_components: 'gke-gcloud-auth-plugin,kubectl'
+
+      - name: Get GKE credentials
+        env:
+          CLOUDSDK_CONTAINER_USE_APPLICATION_DEFAULT_CREDENTIALS: true
+        run: gcloud container clusters get-credentials ${{ vars.GKE_CLUSTER }} --zone ${{ vars.GKE_ZONE }} --project ${{ vars.GCP_PROJECT_ID }}
+
+      - name: DVC Pull
+        env:
+          DAGSHUB_USERNAME: ${{ secrets.DAGSHUB_USERNAME }}
+          DAGSHUB_API_KEY: ${{ secrets.DAGSHUB_API_KEY }}
+        # Las credenciales de Dagshub son necesarias para acceder al almacenamiento remoto
+        run: |
+          dvc remote modify origin --local auth basic
+          dvc remote modify origin --local user $DAGSHUB_USERNAME
+          dvc remote modify origin --local password $DAGSHUB_API_KEY
+          dvc pull -r origin
+
+      - name: Configure Docker to use GCR
+        run: gcloud auth configure-docker --quiet
+
+      - name: Build and Push Docker Image
+        run: |
+          docker build -t gcr.io/${{ vars.GCP_PROJECT_ID }}/mlops-api:latest .
+          docker push gcr.io/${{ vars.GCP_PROJECT_ID }}/mlops-api:latest
+
+      - name: Deploy to GKE
+        run: |
+          kubectl apply -f deployment.yaml
+          kubectl apply -f service.yaml
+          # :latest no cambia el spec -> forzar que los pods vuelvan a descargar la imagen
+          kubectl rollout restart deployment/mlops-api-deployment
+          kubectl rollout status deployment/mlops-api-deployment --timeout=180s
