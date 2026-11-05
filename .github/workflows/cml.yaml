@@ -210,3 +210,16 @@ jobs:
           done
           echo "Web: http://$IP"
           curl -sf -o /dev/null -w "HTTP %{http_code}\n" "http://$IP/"
+          # Streamlit solo pinta la página si su websocket (/_stcore/stream) conecta: esperar 101
+          python3 - "$IP" <<'PY'
+          import base64, os, socket, sys
+          ip = sys.argv[1]
+          req = ("GET /_stcore/stream HTTP/1.1\r\nHost: %s\r\nUpgrade: websocket\r\nConnection: Upgrade\r\n"
+                 "Sec-WebSocket-Key: %s\r\nSec-WebSocket-Version: 13\r\nSec-WebSocket-Protocol: streamlit\r\n"
+                 "Origin: http://%s\r\n\r\n") % (ip, base64.b64encode(os.urandom(16)).decode(), ip)
+          s = socket.create_connection((ip, 80), timeout=10)
+          s.sendall(req.encode())
+          status = s.recv(4096).decode(errors="replace").split("\r\n")[0]
+          print("WebSocket:", status)
+          assert " 101 " in status
+          PY
