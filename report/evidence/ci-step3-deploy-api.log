@@ -1,0 +1,1107 @@
+deploy-to-gke	Set up job	﻿2026-11-05T09:35:58.4717803Z Current runner version: '2.338.2'
+deploy-to-gke	Set up job	2026-11-05T09:35:58.4738556Z ##[group]Runner Image Provisioner
+deploy-to-gke	Set up job	2026-11-05T09:35:58.4739418Z Hosted Compute Agent
+deploy-to-gke	Set up job	2026-11-05T09:35:58.4739978Z Version: 20261028.624
+deploy-to-gke	Set up job	2026-11-05T09:35:58.4740609Z Commit: 54898b74c23fde5556c9b3c3a2290865feef0dfe
+deploy-to-gke	Set up job	2026-11-05T09:35:58.4741242Z Build Date: 2026-10-28T21:51:42Z
+deploy-to-gke	Set up job	2026-11-05T09:35:58.4741982Z Worker ID: ***c7be7173-7be0-4051-8029-a5c8d1e4b50f***
+deploy-to-gke	Set up job	2026-11-05T09:35:58.4742681Z Region: westus2
+deploy-to-gke	Set up job	2026-11-05T09:35:58.4743217Z Cloud: Azure
+deploy-to-gke	Set up job	2026-11-05T09:35:58.4743777Z ##[endgroup]
+deploy-to-gke	Set up job	2026-11-05T09:35:58.4745234Z ##[group]Operating System
+deploy-to-gke	Set up job	2026-11-05T09:35:58.4745898Z Ubuntu
+deploy-to-gke	Set up job	2026-11-05T09:35:58.4746382Z 24.04.5
+deploy-to-gke	Set up job	2026-11-05T09:35:58.4746874Z LTS
+deploy-to-gke	Set up job	2026-11-05T09:35:58.4747401Z ##[endgroup]
+deploy-to-gke	Set up job	2026-11-05T09:35:58.4747904Z ##[group]Runner Image
+deploy-to-gke	Set up job	2026-11-05T09:35:58.4748467Z Image: ubuntu-24.04
+deploy-to-gke	Set up job	2026-11-05T09:35:58.4749006Z Version: 20261101.360.1
+deploy-to-gke	Set up job	2026-11-05T09:35:58.4749838Z Included Software: https://github.com/actions/runner-images/blob/ubuntu24/20261101.360/images/ubuntu/Ubuntu2404-Readme.md
+deploy-to-gke	Set up job	2026-11-05T09:35:58.4751117Z Image Release: https://github.com/actions/runner-images/releases/tag/ubuntu24%2F20261101.360
+deploy-to-gke	Set up job	2026-11-05T09:35:58.4751854Z ##[endgroup]
+deploy-to-gke	Set up job	2026-11-05T09:35:58.4752956Z ##[group]GITHUB_TOKEN Permissions
+deploy-to-gke	Set up job	2026-11-05T09:35:58.4754687Z Contents: write
+deploy-to-gke	Set up job	2026-11-05T09:35:58.4755277Z Metadata: read
+deploy-to-gke	Set up job	2026-11-05T09:35:58.4755883Z PullRequests: write
+deploy-to-gke	Set up job	2026-11-05T09:35:58.4756452Z ##[endgroup]
+deploy-to-gke	Set up job	2026-11-05T09:35:58.4758055Z Secret source: Actions
+deploy-to-gke	Set up job	2026-11-05T09:35:58.4758869Z Cache mode: write
+deploy-to-gke	Set up job	2026-11-05T09:35:58.4759568Z Prepare workflow directory
+deploy-to-gke	Set up job	2026-11-05T09:35:58.4969070Z Prepare all required actions
+deploy-to-gke	Set up job	2026-11-05T09:35:58.5000807Z Getting action download info
+deploy-to-gke	Set up job	2026-11-05T09:35:58.8591386Z Download action repository 'actions/checkout@v4' (SHA:11d5960a326750d5838078e36cf38b85af677262)
+deploy-to-gke	Set up job	2026-11-05T09:35:58.9472840Z Download action repository 'iterative/setup-dvc@175771be1dc3d119268e00a896b52a4b77decb5e' (SHA:175771be1dc3d119268e00a896b52a4b77decb5e)
+deploy-to-gke	Set up job	2026-11-05T09:35:59.1874678Z Download action repository 'actions/setup-python@v5' (SHA:a26af69be951a213d495a4c3e4e4022e16d87065)
+deploy-to-gke	Set up job	2026-11-05T09:35:59.2764828Z Download action repository 'google-github-actions/auth@c200f3691d83b41bf9bbd8638997a462592937ed' (SHA:c200f3691d83b41bf9bbd8638997a462592937ed)
+deploy-to-gke	Set up job	2026-11-05T09:35:59.4746443Z Download action repository 'google-github-actions/setup-gcloud@e427ad8a34f8676edf47cf7d7925499adf3eb74f' (SHA:e427ad8a34f8676edf47cf7d7925499adf3eb74f)
+deploy-to-gke	Set up job	2026-11-05T09:35:59.7357330Z Complete job name: deploy-to-gke
+deploy-to-gke	Checkout code	﻿2026-11-05T09:35:59.7993689Z ##[group]Run actions/checkout@v4
+deploy-to-gke	Checkout code	2026-11-05T09:35:59.7994390Z with:
+deploy-to-gke	Checkout code	2026-11-05T09:35:59.7994813Z   repository: ***/mlops-practica-icai
+deploy-to-gke	Checkout code	2026-11-05T09:35:59.7997093Z   token: ***
+deploy-to-gke	Checkout code	2026-11-05T09:35:59.7997425Z   ssh-strict: true
+deploy-to-gke	Checkout code	2026-11-05T09:35:59.7997761Z   ssh-user: git
+deploy-to-gke	Checkout code	2026-11-05T09:35:59.7998103Z   persist-credentials: true
+deploy-to-gke	Checkout code	2026-11-05T09:35:59.7998473Z   clean: true
+deploy-to-gke	Checkout code	2026-11-05T09:35:59.7998810Z   sparse-checkout-cone-mode: true
+deploy-to-gke	Checkout code	2026-11-05T09:35:59.7999193Z   fetch-depth: 1
+deploy-to-gke	Checkout code	2026-11-05T09:35:59.7999553Z   fetch-tags: false
+deploy-to-gke	Checkout code	2026-11-05T09:35:59.7999897Z   show-progress: true
+deploy-to-gke	Checkout code	2026-11-05T09:35:59.8000245Z   lfs: false
+deploy-to-gke	Checkout code	2026-11-05T09:35:59.8000592Z   submodules: false
+deploy-to-gke	Checkout code	2026-11-05T09:35:59.8000935Z   set-safe-directory: true
+deploy-to-gke	Checkout code	2026-11-05T09:35:59.8001314Z   allow-unsafe-pr-checkout: false
+deploy-to-gke	Checkout code	2026-11-05T09:35:59.8001783Z ##[endgroup]
+deploy-to-gke	Checkout code	2026-11-05T09:36:00.0266553Z Syncing repository: ***/mlops-practica-icai
+deploy-to-gke	Checkout code	2026-11-05T09:36:00.0268317Z ##[group]Getting Git version info
+deploy-to-gke	Checkout code	2026-11-05T09:36:00.0269216Z Working directory is '/home/runner/work/mlops-practica-icai/mlops-practica-icai'
+deploy-to-gke	Checkout code	2026-11-05T09:36:00.0270591Z [command]/usr/bin/git version
+deploy-to-gke	Checkout code	2026-11-05T09:36:00.0349186Z git version 2.56.0
+deploy-to-gke	Checkout code	2026-11-05T09:36:00.0362432Z ##[endgroup]
+deploy-to-gke	Checkout code	2026-11-05T09:36:00.0373419Z Temporarily overriding HOME='/home/runner/work/_temp/0d2ff37c-c001-4dc9-ac07-93e01419fc55' before making global git config changes
+deploy-to-gke	Checkout code	2026-11-05T09:36:00.0375060Z Adding repository directory to the temporary git global config as a safe directory
+deploy-to-gke	Checkout code	2026-11-05T09:36:00.0378018Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/mlops-practica-icai/mlops-practica-icai
+deploy-to-gke	Checkout code	2026-11-05T09:36:00.0423810Z Deleting the contents of '/home/runner/work/mlops-practica-icai/mlops-practica-icai'
+deploy-to-gke	Checkout code	2026-11-05T09:36:00.0427062Z ##[group]Initializing the repository
+deploy-to-gke	Checkout code	2026-11-05T09:36:00.0429721Z [command]/usr/bin/git init /home/runner/work/mlops-practica-icai/mlops-practica-icai
+deploy-to-gke	Checkout code	2026-11-05T09:36:00.0538733Z hint: Using 'master' as the name for the initial branch. This default branch name
+deploy-to-gke	Checkout code	2026-11-05T09:36:00.0539511Z hint: will change to "main" in Git 3.0. To configure the initial branch name
+deploy-to-gke	Checkout code	2026-11-05T09:36:00.0540151Z hint: to use in all of your new repositories, which will suppress this warning,
+deploy-to-gke	Checkout code	2026-11-05T09:36:00.0540664Z hint: call:
+deploy-to-gke	Checkout code	2026-11-05T09:36:00.0540983Z hint:
+deploy-to-gke	Checkout code	2026-11-05T09:36:00.0541383Z hint: 	git config --global init.defaultBranch <name>
+deploy-to-gke	Checkout code	2026-11-05T09:36:00.0541825Z hint:
+deploy-to-gke	Checkout code	2026-11-05T09:36:00.0542247Z hint: Names commonly chosen instead of 'master' are 'main', 'trunk' and
+deploy-to-gke	Checkout code	2026-11-05T09:36:00.0542882Z hint: 'development'. The just-created branch can be renamed via this command:
+deploy-to-gke	Checkout code	2026-11-05T09:36:00.0543389Z hint:
+deploy-to-gke	Checkout code	2026-11-05T09:36:00.0543716Z hint: 	git branch -m <name>
+deploy-to-gke	Checkout code	2026-11-05T09:36:00.0544075Z hint:
+deploy-to-gke	Checkout code	2026-11-05T09:36:00.0544761Z hint: Disable this message with "git config set advice.defaultBranchName false"
+deploy-to-gke	Checkout code	2026-11-05T09:36:00.0548344Z Initialized empty Git repository in /home/runner/work/mlops-practica-icai/mlops-practica-icai/.git/
+deploy-to-gke	Checkout code	2026-11-05T09:36:00.0557203Z [command]/usr/bin/git remote add origin https://github.com/***/mlops-practica-icai
+deploy-to-gke	Checkout code	2026-11-05T09:36:00.0599313Z ##[endgroup]
+deploy-to-gke	Checkout code	2026-11-05T09:36:00.0600271Z ##[group]Disabling automatic garbage collection
+deploy-to-gke	Checkout code	2026-11-05T09:36:00.0602379Z [command]/usr/bin/git config --local gc.auto 0
+deploy-to-gke	Checkout code	2026-11-05T09:36:00.0631192Z ##[endgroup]
+deploy-to-gke	Checkout code	2026-11-05T09:36:00.0632066Z ##[group]Setting up auth
+deploy-to-gke	Checkout code	2026-11-05T09:36:00.0636589Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+deploy-to-gke	Checkout code	2026-11-05T09:36:00.0666210Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+deploy-to-gke	Checkout code	2026-11-05T09:36:00.0988040Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+deploy-to-gke	Checkout code	2026-11-05T09:36:00.1016766Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+deploy-to-gke	Checkout code	2026-11-05T09:36:00.1205565Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+deploy-to-gke	Checkout code	2026-11-05T09:36:00.1235125Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+deploy-to-gke	Checkout code	2026-11-05T09:36:00.1420106Z [command]/usr/bin/git config --local http.https://github.com/.extraheader AUTHORIZATION: basic ***
+deploy-to-gke	Checkout code	2026-11-05T09:36:00.1454015Z ##[endgroup]
+deploy-to-gke	Checkout code	2026-11-05T09:36:00.1454972Z ##[group]Fetching the repository
+deploy-to-gke	Checkout code	2026-11-05T09:36:00.1463056Z [command]/usr/bin/git -c protocol.version=2 fetch --no-tags --prune --no-recurse-submodules --depth=1 origin +99bff29d3d4db02d3f9f912d60753b6d376ce021:refs/remotes/origin/p6-k8s-trivy
+deploy-to-gke	Checkout code	2026-11-05T09:36:00.5548032Z From https://github.com/***/mlops-practica-icai
+deploy-to-gke	Checkout code	2026-11-05T09:36:00.5551452Z  * [new ref]         99bff29d3d4db02d3f9f912d60753b6d376ce021 -> origin/p6-k8s-trivy
+deploy-to-gke	Checkout code	2026-11-05T09:36:00.5554998Z ##[endgroup]
+deploy-to-gke	Checkout code	2026-11-05T09:36:00.5555917Z ##[group]Determining the checkout info
+deploy-to-gke	Checkout code	2026-11-05T09:36:00.5556948Z ##[endgroup]
+deploy-to-gke	Checkout code	2026-11-05T09:36:00.5559723Z [command]/usr/bin/git sparse-checkout disable
+deploy-to-gke	Checkout code	2026-11-05T09:36:00.5655724Z [command]/usr/bin/git config --local --unset-all extensions.worktreeConfig
+deploy-to-gke	Checkout code	2026-11-05T09:36:00.5697179Z ##[group]Checking out the ref
+deploy-to-gke	Checkout code	2026-11-05T09:36:00.5699666Z [command]/usr/bin/git checkout --progress --force -B p6-k8s-trivy refs/remotes/origin/p6-k8s-trivy
+deploy-to-gke	Checkout code	2026-11-05T09:36:00.5757562Z Switched to a new branch 'p6-k8s-trivy'
+deploy-to-gke	Checkout code	2026-11-05T09:36:00.5762210Z branch 'p6-k8s-trivy' set up to track 'origin/p6-k8s-trivy'.
+deploy-to-gke	Checkout code	2026-11-05T09:36:00.5767850Z ##[endgroup]
+deploy-to-gke	Checkout code	2026-11-05T09:36:00.5800662Z [command]/usr/bin/git log -1 --format=%H
+deploy-to-gke	Checkout code	2026-11-05T09:36:00.5821293Z 99bff29d3d4db02d3f9f912d60753b6d376ce021
+deploy-to-gke	DVC and Python setup	﻿2026-11-05T09:36:00.6030608Z ##[group]Run iterative/setup-dvc@175771be1dc3d119268e00a896b52a4b77decb5e
+deploy-to-gke	DVC and Python setup	2026-11-05T09:36:00.6031160Z with:
+deploy-to-gke	DVC and Python setup	2026-11-05T09:36:00.6031481Z   version: latest
+deploy-to-gke	DVC and Python setup	2026-11-05T09:36:00.6031821Z ##[endgroup]
+deploy-to-gke	DVC and Python setup	2026-11-05T09:36:00.6865285Z (node:2359) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.
+deploy-to-gke	DVC and Python setup	2026-11-05T09:36:00.6868490Z (Use `node --trace-deprecation ...` to show where the warning was created)
+deploy-to-gke	DVC and Python setup	2026-11-05T09:36:00.6870231Z (node:2359) [DEP0169] DeprecationWarning: `url.parse()` behavior is not standardized and prone to errors that have security implications. Use the WHATWG URL API instead. CVEs are not issued for `url.parse()` vulnerabilities.
+deploy-to-gke	DVC and Python setup	2026-11-05T09:36:01.2475541Z Installing DVC from: https://dvc.org/download/linux-deb/dvc-3.67.1
+deploy-to-gke	DVC and Python setup	2026-11-05T09:36:14.9334267Z Get:1 file:/etc/apt/apt-mirrors.txt Mirrorlist [144 B]
+deploy-to-gke	DVC and Python setup	2026-11-05T09:36:14.9335110Z Get:6 https://packages.microsoft.com/ubuntu/24.04/prod noble InRelease [3600 B]
+deploy-to-gke	DVC and Python setup	2026-11-05T09:36:14.9335845Z Hit:2 http://azure.archive.ubuntu.com/ubuntu noble InRelease
+deploy-to-gke	DVC and Python setup	2026-11-05T09:36:14.9336424Z Get:3 http://azure.archive.ubuntu.com/ubuntu noble-updates InRelease [126 kB]
+deploy-to-gke	DVC and Python setup	2026-11-05T09:36:14.9337105Z Get:4 http://azure.archive.ubuntu.com/ubuntu noble-backports InRelease [126 kB]
+deploy-to-gke	DVC and Python setup	2026-11-05T09:36:14.9337721Z Get:5 http://azure.archive.ubuntu.com/ubuntu noble-security InRelease [126 kB]
+deploy-to-gke	DVC and Python setup	2026-11-05T09:36:14.9338209Z Get:7 https://packages.microsoft.com/ubuntu/24.04/prod noble/main arm64 Packages [663 kB]
+deploy-to-gke	DVC and Python setup	2026-11-05T09:36:14.9338661Z Get:8 https://packages.microsoft.com/ubuntu/24.04/prod noble/main amd64 Packages [731 kB]
+deploy-to-gke	DVC and Python setup	2026-11-05T09:36:14.9339098Z Get:9 http://azure.archive.ubuntu.com/ubuntu noble-updates/main amd64 Packages [1408 kB]
+deploy-to-gke	DVC and Python setup	2026-11-05T09:36:14.9339588Z Get:10 http://azure.archive.ubuntu.com/ubuntu noble-updates/main Translation-en [311 kB]
+deploy-to-gke	DVC and Python setup	2026-11-05T09:36:14.9340045Z Get:11 http://azure.archive.ubuntu.com/ubuntu noble-updates/universe amd64 Packages [1708 kB]
+deploy-to-gke	DVC and Python setup	2026-11-05T09:36:14.9340485Z Get:12 http://azure.archive.ubuntu.com/ubuntu noble-updates/universe Translation-en [343 kB]
+deploy-to-gke	DVC and Python setup	2026-11-05T09:36:14.9340933Z Get:13 http://azure.archive.ubuntu.com/ubuntu noble-security/main amd64 Packages [1157 kB]
+deploy-to-gke	DVC and Python setup	2026-11-05T09:36:14.9341376Z Get:14 http://azure.archive.ubuntu.com/ubuntu noble-security/main Translation-en [233 kB]
+deploy-to-gke	DVC and Python setup	2026-11-05T09:36:14.9341852Z Get:15 http://azure.archive.ubuntu.com/ubuntu noble-security/universe amd64 Packages [1225 kB]
+deploy-to-gke	DVC and Python setup	2026-11-05T09:36:14.9342358Z Get:16 http://azure.archive.ubuntu.com/ubuntu noble-security/universe Translation-en [247 kB]
+deploy-to-gke	DVC and Python setup	2026-11-05T09:36:14.9342807Z Get:17 http://azure.archive.ubuntu.com/ubuntu noble-security/restricted amd64 Packages [1721 kB]
+deploy-to-gke	DVC and Python setup	2026-11-05T09:36:14.9343281Z Get:18 http://azure.archive.ubuntu.com/ubuntu noble-security/restricted Translation-en [394 kB]
+deploy-to-gke	DVC and Python setup	2026-11-05T09:36:14.9343731Z Get:19 http://azure.archive.ubuntu.com/ubuntu noble-security/multiverse Translation-en [12.4 kB]
+deploy-to-gke	DVC and Python setup	2026-11-05T09:36:14.9344108Z Fetched 10.5 MB in 1s (12.9 MB/s)
+deploy-to-gke	DVC and Python setup	2026-11-05T09:36:14.9344893Z Reading package lists...
+deploy-to-gke	DVC and Python setup	2026-11-05T09:36:14.9345127Z Building dependency tree...
+deploy-to-gke	DVC and Python setup	2026-11-05T09:36:14.9345367Z Reading state information...
+deploy-to-gke	DVC and Python setup	2026-11-05T09:36:14.9345684Z 23 packages can be upgraded. Run 'apt list --upgradable' to see them.
+deploy-to-gke	DVC and Python setup	2026-11-05T09:36:14.9345978Z Reading package lists...
+deploy-to-gke	DVC and Python setup	2026-11-05T09:36:14.9346201Z Building dependency tree...
+deploy-to-gke	DVC and Python setup	2026-11-05T09:36:14.9346434Z Reading state information...
+deploy-to-gke	DVC and Python setup	2026-11-05T09:36:14.9346726Z git is already the newest version (1:2.56.0-0ppa1~ubuntu24.04.2).
+deploy-to-gke	DVC and Python setup	2026-11-05T09:36:14.9347034Z git set to manually installed.
+deploy-to-gke	DVC and Python setup	2026-11-05T09:36:14.9347336Z The following NEW packages will be installed:
+deploy-to-gke	DVC and Python setup	2026-11-05T09:36:14.9347632Z   dvc
+deploy-to-gke	DVC and Python setup	2026-11-05T09:36:14.9348258Z 0 upgraded, 1 newly installed, 0 to remove and 23 not upgraded.
+deploy-to-gke	DVC and Python setup	2026-11-05T09:36:14.9348546Z Need to get 0 B/201 MB of archives.
+deploy-to-gke	DVC and Python setup	2026-11-05T09:36:14.9348844Z After this operation, 582 MB of additional disk space will be used.
+deploy-to-gke	DVC and Python setup	2026-11-05T09:36:14.9349263Z Get:1 /home/runner/work/mlops-practica-icai/mlops-practica-icai/dvc.deb dvc amd64 3.67.1 [201 MB]
+deploy-to-gke	DVC and Python setup	2026-11-05T09:36:14.9349829Z Selecting previously unselected package dvc.
+deploy-to-gke	DVC and Python setup	2026-11-05T09:36:14.9350083Z (Reading database ... 
+deploy-to-gke	DVC and Python setup	2026-11-05T09:36:14.9350300Z (Reading database ... 5%
+deploy-to-gke	DVC and Python setup	2026-11-05T09:36:14.9350517Z (Reading database ... 10%
+deploy-to-gke	DVC and Python setup	2026-11-05T09:36:14.9350735Z (Reading database ... 15%
+deploy-to-gke	DVC and Python setup	2026-11-05T09:36:14.9350949Z (Reading database ... 20%
+deploy-to-gke	DVC and Python setup	2026-11-05T09:36:14.9351159Z (Reading database ... 25%
+deploy-to-gke	DVC and Python setup	2026-11-05T09:36:14.9351371Z (Reading database ... 30%
+deploy-to-gke	DVC and Python setup	2026-11-05T09:36:14.9351583Z (Reading database ... 35%
+deploy-to-gke	DVC and Python setup	2026-11-05T09:36:14.9351790Z (Reading database ... 40%
+deploy-to-gke	DVC and Python setup	2026-11-05T09:36:14.9352002Z (Reading database ... 45%
+deploy-to-gke	DVC and Python setup	2026-11-05T09:36:14.9352236Z (Reading database ... 50%
+deploy-to-gke	DVC and Python setup	2026-11-05T09:36:14.9352447Z (Reading database ... 55%
+deploy-to-gke	DVC and Python setup	2026-11-05T09:36:14.9352659Z (Reading database ... 60%
+deploy-to-gke	DVC and Python setup	2026-11-05T09:36:14.9352870Z (Reading database ... 65%
+deploy-to-gke	DVC and Python setup	2026-11-05T09:36:14.9353079Z (Reading database ... 70%
+deploy-to-gke	DVC and Python setup	2026-11-05T09:36:14.9353291Z (Reading database ... 75%
+deploy-to-gke	DVC and Python setup	2026-11-05T09:36:14.9353501Z (Reading database ... 80%
+deploy-to-gke	DVC and Python setup	2026-11-05T09:36:14.9373432Z (Reading database ... 85%
+deploy-to-gke	DVC and Python setup	2026-11-05T09:36:14.9373855Z (Reading database ... 90%
+deploy-to-gke	DVC and Python setup	2026-11-05T09:36:14.9374311Z (Reading database ... 95%
+deploy-to-gke	DVC and Python setup	2026-11-05T09:36:14.9374636Z (Reading database ... 100%
+deploy-to-gke	DVC and Python setup	2026-11-05T09:36:14.9375093Z (Reading database ... 215960 files and directories currently installed.)
+deploy-to-gke	DVC and Python setup	2026-11-05T09:36:14.9375642Z Preparing to unpack .../mlops-practica-icai/dvc.deb ...
+deploy-to-gke	DVC and Python setup	2026-11-05T09:36:14.9376061Z Unpacking dvc (3.67.1) ...
+deploy-to-gke	DVC and Python setup	2026-11-05T09:36:14.9376416Z Setting up dvc (3.67.1) ...
+deploy-to-gke	Setup Python	﻿2026-11-05T09:36:14.9746878Z ##[group]Run actions/setup-python@v5
+deploy-to-gke	Setup Python	2026-11-05T09:36:14.9747144Z with:
+deploy-to-gke	Setup Python	2026-11-05T09:36:14.9747344Z   python-version: 3.11
+deploy-to-gke	Setup Python	2026-11-05T09:36:14.9747562Z   check-latest: false
+deploy-to-gke	Setup Python	2026-11-05T09:36:14.9749133Z   token: ***
+deploy-to-gke	Setup Python	2026-11-05T09:36:14.9749357Z   update-environment: true
+deploy-to-gke	Setup Python	2026-11-05T09:36:14.9749576Z   allow-prereleases: false
+deploy-to-gke	Setup Python	2026-11-05T09:36:14.9749789Z   freethreaded: false
+deploy-to-gke	Setup Python	2026-11-05T09:36:14.9749994Z ##[endgroup]
+deploy-to-gke	Setup Python	2026-11-05T09:36:15.0596416Z ##[group]Installed versions
+deploy-to-gke	Setup Python	2026-11-05T09:36:15.0671971Z (node:2861) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.
+deploy-to-gke	Setup Python	2026-11-05T09:36:15.0672929Z (Use `node --trace-deprecation ...` to show where the warning was created)
+deploy-to-gke	Setup Python	2026-11-05T09:36:15.0673431Z Successfully set up CPython (3.11.18)
+deploy-to-gke	Setup Python	2026-11-05T09:36:15.0674093Z ##[endgroup]
+deploy-to-gke	Authenticate to Google Cloud	﻿2026-11-05T09:36:15.0838215Z ##[group]Run google-github-actions/auth@c200f3691d83b41bf9bbd8638997a462592937ed
+deploy-to-gke	Authenticate to Google Cloud	2026-11-05T09:36:15.0838554Z with:
+deploy-to-gke	Authenticate to Google Cloud	2026-11-05T09:36:15.0843612Z   credentials_json: ***
+deploy-to-gke	Authenticate to Google Cloud	2026-11-05T09:36:15.0843830Z   create_credentials_file: true
+deploy-to-gke	Authenticate to Google Cloud	2026-11-05T09:36:15.0844062Z   export_environment_variables: true
+deploy-to-gke	Authenticate to Google Cloud	2026-11-05T09:36:15.0844477Z   universe: googleapis.com
+deploy-to-gke	Authenticate to Google Cloud	2026-11-05T09:36:15.0844697Z   cleanup_credentials: true
+deploy-to-gke	Authenticate to Google Cloud	2026-11-05T09:36:15.0844921Z   access_token_lifetime: 3600s
+deploy-to-gke	Authenticate to Google Cloud	2026-11-05T09:36:15.0845208Z   access_token_scopes: https://www.googleapis.com/auth/cloud-platform
+deploy-to-gke	Authenticate to Google Cloud	2026-11-05T09:36:15.0845505Z   id_token_include_email: false
+deploy-to-gke	Authenticate to Google Cloud	2026-11-05T09:36:15.0845720Z env:
+deploy-to-gke	Authenticate to Google Cloud	2026-11-05T09:36:15.0845951Z   pythonLocation: /opt/hostedtoolcache/Python/3.11.18/x64
+deploy-to-gke	Authenticate to Google Cloud	2026-11-05T09:36:15.0846283Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.11.18/x64/lib/pkgconfig
+deploy-to-gke	Authenticate to Google Cloud	2026-11-05T09:36:15.0846605Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.11.18/x64
+deploy-to-gke	Authenticate to Google Cloud	2026-11-05T09:36:15.0846902Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.11.18/x64
+deploy-to-gke	Authenticate to Google Cloud	2026-11-05T09:36:15.0847215Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.11.18/x64
+deploy-to-gke	Authenticate to Google Cloud	2026-11-05T09:36:15.0847514Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.11.18/x64/lib
+deploy-to-gke	Authenticate to Google Cloud	2026-11-05T09:36:15.0847777Z ##[endgroup]
+deploy-to-gke	Authenticate to Google Cloud	2026-11-05T09:36:15.1507008Z Created credentials file at "/home/runner/work/mlops-practica-icai/mlops-practica-icai/gha-creds-ad4b96aa0c62c5b2.json"
+deploy-to-gke	Set up gcloud CLI and kubectl	﻿2026-11-05T09:36:15.1669399Z ##[group]Run google-github-actions/setup-gcloud@e427ad8a34f8676edf47cf7d7925499adf3eb74f
+deploy-to-gke	Set up gcloud CLI and kubectl	2026-11-05T09:36:15.1669765Z with:
+deploy-to-gke	Set up gcloud CLI and kubectl	2026-11-05T09:36:15.1669963Z   version: latest
+deploy-to-gke	Set up gcloud CLI and kubectl	2026-11-05T09:36:15.1670204Z   install_components: gke-gcloud-auth-plugin,kubectl
+deploy-to-gke	Set up gcloud CLI and kubectl	2026-11-05T09:36:15.1670465Z   skip_install: false
+deploy-to-gke	Set up gcloud CLI and kubectl	2026-11-05T09:36:15.1670671Z   skip_tool_cache: false
+deploy-to-gke	Set up gcloud CLI and kubectl	2026-11-05T09:36:15.1670882Z env:
+deploy-to-gke	Set up gcloud CLI and kubectl	2026-11-05T09:36:15.1671114Z   pythonLocation: /opt/hostedtoolcache/Python/3.11.18/x64
+deploy-to-gke	Set up gcloud CLI and kubectl	2026-11-05T09:36:15.1671442Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.11.18/x64/lib/pkgconfig
+deploy-to-gke	Set up gcloud CLI and kubectl	2026-11-05T09:36:15.1671766Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.11.18/x64
+deploy-to-gke	Set up gcloud CLI and kubectl	2026-11-05T09:36:15.1672067Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.11.18/x64
+deploy-to-gke	Set up gcloud CLI and kubectl	2026-11-05T09:36:15.1672366Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.11.18/x64
+deploy-to-gke	Set up gcloud CLI and kubectl	2026-11-05T09:36:15.1672668Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.11.18/x64/lib
+deploy-to-gke	Set up gcloud CLI and kubectl	2026-11-05T09:36:15.1673132Z   CLOUDSDK_AUTH_CREDENTIAL_FILE_OVERRIDE: /home/runner/work/mlops-practica-icai/mlops-practica-icai/gha-creds-ad4b96aa0c62c5b2.json
+deploy-to-gke	Set up gcloud CLI and kubectl	2026-11-05T09:36:15.1673726Z   GOOGLE_APPLICATION_CREDENTIALS: /home/runner/work/mlops-practica-icai/mlops-practica-icai/gha-creds-ad4b96aa0c62c5b2.json
+deploy-to-gke	Set up gcloud CLI and kubectl	2026-11-05T09:36:15.1674434Z   GOOGLE_GHA_CREDS_PATH: /home/runner/work/mlops-practica-icai/mlops-practica-icai/gha-creds-ad4b96aa0c62c5b2.json
+deploy-to-gke	Set up gcloud CLI and kubectl	2026-11-05T09:36:15.1674820Z   CLOUDSDK_CORE_PROJECT: mlops-icai-a2265f
+deploy-to-gke	Set up gcloud CLI and kubectl	2026-11-05T09:36:15.1675075Z   CLOUDSDK_PROJECT: mlops-icai-a2265f
+deploy-to-gke	Set up gcloud CLI and kubectl	2026-11-05T09:36:15.1675321Z   GCLOUD_PROJECT: mlops-icai-a2265f
+deploy-to-gke	Set up gcloud CLI and kubectl	2026-11-05T09:36:15.1675559Z   GCP_PROJECT: mlops-icai-a2265f
+deploy-to-gke	Set up gcloud CLI and kubectl	2026-11-05T09:36:15.1675796Z   GOOGLE_CLOUD_PROJECT: mlops-icai-a2265f
+deploy-to-gke	Set up gcloud CLI and kubectl	2026-11-05T09:36:15.1676036Z ##[endgroup]
+deploy-to-gke	Set up gcloud CLI and kubectl	2026-11-05T09:36:15.8082653Z [command]/usr/bin/tar xz --warning=no-unknown-keyword --overwrite -C /home/runner/work/_temp/48a65cb5-1c9e-4998-bb74-4a9296027cf2 -f /home/runner/work/_temp/795c1f8f-ec48-4fda-b982-6848ad8dea59
+deploy-to-gke	Set up gcloud CLI and kubectl	2026-11-05T09:36:39.4093020Z Successfully authenticated
+deploy-to-gke	Get GKE credentials	﻿2026-11-05T09:36:39.4333729Z ##[group]Run gcloud container clusters get-credentials mlops-gke-cluster --zone us-central1-a --project mlops-icai-a2265f
+deploy-to-gke	Get GKE credentials	2026-11-05T09:36:39.4334620Z [36;1mgcloud container clusters get-credentials mlops-gke-cluster --zone us-central1-a --project mlops-icai-a2265f[0m
+deploy-to-gke	Get GKE credentials	2026-11-05T09:36:39.4359503Z shell: /usr/bin/bash -e ***0***
+deploy-to-gke	Get GKE credentials	2026-11-05T09:36:39.4359714Z env:
+deploy-to-gke	Get GKE credentials	2026-11-05T09:36:39.4359918Z   pythonLocation: /opt/hostedtoolcache/Python/3.11.18/x64
+deploy-to-gke	Get GKE credentials	2026-11-05T09:36:39.4360218Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.11.18/x64/lib/pkgconfig
+deploy-to-gke	Get GKE credentials	2026-11-05T09:36:39.4360512Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.11.18/x64
+deploy-to-gke	Get GKE credentials	2026-11-05T09:36:39.4360779Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.11.18/x64
+deploy-to-gke	Get GKE credentials	2026-11-05T09:36:39.4361044Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.11.18/x64
+deploy-to-gke	Get GKE credentials	2026-11-05T09:36:39.4361322Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.11.18/x64/lib
+deploy-to-gke	Get GKE credentials	2026-11-05T09:36:39.4361744Z   CLOUDSDK_AUTH_CREDENTIAL_FILE_OVERRIDE: /home/runner/work/mlops-practica-icai/mlops-practica-icai/gha-creds-ad4b96aa0c62c5b2.json
+deploy-to-gke	Get GKE credentials	2026-11-05T09:36:39.4362309Z   GOOGLE_APPLICATION_CREDENTIALS: /home/runner/work/mlops-practica-icai/mlops-practica-icai/gha-creds-ad4b96aa0c62c5b2.json
+deploy-to-gke	Get GKE credentials	2026-11-05T09:36:39.4362800Z   GOOGLE_GHA_CREDS_PATH: /home/runner/work/mlops-practica-icai/mlops-practica-icai/gha-creds-ad4b96aa0c62c5b2.json
+deploy-to-gke	Get GKE credentials	2026-11-05T09:36:39.4363161Z   CLOUDSDK_CORE_PROJECT: mlops-icai-a2265f
+deploy-to-gke	Get GKE credentials	2026-11-05T09:36:39.4363372Z   CLOUDSDK_PROJECT: mlops-icai-a2265f
+deploy-to-gke	Get GKE credentials	2026-11-05T09:36:39.4363573Z   GCLOUD_PROJECT: mlops-icai-a2265f
+deploy-to-gke	Get GKE credentials	2026-11-05T09:36:39.4363771Z   GCP_PROJECT: mlops-icai-a2265f
+deploy-to-gke	Get GKE credentials	2026-11-05T09:36:39.4363969Z   GOOGLE_CLOUD_PROJECT: mlops-icai-a2265f
+deploy-to-gke	Get GKE credentials	2026-11-05T09:36:39.4364386Z   CLOUDSDK_METRICS_ENVIRONMENT: github-actions-setup-gcloud
+deploy-to-gke	Get GKE credentials	2026-11-05T09:36:39.4364649Z   CLOUDSDK_METRICS_ENVIRONMENT_VERSION: 2.2.1
+deploy-to-gke	Get GKE credentials	2026-11-05T09:36:39.4365055Z   CLOUDSDK_CONTAINER_USE_APPLICATION_DEFAULT_CREDENTIALS: true
+deploy-to-gke	Get GKE credentials	2026-11-05T09:36:39.4365286Z ##[endgroup]
+deploy-to-gke	Get GKE credentials	2026-11-05T09:36:40.0080049Z Fetching cluster endpoint and auth data.
+deploy-to-gke	Get GKE credentials	2026-11-05T09:36:40.8226872Z kubeconfig entry generated for mlops-gke-cluster.
+deploy-to-gke	DVC Pull	﻿2026-11-05T09:36:40.9732978Z ##[group]Run dvc remote modify origin --local auth basic
+deploy-to-gke	DVC Pull	2026-11-05T09:36:40.9733294Z [36;1mdvc remote modify origin --local auth basic[0m
+deploy-to-gke	DVC Pull	2026-11-05T09:36:40.9733558Z [36;1mdvc remote modify origin --local user $DAGSHUB_USERNAME[0m
+deploy-to-gke	DVC Pull	2026-11-05T09:36:40.9733851Z [36;1mdvc remote modify origin --local password $DAGSHUB_API_KEY[0m
+deploy-to-gke	DVC Pull	2026-11-05T09:36:40.9734094Z [36;1mdvc pull -r origin[0m
+deploy-to-gke	DVC Pull	2026-11-05T09:36:40.9751115Z shell: /usr/bin/bash -e ***0***
+deploy-to-gke	DVC Pull	2026-11-05T09:36:40.9751304Z env:
+deploy-to-gke	DVC Pull	2026-11-05T09:36:40.9751500Z   pythonLocation: /opt/hostedtoolcache/Python/3.11.18/x64
+deploy-to-gke	DVC Pull	2026-11-05T09:36:40.9751788Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.11.18/x64/lib/pkgconfig
+deploy-to-gke	DVC Pull	2026-11-05T09:36:40.9752090Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.11.18/x64
+deploy-to-gke	DVC Pull	2026-11-05T09:36:40.9752353Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.11.18/x64
+deploy-to-gke	DVC Pull	2026-11-05T09:36:40.9752609Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.11.18/x64
+deploy-to-gke	DVC Pull	2026-11-05T09:36:40.9752872Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.11.18/x64/lib
+deploy-to-gke	DVC Pull	2026-11-05T09:36:40.9753303Z   CLOUDSDK_AUTH_CREDENTIAL_FILE_OVERRIDE: /home/runner/work/mlops-practica-icai/mlops-practica-icai/gha-creds-ad4b96aa0c62c5b2.json
+deploy-to-gke	DVC Pull	2026-11-05T09:36:40.9753830Z   GOOGLE_APPLICATION_CREDENTIALS: /home/runner/work/mlops-practica-icai/mlops-practica-icai/gha-creds-ad4b96aa0c62c5b2.json
+deploy-to-gke	DVC Pull	2026-11-05T09:36:40.9754412Z   GOOGLE_GHA_CREDS_PATH: /home/runner/work/mlops-practica-icai/mlops-practica-icai/gha-creds-ad4b96aa0c62c5b2.json
+deploy-to-gke	DVC Pull	2026-11-05T09:36:40.9754759Z   CLOUDSDK_CORE_PROJECT: mlops-icai-a2265f
+deploy-to-gke	DVC Pull	2026-11-05T09:36:40.9754973Z   CLOUDSDK_PROJECT: mlops-icai-a2265f
+deploy-to-gke	DVC Pull	2026-11-05T09:36:40.9755181Z   GCLOUD_PROJECT: mlops-icai-a2265f
+deploy-to-gke	DVC Pull	2026-11-05T09:36:40.9755382Z   GCP_PROJECT: mlops-icai-a2265f
+deploy-to-gke	DVC Pull	2026-11-05T09:36:40.9755587Z   GOOGLE_CLOUD_PROJECT: mlops-icai-a2265f
+deploy-to-gke	DVC Pull	2026-11-05T09:36:40.9755829Z   CLOUDSDK_METRICS_ENVIRONMENT: github-actions-setup-gcloud
+deploy-to-gke	DVC Pull	2026-11-05T09:36:40.9756078Z   CLOUDSDK_METRICS_ENVIRONMENT_VERSION: 2.2.1
+deploy-to-gke	DVC Pull	2026-11-05T09:36:40.9756293Z   DAGSHUB_USERNAME: ***
+deploy-to-gke	DVC Pull	2026-11-05T09:36:40.9756506Z   DAGSHUB_API_KEY: ***
+deploy-to-gke	DVC Pull	2026-11-05T09:36:40.9756673Z ##[endgroup]
+deploy-to-gke	DVC Pull	2026-11-05T09:36:54.3170456Z A       confusion_matrix.png
+deploy-to-gke	DVC Pull	2026-11-05T09:36:54.3171781Z A       data/iris_dataset.csv
+deploy-to-gke	DVC Pull	2026-11-05T09:36:54.3174054Z A       mlflow_metrics.json
+deploy-to-gke	DVC Pull	2026-11-05T09:36:54.3176267Z A       model.pkl
+deploy-to-gke	DVC Pull	2026-11-05T09:36:54.3181074Z 4 files fetched and 4 files added
+deploy-to-gke	Configure Docker to use GCR	﻿2026-11-05T09:36:54.5201245Z ##[group]Run gcloud auth configure-docker --quiet
+deploy-to-gke	Configure Docker to use GCR	2026-11-05T09:36:54.5201715Z [36;1mgcloud auth configure-docker --quiet[0m
+deploy-to-gke	Configure Docker to use GCR	2026-11-05T09:36:54.5224801Z shell: /usr/bin/bash -e ***0***
+deploy-to-gke	Configure Docker to use GCR	2026-11-05T09:36:54.5225113Z env:
+deploy-to-gke	Configure Docker to use GCR	2026-11-05T09:36:54.5225418Z   pythonLocation: /opt/hostedtoolcache/Python/3.11.18/x64
+deploy-to-gke	Configure Docker to use GCR	2026-11-05T09:36:54.5225903Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.11.18/x64/lib/pkgconfig
+deploy-to-gke	Configure Docker to use GCR	2026-11-05T09:36:54.5226360Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.11.18/x64
+deploy-to-gke	Configure Docker to use GCR	2026-11-05T09:36:54.5226784Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.11.18/x64
+deploy-to-gke	Configure Docker to use GCR	2026-11-05T09:36:54.5227201Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.11.18/x64
+deploy-to-gke	Configure Docker to use GCR	2026-11-05T09:36:54.5227622Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.11.18/x64/lib
+deploy-to-gke	Configure Docker to use GCR	2026-11-05T09:36:54.5228293Z   CLOUDSDK_AUTH_CREDENTIAL_FILE_OVERRIDE: /home/runner/work/mlops-practica-icai/mlops-practica-icai/gha-creds-ad4b96aa0c62c5b2.json
+deploy-to-gke	Configure Docker to use GCR	2026-11-05T09:36:54.5229227Z   GOOGLE_APPLICATION_CREDENTIALS: /home/runner/work/mlops-practica-icai/mlops-practica-icai/gha-creds-ad4b96aa0c62c5b2.json
+deploy-to-gke	Configure Docker to use GCR	2026-11-05T09:36:54.5230078Z   GOOGLE_GHA_CREDS_PATH: /home/runner/work/mlops-practica-icai/mlops-practica-icai/gha-creds-ad4b96aa0c62c5b2.json
+deploy-to-gke	Configure Docker to use GCR	2026-11-05T09:36:54.5230638Z   CLOUDSDK_CORE_PROJECT: mlops-icai-a2265f
+deploy-to-gke	Configure Docker to use GCR	2026-11-05T09:36:54.5231207Z   CLOUDSDK_PROJECT: mlops-icai-a2265f
+deploy-to-gke	Configure Docker to use GCR	2026-11-05T09:36:54.5231526Z   GCLOUD_PROJECT: mlops-icai-a2265f
+deploy-to-gke	Configure Docker to use GCR	2026-11-05T09:36:54.5231836Z   GCP_PROJECT: mlops-icai-a2265f
+deploy-to-gke	Configure Docker to use GCR	2026-11-05T09:36:54.5232147Z   GOOGLE_CLOUD_PROJECT: mlops-icai-a2265f
+deploy-to-gke	Configure Docker to use GCR	2026-11-05T09:36:54.5232523Z   CLOUDSDK_METRICS_ENVIRONMENT: github-actions-setup-gcloud
+deploy-to-gke	Configure Docker to use GCR	2026-11-05T09:36:54.5232924Z   CLOUDSDK_METRICS_ENVIRONMENT_VERSION: 2.2.1
+deploy-to-gke	Configure Docker to use GCR	2026-11-05T09:36:54.5233238Z ##[endgroup]
+deploy-to-gke	Configure Docker to use GCR	2026-11-05T09:36:54.8065527Z Adding credentials for all GCR repositories.
+deploy-to-gke	Configure Docker to use GCR	2026-11-05T09:36:54.8068558Z WARNING: A long list of credential helpers may cause delays running 'docker build'. We recommend passing the registry name to configure only the registry you are using.
+deploy-to-gke	Configure Docker to use GCR	2026-11-05T09:36:54.8251597Z Docker configuration file updated.
+deploy-to-gke	Build and Push Docker Image	﻿2026-11-05T09:36:54.9654589Z ##[group]Run docker build -t gcr.io/mlops-icai-a2265f/mlops-api:latest .
+deploy-to-gke	Build and Push Docker Image	2026-11-05T09:36:54.9654959Z [36;1mdocker build -t gcr.io/mlops-icai-a2265f/mlops-api:latest .[0m
+deploy-to-gke	Build and Push Docker Image	2026-11-05T09:36:54.9655244Z [36;1mdocker push gcr.io/mlops-icai-a2265f/mlops-api:latest[0m
+deploy-to-gke	Build and Push Docker Image	2026-11-05T09:36:54.9671698Z shell: /usr/bin/bash -e ***0***
+deploy-to-gke	Build and Push Docker Image	2026-11-05T09:36:54.9671888Z env:
+deploy-to-gke	Build and Push Docker Image	2026-11-05T09:36:54.9672082Z   pythonLocation: /opt/hostedtoolcache/Python/3.11.18/x64
+deploy-to-gke	Build and Push Docker Image	2026-11-05T09:36:54.9672371Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.11.18/x64/lib/pkgconfig
+deploy-to-gke	Build and Push Docker Image	2026-11-05T09:36:54.9672656Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.11.18/x64
+deploy-to-gke	Build and Push Docker Image	2026-11-05T09:36:54.9672921Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.11.18/x64
+deploy-to-gke	Build and Push Docker Image	2026-11-05T09:36:54.9673185Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.11.18/x64
+deploy-to-gke	Build and Push Docker Image	2026-11-05T09:36:54.9673450Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.11.18/x64/lib
+deploy-to-gke	Build and Push Docker Image	2026-11-05T09:36:54.9673865Z   CLOUDSDK_AUTH_CREDENTIAL_FILE_OVERRIDE: /home/runner/work/mlops-practica-icai/mlops-practica-icai/gha-creds-ad4b96aa0c62c5b2.json
+deploy-to-gke	Build and Push Docker Image	2026-11-05T09:36:54.9674624Z   GOOGLE_APPLICATION_CREDENTIALS: /home/runner/work/mlops-practica-icai/mlops-practica-icai/gha-creds-ad4b96aa0c62c5b2.json
+deploy-to-gke	Build and Push Docker Image	2026-11-05T09:36:54.9675118Z   GOOGLE_GHA_CREDS_PATH: /home/runner/work/mlops-practica-icai/mlops-practica-icai/gha-creds-ad4b96aa0c62c5b2.json
+deploy-to-gke	Build and Push Docker Image	2026-11-05T09:36:54.9675466Z   CLOUDSDK_CORE_PROJECT: mlops-icai-a2265f
+deploy-to-gke	Build and Push Docker Image	2026-11-05T09:36:54.9675678Z   CLOUDSDK_PROJECT: mlops-icai-a2265f
+deploy-to-gke	Build and Push Docker Image	2026-11-05T09:36:54.9675881Z   GCLOUD_PROJECT: mlops-icai-a2265f
+deploy-to-gke	Build and Push Docker Image	2026-11-05T09:36:54.9676076Z   GCP_PROJECT: mlops-icai-a2265f
+deploy-to-gke	Build and Push Docker Image	2026-11-05T09:36:54.9676276Z   GOOGLE_CLOUD_PROJECT: mlops-icai-a2265f
+deploy-to-gke	Build and Push Docker Image	2026-11-05T09:36:54.9676526Z   CLOUDSDK_METRICS_ENVIRONMENT: github-actions-setup-gcloud
+deploy-to-gke	Build and Push Docker Image	2026-11-05T09:36:54.9676782Z   CLOUDSDK_METRICS_ENVIRONMENT_VERSION: 2.2.1
+deploy-to-gke	Build and Push Docker Image	2026-11-05T09:36:54.9676983Z ##[endgroup]
+deploy-to-gke	Build and Push Docker Image	2026-11-05T09:36:55.4136693Z #0 building with "default" instance using docker driver
+deploy-to-gke	Build and Push Docker Image	2026-11-05T09:36:55.4136944Z 
+deploy-to-gke	Build and Push Docker Image	2026-11-05T09:36:55.4137089Z #1 [internal] load build definition from Dockerfile
+deploy-to-gke	Build and Push Docker Image	2026-11-05T09:36:55.4137321Z #1 transferring dockerfile: 532B done
+deploy-to-gke	Build and Push Docker Image	2026-11-05T09:36:55.4137515Z #1 DONE 0.0s
+deploy-to-gke	Build and Push Docker Image	2026-11-05T09:36:55.4137608Z 
+deploy-to-gke	Build and Push Docker Image	2026-11-05T09:36:55.4137753Z #2 [internal] load metadata for docker.io/library/python:3.11-slim
+deploy-to-gke	Build and Push Docker Image	2026-11-05T09:36:55.6315306Z #2 ...
+deploy-to-gke	Build and Push Docker Image	2026-11-05T09:36:55.6315510Z 
+deploy-to-gke	Build and Push Docker Image	2026-11-05T09:36:55.6315716Z #3 [auth] library/python:pull token for registry-1.docker.io
+deploy-to-gke	Build and Push Docker Image	2026-11-05T09:36:55.6316064Z #3 DONE 0.0s
+deploy-to-gke	Build and Push Docker Image	2026-11-05T09:36:55.7815655Z 
+deploy-to-gke	Build and Push Docker Image	2026-11-05T09:36:55.7816010Z #2 [internal] load metadata for docker.io/library/python:3.11-slim
+deploy-to-gke	Build and Push Docker Image	2026-11-05T09:36:56.1951551Z #2 DONE 0.9s
+deploy-to-gke	Build and Push Docker Image	2026-11-05T09:36:56.3084154Z 
+deploy-to-gke	Build and Push Docker Image	2026-11-05T09:36:56.3084573Z #4 [internal] load .dockerignore
+deploy-to-gke	Build and Push Docker Image	2026-11-05T09:36:56.3084925Z #4 transferring context: 2B done
+deploy-to-gke	Build and Push Docker Image	2026-11-05T09:36:56.3085192Z #4 DONE 0.0s
+deploy-to-gke	Build and Push Docker Image	2026-11-05T09:36:56.3085321Z 
+deploy-to-gke	Build and Push Docker Image	2026-11-05T09:36:56.3085399Z #5 [internal] load build context
+deploy-to-gke	Build and Push Docker Image	2026-11-05T09:36:56.3085593Z #5 transferring context: 170.61kB done
+deploy-to-gke	Build and Push Docker Image	2026-11-05T09:36:56.3085865Z #5 DONE 0.0s
+deploy-to-gke	Build and Push Docker Image	2026-11-05T09:36:56.3085998Z 
+deploy-to-gke	Build and Push Docker Image	2026-11-05T09:36:56.3086358Z #6 [1/6] FROM docker.io/library/python:3.11-slim@sha256:db20d8506e2f15b6db39b40b6015ca46bae855dec6dd326d462cfe79ae972893
+deploy-to-gke	Build and Push Docker Image	2026-11-05T09:36:56.3087420Z #6 resolve docker.io/library/python:3.11-slim@sha256:db20d8506e2f15b6db39b40b6015ca46bae855dec6dd326d462cfe79ae972893 done
+deploy-to-gke	Build and Push Docker Image	2026-11-05T09:36:56.3088140Z #6 sha256:db20d8506e2f15b6db39b40b6015ca46bae855dec6dd326d462cfe79ae972893 10.37kB / 10.37kB done
+deploy-to-gke	Build and Push Docker Image	2026-11-05T09:36:56.3088792Z #6 sha256:6d10e720318bd84cc3d88af92bb5a47189222e17620a2fd214da6445e4afb679 1.75kB / 1.75kB done
+deploy-to-gke	Build and Push Docker Image	2026-11-05T09:36:56.3089634Z #6 sha256:de8d79606beff46114d4abd5c392116c62142cbe582f8ede92cf4a64e1a10ff5 5.49kB / 5.49kB done
+deploy-to-gke	Build and Push Docker Image	2026-11-05T09:36:56.3090494Z #6 sha256:6fc242d221a673263eabd14a9ad9584d3177c96e5cb504c891497338e2f912f5 0B / 29.86MB 0.1s
+deploy-to-gke	Build and Push Docker Image	2026-11-05T09:36:56.3091243Z #6 sha256:ee5aaeba9945927662bea2702989dfd74d9273796415b896363e6a9c44d9a8ce 0B / 1.29MB 0.1s
+deploy-to-gke	Build and Push Docker Image	2026-11-05T09:36:56.3091824Z #6 sha256:24ff04c921070df4f4dc987278926d5dabde59d57b55ae3665439331f79af932 0B / 14.46MB 0.1s
+deploy-to-gke	Build and Push Docker Image	2026-11-05T09:36:56.4100176Z #6 sha256:6fc242d221a673263eabd14a9ad9584d3177c96e5cb504c891497338e2f912f5 29.86MB / 29.86MB 0.2s
+deploy-to-gke	Build and Push Docker Image	2026-11-05T09:36:56.4100785Z #6 sha256:ee5aaeba9945927662bea2702989dfd74d9273796415b896363e6a9c44d9a8ce 1.29MB / 1.29MB 0.2s
+deploy-to-gke	Build and Push Docker Image	2026-11-05T09:36:56.6091690Z #6 sha256:6fc242d221a673263eabd14a9ad9584d3177c96e5cb504c891497338e2f912f5 29.86MB / 29.86MB 0.4s done
+deploy-to-gke	Build and Push Docker Image	2026-11-05T09:36:56.6092158Z #6 sha256:24ff04c921070df4f4dc987278926d5dabde59d57b55ae3665439331f79af932 14.46MB / 14.46MB 0.4s
+deploy-to-gke	Build and Push Docker Image	2026-11-05T09:36:56.7630788Z #6 sha256:ee5aaeba9945927662bea2702989dfd74d9273796415b896363e6a9c44d9a8ce 1.29MB / 1.29MB 0.4s done
+deploy-to-gke	Build and Push Docker Image	2026-11-05T09:36:56.7631591Z #6 sha256:24ff04c921070df4f4dc987278926d5dabde59d57b55ae3665439331f79af932 14.46MB / 14.46MB 0.4s done
+deploy-to-gke	Build and Push Docker Image	2026-11-05T09:36:56.7632248Z #6 extracting sha256:6fc242d221a673263eabd14a9ad9584d3177c96e5cb504c891497338e2f912f5 0.1s
+deploy-to-gke	Build and Push Docker Image	2026-11-05T09:36:56.7632743Z #6 sha256:361db81715472ecba5e656c314c299bd945309020483159596a8d123c2b1d580 0B / 251B 0.5s
+deploy-to-gke	Build and Push Docker Image	2026-11-05T09:36:56.8638841Z #6 sha256:361db81715472ecba5e656c314c299bd945309020483159596a8d123c2b1d580 251B / 251B 0.5s done
+deploy-to-gke	Build and Push Docker Image	2026-11-05T09:36:57.2446166Z #6 extracting sha256:6fc242d221a673263eabd14a9ad9584d3177c96e5cb504c891497338e2f912f5 0.5s done
+deploy-to-gke	Build and Push Docker Image	2026-11-05T09:36:57.2446779Z #6 extracting sha256:ee5aaeba9945927662bea2702989dfd74d9273796415b896363e6a9c44d9a8ce 0.1s done
+deploy-to-gke	Build and Push Docker Image	2026-11-05T09:36:59.9540838Z #6 extracting sha256:24ff04c921070df4f4dc987278926d5dabde59d57b55ae3665439331f79af932
+deploy-to-gke	Build and Push Docker Image	2026-11-05T09:37:00.5228665Z #6 extracting sha256:24ff04c921070df4f4dc987278926d5dabde59d57b55ae3665439331f79af932 0.4s done
+deploy-to-gke	Build and Push Docker Image	2026-11-05T09:37:00.7089225Z #6 extracting sha256:361db81715472ecba5e656c314c299bd945309020483159596a8d123c2b1d580
+deploy-to-gke	Build and Push Docker Image	2026-11-05T09:37:00.8894882Z #6 extracting sha256:361db81715472ecba5e656c314c299bd945309020483159596a8d123c2b1d580 done
+deploy-to-gke	Build and Push Docker Image	2026-11-05T09:37:00.8895488Z #6 DONE 4.5s
+deploy-to-gke	Build and Push Docker Image	2026-11-05T09:37:00.8895658Z 
+deploy-to-gke	Build and Push Docker Image	2026-11-05T09:37:00.8895785Z #7 [2/6] WORKDIR /app
+deploy-to-gke	Build and Push Docker Image	2026-11-05T09:37:00.8896110Z #7 DONE 0.0s
+deploy-to-gke	Build and Push Docker Image	2026-11-05T09:37:00.8896262Z 
+deploy-to-gke	Build and Push Docker Image	2026-11-05T09:37:00.8896398Z #8 [3/6] COPY requirements.txt .
+deploy-to-gke	Build and Push Docker Image	2026-11-05T09:37:00.8896708Z #8 DONE 0.0s
+deploy-to-gke	Build and Push Docker Image	2026-11-05T09:37:00.8896871Z 
+deploy-to-gke	Build and Push Docker Image	2026-11-05T09:37:00.8897066Z #9 [4/6] RUN pip install --no-cache-dir -r requirements.txt
+deploy-to-gke	Build and Push Docker Image	2026-11-05T09:37:01.8428708Z #9 1.104 Collecting scikit-learn==1.3.0 (from -r requirements.txt (line 1))
+deploy-to-gke	Build and Push Docker Image	2026-11-05T09:37:01.9623955Z #9 1.139   Downloading scikit_learn-1.3.0-cp311-cp311-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (11 kB)
+deploy-to-gke	Build and Push Docker Image	2026-11-05T09:37:01.9624936Z #9 1.223 Collecting pandas==2.2.2 (from -r requirements.txt (line 2))
+deploy-to-gke	Build and Push Docker Image	2026-11-05T09:37:02.1195522Z #9 1.230   Downloading pandas-2.2.2-cp311-cp311-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (19 kB)
+deploy-to-gke	Build and Push Docker Image	2026-11-05T09:37:02.1201986Z #9 1.381 Collecting numpy==1.26.4 (from -r requirements.txt (line 3))
+deploy-to-gke	Build and Push Docker Image	2026-11-05T09:37:02.2271579Z #9 1.388   Downloading numpy-1.26.4-cp311-cp311-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (61 kB)
+deploy-to-gke	Build and Push Docker Image	2026-11-05T09:37:02.2272734Z #9 1.394      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 61.0/61.0 kB 12.6 MB/s eta 0:00:00
+deploy-to-gke	Build and Push Docker Image	2026-11-05T09:37:02.2273314Z #9 1.481 Collecting dvc (from -r requirements.txt (line 4))
+deploy-to-gke	Build and Push Docker Image	2026-11-05T09:37:02.2274094Z #9 1.488   Downloading dvc-3.67.1-py3-none-any.whl.metadata (17 kB)
+deploy-to-gke	Build and Push Docker Image	2026-11-05T09:37:02.3552355Z #9 1.520 Collecting mlflow (from -r requirements.txt (line 5))
+deploy-to-gke	Build and Push Docker Image	2026-11-05T09:37:02.3552987Z #9 1.527   Downloading mlflow-3.18.0-py3-none-any.whl.metadata (50 kB)
+deploy-to-gke	Build and Push Docker Image	2026-11-05T09:37:02.3553870Z #9 1.528      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 50.5/50.5 kB 206.9 MB/s eta 0:00:00
+deploy-to-gke	Build and Push Docker Image	2026-11-05T09:37:02.3554540Z #9 1.616 Collecting matplotlib (from -r requirements.txt (line 6))
+deploy-to-gke	Build and Push Docker Image	2026-11-05T09:37:02.4615275Z #9 1.623   Downloading matplotlib-3.11.2-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.whl.metadata (80 kB)
+deploy-to-gke	Build and Push Docker Image	2026-11-05T09:37:02.4616231Z #9 1.625      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 80.3/80.3 kB 292.6 MB/s eta 0:00:00
+deploy-to-gke	Build and Push Docker Image	2026-11-05T09:37:02.4616856Z #9 1.646 Collecting seaborn (from -r requirements.txt (line 7))
+deploy-to-gke	Build and Push Docker Image	2026-11-05T09:37:02.4617171Z #9 1.652   Downloading seaborn-0.13.2-py3-none-any.whl.metadata (5.4 kB)
+deploy-to-gke	Build and Push Docker Image	2026-11-05T09:37:02.4617486Z #9 1.670 Collecting flask==3.1.3 (from -r requirements.txt (line 8))
+deploy-to-gke	Build and Push Docker Image	2026-11-05T09:37:02.4617802Z #9 1.676   Downloading flask-3.1.3-py3-none-any.whl.metadata (3.2 kB)
+deploy-to-gke	Build and Push Docker Image	2026-11-05T09:37:02.4618099Z #9 1.714 Collecting streamlit (from -r requirements.txt (line 9))
+deploy-to-gke	Build and Push Docker Image	2026-11-05T09:37:02.4618405Z #9 1.720   Downloading streamlit-1.66.1-py3-none-any.whl.metadata (10 kB)
+deploy-to-gke	Build and Push Docker Image	2026-11-05T09:37:02.5875957Z #9 1.849 Collecting scipy>=1.5.0 (from scikit-learn==1.3.0->-r requirements.txt (line 1))
+deploy-to-gke	Build and Push Docker Image	2026-11-05T09:37:02.6876309Z #9 1.856   Downloading scipy-1.17.1-cp311-cp311-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl.metadata (62 kB)
+deploy-to-gke	Build and Push Docker Image	2026-11-05T09:37:02.6877352Z #9 1.857      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 62.1/62.1 kB 503.8 MB/s eta 0:00:00
+deploy-to-gke	Build and Push Docker Image	2026-11-05T09:37:02.6877898Z #9 1.881 Collecting joblib>=1.1.1 (from scikit-learn==1.3.0->-r requirements.txt (line 1))
+deploy-to-gke	Build and Push Docker Image	2026-11-05T09:37:02.6878486Z #9 1.887   Downloading joblib-1.6.0-py3-none-any.whl.metadata (6.5 kB)
+deploy-to-gke	Build and Push Docker Image	2026-11-05T09:37:02.6878914Z #9 1.900 Collecting threadpoolctl>=2.0.0 (from scikit-learn==1.3.0->-r requirements.txt (line 1))
+deploy-to-gke	Build and Push Docker Image	2026-11-05T09:37:02.6879364Z #9 1.906   Downloading threadpoolctl-3.7.0-py3-none-any.whl.metadata (24 kB)
+deploy-to-gke	Build and Push Docker Image	2026-11-05T09:37:02.6879726Z #9 1.949 Collecting python-dateutil>=2.8.2 (from pandas==2.2.2->-r requirements.txt (line 2))
+deploy-to-gke	Build and Push Docker Image	2026-11-05T09:37:02.7934481Z #9 1.955   Downloading python_dateutil-4.0.0-py3-none-any.whl.metadata (7.3 kB)
+deploy-to-gke	Build and Push Docker Image	2026-11-05T09:37:02.7935152Z #9 1.985 Collecting pytz>=2020.1 (from pandas==2.2.2->-r requirements.txt (line 2))
+deploy-to-gke	Build and Push Docker Image	2026-11-05T09:37:02.7935729Z #9 1.992   Downloading pytz-2026.6-py2.py3-none-any.whl.metadata (22 kB)
+deploy-to-gke	Build and Push Docker Image	2026-11-05T09:37:02.7936302Z #9 2.008 Collecting tzdata>=2022.7 (from pandas==2.2.2->-r requirements.txt (line 2))
+deploy-to-gke	Build and Push Docker Image	2026-11-05T09:37:02.7936867Z #9 2.014   Downloading tzdata-2026.6-py2.py3-none-any.whl.metadata (1.4 kB)
+deploy-to-gke	Build and Push Docker Image	2026-11-05T09:37:02.7937479Z #9 2.031 Collecting blinker>=1.9.0 (from flask==3.1.3->-r requirements.txt (line 8))
+deploy-to-gke	Build and Push Docker Image	2026-11-05T09:37:02.7938040Z #9 2.037   Downloading blinker-1.9.0-py3-none-any.whl.metadata (1.6 kB)
+deploy-to-gke	Build and Push Docker Image	2026-11-05T09:37:02.7938568Z #9 2.055 Collecting click>=8.1.3 (from flask==3.1.3->-r requirements.txt (line 8))
+deploy-to-gke	Build and Push Docker Image	2026-11-05T09:37:02.9155046Z #9 2.061   Downloading click-8.5.0-py3-none-any.whl.metadata (2.6 kB)
+deploy-to-gke	Build and Push Docker Image	2026-11-05T09:37:02.9155760Z #9 2.074 Collecting itsdangerous>=2.2.0 (from flask==3.1.3->-r requirements.txt (line 8))
+deploy-to-gke	Build and Push Docker Image	2026-11-05T09:37:02.9156374Z #9 2.080   Downloading itsdangerous-2.2.0-py3-none-any.whl.metadata (1.9 kB)
+deploy-to-gke	Build and Push Docker Image	2026-11-05T09:37:02.9156946Z #9 2.095 Collecting jinja2>=3.1.2 (from flask==3.1.3->-r requirements.txt (line 8))
+deploy-to-gke	Build and Push Docker Image	2026-11-05T09:37:02.9157508Z #9 2.101   Downloading jinja2-3.1.6-py3-none-any.whl.metadata (2.9 kB)
+deploy-to-gke	Build and Push Docker Image	2026-11-05T09:37:02.9158041Z #9 2.176 Collecting markupsafe>=2.1.1 (from flask==3.1.3->-r requirements.txt (line 8))
+deploy-to-gke	Build and Push Docker Image	2026-11-05T09:37:03.0253746Z #9 2.183   Downloading markupsafe-3.0.4-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl.metadata (2.7 kB)
+deploy-to-gke	Build and Push Docker Image	2026-11-05T09:37:03.0254679Z #9 2.205 Collecting werkzeug>=3.1.0 (from flask==3.1.3->-r requirements.txt (line 8))
+deploy-to-gke	Build and Push Docker Image	2026-11-05T09:37:03.0255528Z #9 2.211   Downloading werkzeug-3.1.9-py3-none-any.whl.metadata (4.1 kB)
+deploy-to-gke	Build and Push Docker Image	2026-11-05T09:37:03.0255985Z #9 2.250 Collecting attrs>=22.2.0 (from dvc->-r requirements.txt (line 4))
+deploy-to-gke	Build and Push Docker Image	2026-11-05T09:37:03.0256304Z #9 2.257   Downloading attrs-26.1.0-py3-none-any.whl.metadata (8.8 kB)
+deploy-to-gke	Build and Push Docker Image	2026-11-05T09:37:03.0256690Z #9 2.287 Collecting celery (from dvc->-r requirements.txt (line 4))
+deploy-to-gke	Build and Push Docker Image	2026-11-05T09:37:03.2192297Z #9 2.293   Downloading celery-5.6.3-py3-none-any.whl.metadata (23 kB)
+deploy-to-gke	Build and Push Docker Image	2026-11-05T09:37:03.2192924Z #9 2.309 Collecting colorama>=0.3.9 (from dvc->-r requirements.txt (line 4))
+deploy-to-gke	Build and Push Docker Image	2026-11-05T09:37:03.2193503Z #9 2.315   Downloading colorama-0.4.6-py2.py3-none-any.whl.metadata (17 kB)
+deploy-to-gke	Build and Push Docker Image	2026-11-05T09:37:03.2194058Z #9 2.328 Collecting configobj>=5.0.9 (from dvc->-r requirements.txt (line 4))
+deploy-to-gke	Build and Push Docker Image	2026-11-05T09:37:03.2195161Z #9 2.334   Downloading configobj-5.0.9-py2.py3-none-any.whl.metadata (3.2 kB)
+deploy-to-gke	Build and Push Docker Image	2026-11-05T09:37:03.2195679Z #9 2.346 Collecting distro>=1.3 (from dvc->-r requirements.txt (line 4))
+deploy-to-gke	Build and Push Docker Image	2026-11-05T09:37:03.2196198Z #9 2.353   Downloading distro-1.9.0-py3-none-any.whl.metadata (6.8 kB)
+deploy-to-gke	Build and Push Docker Image	2026-11-05T09:37:03.2196698Z #9 2.367 Collecting dpath<3,>=2.1.0 (from dvc->-r requirements.txt (line 4))
+deploy-to-gke	Build and Push Docker Image	2026-11-05T09:37:03.2197174Z #9 2.374   Downloading dpath-2.2.0-py3-none-any.whl.metadata (15 kB)
+deploy-to-gke	Build and Push Docker Image	2026-11-05T09:37:03.2197631Z #9 2.480 Collecting dulwich (from dvc->-r requirements.txt (line 4))
+deploy-to-gke	Build and Push Docker Image	2026-11-05T09:37:03.3286275Z #9 2.487   Downloading dulwich-1.2.21-cp311-cp311-manylinux_2_28_x86_64.whl.metadata (6.2 kB)
+deploy-to-gke	Build and Push Docker Image	2026-11-05T09:37:03.3286731Z #9 2.538 Collecting dvc-data<3.19.0,>=3.18.2 (from dvc->-r requirements.txt (line 4))
+deploy-to-gke	Build and Push Docker Image	2026-11-05T09:37:03.3287084Z #9 2.545   Downloading dvc_data-3.18.3-py3-none-any.whl.metadata (4.9 kB)
+deploy-to-gke	Build and Push Docker Image	2026-11-05T09:37:03.3287429Z #9 2.558 Collecting dvc-http>=2.29.0 (from dvc->-r requirements.txt (line 4))
+deploy-to-gke	Build and Push Docker Image	2026-11-05T09:37:03.3287740Z #9 2.565   Downloading dvc_http-2.32.0-py3-none-any.whl.metadata (1.3 kB)
+deploy-to-gke	Build and Push Docker Image	2026-11-05T09:37:03.3288059Z #9 2.590 Collecting dvc-objects (from dvc->-r requirements.txt (line 4))
+deploy-to-gke	Build and Push Docker Image	2026-11-05T09:37:03.4332454Z #9 2.597   Downloading dvc_objects-5.2.0-py3-none-any.whl.metadata (3.9 kB)
+deploy-to-gke	Build and Push Docker Image	2026-11-05T09:37:03.4333527Z #9 2.662 Collecting dvc-render<2,>=1.0.1 (from dvc->-r requirements.txt (line 4))
+deploy-to-gke	Build and Push Docker Image	2026-11-05T09:37:03.4334559Z #9 2.671   Downloading dvc_render-1.0.2-py3-none-any.whl.metadata (5.4 kB)
+deploy-to-gke	Build and Push Docker Image	2026-11-05T09:37:03.4335338Z #9 2.687 Collecting dvc-studio-client<1,>=0.21 (from dvc->-r requirements.txt (line 4))
+deploy-to-gke	Build and Push Docker Image	2026-11-05T09:37:03.4335777Z #9 2.694   Downloading dvc_studio_client-0.23.0-py3-none-any.whl.metadata (4.4 kB)
+deploy-to-gke	Build and Push Docker Image	2026-11-05T09:37:03.5430650Z #9 2.708 Collecting dvc-task<1,>=0.3.0 (from dvc->-r requirements.txt (line 4))
+deploy-to-gke	Build and Push Docker Image	2026-11-05T09:37:03.5431783Z #9 2.716   Downloading dvc_task-0.40.2-py3-none-any.whl.metadata (10.0 kB)
+deploy-to-gke	Build and Push Docker Image	2026-11-05T09:37:03.5432556Z #9 2.733 Collecting flatten-dict<1,>=0.4.1 (from dvc->-r requirements.txt (line 4))
+deploy-to-gke	Build and Push Docker Image	2026-11-05T09:37:03.5433322Z #9 2.740   Downloading flatten_dict-0.5.0-py3-none-any.whl.metadata (8.9 kB)
+deploy-to-gke	Build and Push Docker Image	2026-11-05T09:37:03.5433881Z #9 2.755 Collecting flufl.lock<10,>=8.1.0 (from dvc->-r requirements.txt (line 4))
+deploy-to-gke	Build and Push Docker Image	2026-11-05T09:37:03.5434514Z #9 2.763   Downloading flufl_lock-9.2.0-py3-none-any.whl.metadata (3.3 kB)
+deploy-to-gke	Build and Push Docker Image	2026-11-05T09:37:03.5434980Z #9 2.785 Collecting fsspec>=2024.2.0 (from dvc->-r requirements.txt (line 4))
+deploy-to-gke	Build and Push Docker Image	2026-11-05T09:37:03.5435435Z #9 2.791   Downloading fsspec-2026.9.0-py3-none-any.whl.metadata (10 kB)
+deploy-to-gke	Build and Push Docker Image	2026-11-05T09:37:03.5435816Z #9 2.804 Collecting funcy>=1.14 (from dvc->-r requirements.txt (line 4))
+deploy-to-gke	Build and Push Docker Image	2026-11-05T09:37:03.6449502Z #9 2.811   Downloading funcy-2.1-py3-none-any.whl.metadata (6.3 kB)
+deploy-to-gke	Build and Push Docker Image	2026-11-05T09:37:03.6450420Z #9 2.824 Collecting grandalf<1,>=0.7 (from dvc->-r requirements.txt (line 4))
+deploy-to-gke	Build and Push Docker Image	2026-11-05T09:37:03.6451193Z #9 2.831   Downloading grandalf-0.8-py3-none-any.whl.metadata (1.7 kB)
+deploy-to-gke	Build and Push Docker Image	2026-11-05T09:37:03.6451888Z #9 2.856 Collecting gto<2,>=1.6.0 (from dvc->-r requirements.txt (line 4))
+deploy-to-gke	Build and Push Docker Image	2026-11-05T09:37:03.6452575Z #9 2.863   Downloading gto-1.10.1-py3-none-any.whl.metadata (4.8 kB)
+deploy-to-gke	Build and Push Docker Image	2026-11-05T09:37:03.6453215Z #9 2.879 Collecting hydra-core>=1.1 (from dvc->-r requirements.txt (line 4))
+deploy-to-gke	Build and Push Docker Image	2026-11-05T09:37:03.6453642Z #9 2.886   Downloading hydra_core-1.3.8-py3-none-any.whl.metadata (5.7 kB)
+deploy-to-gke	Build and Push Docker Image	2026-11-05T09:37:03.6453988Z #9 2.898 Collecting iterative-telemetry>=0.0.7 (from dvc->-r requirements.txt (line 4))
+deploy-to-gke	Build and Push Docker Image	2026-11-05T09:37:03.6454577Z #9 2.906   Downloading iterative_telemetry-0.0.10-py3-none-any.whl.metadata (4.1 kB)
+deploy-to-gke	Build and Push Docker Image	2026-11-05T09:37:03.7513638Z #9 2.932 Collecting kombu (from dvc->-r requirements.txt (line 4))
+deploy-to-gke	Build and Push Docker Image	2026-11-05T09:37:03.7514422Z #9 2.938   Downloading kombu-5.7.0-py3-none-any.whl.metadata (17 kB)
+deploy-to-gke	Build and Push Docker Image	2026-11-05T09:37:03.7515087Z #9 2.959 Collecting networkx>=2.5 (from dvc->-r requirements.txt (line 4))
+deploy-to-gke	Build and Push Docker Image	2026-11-05T09:37:03.7515972Z #9 2.966   Downloading networkx-3.6.1-py3-none-any.whl.metadata (6.8 kB)
+deploy-to-gke	Build and Push Docker Image	2026-11-05T09:37:03.7516530Z #9 2.992 Collecting omegaconf (from dvc->-r requirements.txt (line 4))
+deploy-to-gke	Build and Push Docker Image	2026-11-05T09:37:03.7517086Z #9 2.998   Downloading omegaconf-2.4.0-py3-none-any.whl.metadata (4.9 kB)
+deploy-to-gke	Build and Push Docker Image	2026-11-05T09:37:03.7517897Z #9 2.999 Requirement already satisfied: packaging>=19 in /usr/local/lib/python3.11/site-packages (from dvc->-r requirements.txt (line 4)) (26.3)
+deploy-to-gke	Build and Push Docker Image	2026-11-05T09:37:03.7518619Z #9 3.013 Collecting pathspec<2,>=0.10.3 (from dvc->-r requirements.txt (line 4))
+deploy-to-gke	Build and Push Docker Image	2026-11-05T09:37:03.8598099Z #9 3.019   Downloading pathspec-1.1.1-py3-none-any.whl.metadata (14 kB)
+deploy-to-gke	Build and Push Docker Image	2026-11-05T09:37:03.8598510Z #9 3.043 Collecting platformdirs<5,>=3.1.1 (from dvc->-r requirements.txt (line 4))
+deploy-to-gke	Build and Push Docker Image	2026-11-05T09:37:03.8598859Z #9 3.050   Downloading platformdirs-4.14.5-py3-none-any.whl.metadata (5.7 kB)
+deploy-to-gke	Build and Push Docker Image	2026-11-05T09:37:03.8599191Z #9 3.101 Collecting psutil>=5.8 (from dvc->-r requirements.txt (line 4))
+deploy-to-gke	Build and Push Docker Image	2026-11-05T09:37:03.8599608Z #9 3.108   Downloading psutil-7.2.2-cp36-abi3-manylinux2010_x86_64.manylinux_2_12_x86_64.manylinux_2_28_x86_64.whl.metadata (22 kB)
+deploy-to-gke	Build and Push Docker Image	2026-11-05T09:37:03.8600038Z #9 3.121 Collecting pydot>=1.2.4 (from dvc->-r requirements.txt (line 4))
+deploy-to-gke	Build and Push Docker Image	2026-11-05T09:37:03.9819518Z #9 3.127   Downloading pydot-4.0.1-py3-none-any.whl.metadata (11 kB)
+deploy-to-gke	Build and Push Docker Image	2026-11-05T09:37:03.9820347Z #9 3.140 Collecting pygtrie>=2.3.2 (from dvc->-r requirements.txt (line 4))
+deploy-to-gke	Build and Push Docker Image	2026-11-05T09:37:03.9820935Z #9 3.146   Downloading pygtrie-2.6.2-py3-none-any.whl.metadata (12 kB)
+deploy-to-gke	Build and Push Docker Image	2026-11-05T09:37:03.9821580Z #9 3.171 Collecting pyparsing>=3.0.0 (from dvc->-r requirements.txt (line 4))
+deploy-to-gke	Build and Push Docker Image	2026-11-05T09:37:03.9822140Z #9 3.177   Downloading pyparsing-3.3.3-py3-none-any.whl.metadata (5.9 kB)
+deploy-to-gke	Build and Push Docker Image	2026-11-05T09:37:03.9822701Z #9 3.199 Collecting requests>=2.22 (from dvc->-r requirements.txt (line 4))
+deploy-to-gke	Build and Push Docker Image	2026-11-05T09:37:03.9823241Z #9 3.205   Downloading requests-2.34.2-py3-none-any.whl.metadata (4.8 kB)
+deploy-to-gke	Build and Push Docker Image	2026-11-05T09:37:03.9823725Z #9 3.243 Collecting rich>=12 (from dvc->-r requirements.txt (line 4))
+deploy-to-gke	Build and Push Docker Image	2026-11-05T09:37:04.1749804Z #9 3.250   Downloading rich-15.0.0-py3-none-any.whl.metadata (18 kB)
+deploy-to-gke	Build and Push Docker Image	2026-11-05T09:37:04.1750407Z #9 3.330 Collecting ruamel.yaml>=0.17.11 (from dvc->-r requirements.txt (line 4))
+deploy-to-gke	Build and Push Docker Image	2026-11-05T09:37:04.1751134Z #9 3.336   Downloading ruamel_yaml-0.19.1-py3-none-any.whl.metadata (16 kB)
+deploy-to-gke	Build and Push Docker Image	2026-11-05T09:37:04.1751824Z #9 3.436 Collecting scmrepo<4,>=3.5.2 (from dvc->-r requirements.txt (line 4))
+deploy-to-gke	Build and Push Docker Image	2026-11-05T09:37:04.2774636Z #9 3.443   Downloading scmrepo-3.6.2-py3-none-any.whl.metadata (4.8 kB)
+deploy-to-gke	Build and Push Docker Image	2026-11-05T09:37:04.2775233Z #9 3.457 Collecting shortuuid>=0.5 (from dvc->-r requirements.txt (line 4))
+deploy-to-gke	Build and Push Docker Image	2026-11-05T09:37:04.2775584Z #9 3.463   Downloading shortuuid-1.0.13-py3-none-any.whl.metadata (5.8 kB)
+deploy-to-gke	Build and Push Docker Image	2026-11-05T09:37:04.2775901Z #9 3.485 Collecting shtab<2,>=1.3.4 (from dvc->-r requirements.txt (line 4))
+deploy-to-gke	Build and Push Docker Image	2026-11-05T09:37:04.2776203Z #9 3.491   Downloading shtab-1.13.0-py3-none-any.whl.metadata (7.6 kB)
+deploy-to-gke	Build and Push Docker Image	2026-11-05T09:37:04.2776509Z #9 3.503 Collecting tabulate>=0.8.7 (from dvc->-r requirements.txt (line 4))
+deploy-to-gke	Build and Push Docker Image	2026-11-05T09:37:04.2776848Z #9 3.510   Downloading tabulate-0.10.0-py3-none-any.whl.metadata (40 kB)
+deploy-to-gke	Build and Push Docker Image	2026-11-05T09:37:04.2777465Z #9 3.511      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 40.8/40.8 kB 440.0 MB/s eta 0:00:00
+deploy-to-gke	Build and Push Docker Image	2026-11-05T09:37:04.2778016Z #9 3.532 Collecting tomlkit>=0.11.1 (from dvc->-r requirements.txt (line 4))
+deploy-to-gke	Build and Push Docker Image	2026-11-05T09:37:04.2778332Z #9 3.539   Downloading tomlkit-0.15.2-py3-none-any.whl.metadata (3.4 kB)
+deploy-to-gke	Build and Push Docker Image	2026-11-05T09:37:04.4090042Z #9 3.570 Collecting tqdm<5,>=4.63.1 (from dvc->-r requirements.txt (line 4))
+deploy-to-gke	Build and Push Docker Image	2026-11-05T09:37:04.4090671Z #9 3.577   Downloading tqdm-4.70.1-py3-none-any.whl.metadata (57 kB)
+deploy-to-gke	Build and Push Docker Image	2026-11-05T09:37:04.4091407Z #9 3.578      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 57.4/57.4 kB 484.8 MB/s eta 0:00:00
+deploy-to-gke	Build and Push Docker Image	2026-11-05T09:37:04.4091925Z #9 3.596 Collecting voluptuous>=0.11.7 (from dvc->-r requirements.txt (line 4))
+deploy-to-gke	Build and Push Docker Image	2026-11-05T09:37:04.4092406Z #9 3.602   Downloading voluptuous-0.16.0-py3-none-any.whl.metadata (20 kB)
+deploy-to-gke	Build and Push Docker Image	2026-11-05T09:37:04.4093260Z #9 3.614 Collecting zc.lockfile>=1.2.1 (from dvc->-r requirements.txt (line 4))
+deploy-to-gke	Build and Push Docker Image	2026-11-05T09:37:04.4093714Z #9 3.621   Downloading zc_lockfile-4.1-py3-none-any.whl.metadata (6.8 kB)
+deploy-to-gke	Build and Push Docker Image	2026-11-05T09:37:04.4094353Z #9 3.670 Collecting mlflow-skinny==3.18.0 (from mlflow->-r requirements.txt (line 5))
+deploy-to-gke	Build and Push Docker Image	2026-11-05T09:37:04.6154699Z #9 3.677   Downloading mlflow_skinny-3.18.0-py3-none-any.whl.metadata (51 kB)
+deploy-to-gke	Build and Push Docker Image	2026-11-05T09:37:04.6155424Z #9 3.678      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 51.4/51.4 kB 461.1 MB/s eta 0:00:00
+deploy-to-gke	Build and Push Docker Image	2026-11-05T09:37:04.6155771Z #9 3.696 Collecting mlflow-tracing==3.18.0 (from mlflow->-r requirements.txt (line 5))
+deploy-to-gke	Build and Push Docker Image	2026-11-05T09:37:04.6156129Z #9 3.703   Downloading mlflow_tracing-3.18.0-py3-none-any.whl.metadata (19 kB)
+deploy-to-gke	Build and Push Docker Image	2026-11-05T09:37:04.6156463Z #9 3.720 Collecting Flask-CORS<7 (from mlflow->-r requirements.txt (line 5))
+deploy-to-gke	Build and Push Docker Image	2026-11-05T09:37:04.6156786Z #9 3.726   Downloading flask_cors-6.0.5-py3-none-any.whl.metadata (5.4 kB)
+deploy-to-gke	Build and Push Docker Image	2026-11-05T09:37:04.9595156Z #9 4.220 Collecting aiohttp<4,>=3.7.0 (from mlflow->-r requirements.txt (line 5))
+deploy-to-gke	Build and Push Docker Image	2026-11-05T09:37:05.1492462Z #9 4.227   Downloading aiohttp-3.14.5-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl.metadata (8.3 kB)
+deploy-to-gke	Build and Push Docker Image	2026-11-05T09:37:05.1493419Z #9 4.257 Collecting alembic!=1.10.0,<2 (from mlflow->-r requirements.txt (line 5))
+deploy-to-gke	Build and Push Docker Image	2026-11-05T09:37:05.1493993Z #9 4.264   Downloading alembic-1.20.1-py3-none-any.whl.metadata (7.3 kB)
+deploy-to-gke	Build and Push Docker Image	2026-11-05T09:37:05.1494742Z #9 4.410 Collecting cryptography<51,>=43.0.0 (from mlflow->-r requirements.txt (line 5))
+deploy-to-gke	Build and Push Docker Image	2026-11-05T09:37:05.2528270Z #9 4.417   Downloading cryptography-50.0.2-cp311-abi3-manylinux_2_34_x86_64.whl.metadata (4.4 kB)
+deploy-to-gke	Build and Push Docker Image	2026-11-05T09:37:05.2529020Z #9 4.438 Collecting docker<8,>=4.0.0 (from mlflow->-r requirements.txt (line 5))
+deploy-to-gke	Build and Push Docker Image	2026-11-05T09:37:05.2529587Z #9 4.444   Downloading docker-7.2.0-py3-none-any.whl.metadata (3.8 kB)
+deploy-to-gke	Build and Push Docker Image	2026-11-05T09:37:05.2530119Z #9 4.461 Collecting graphene<4 (from mlflow->-r requirements.txt (line 5))
+deploy-to-gke	Build and Push Docker Image	2026-11-05T09:37:05.2530706Z #9 4.467   Downloading graphene-3.4.3-py2.py3-none-any.whl.metadata (6.9 kB)
+deploy-to-gke	Build and Push Docker Image	2026-11-05T09:37:05.2531266Z #9 4.486 Collecting gunicorn<27 (from mlflow->-r requirements.txt (line 5))
+deploy-to-gke	Build and Push Docker Image	2026-11-05T09:37:05.2531821Z #9 4.492   Downloading gunicorn-26.2.0-py3-none-any.whl.metadata (5.5 kB)
+deploy-to-gke	Build and Push Docker Image	2026-11-05T09:37:05.2532357Z #9 4.508 Collecting huey<4,>=2.5.4 (from mlflow->-r requirements.txt (line 5))
+deploy-to-gke	Build and Push Docker Image	2026-11-05T09:37:05.2532882Z #9 4.514   Downloading huey-3.5.4-py3-none-any.whl.metadata (5.7 kB)
+deploy-to-gke	Build and Push Docker Image	2026-11-05T09:37:05.5032700Z #9 4.582 Collecting pyarrow<27,>=4.0.0 (from mlflow->-r requirements.txt (line 5))
+deploy-to-gke	Build and Push Docker Image	2026-11-05T09:37:05.5033355Z #9 4.589   Downloading pyarrow-26.0.1-cp311-cp311-manylinux_2_28_x86_64.whl.metadata (3.0 kB)
+deploy-to-gke	Build and Push Docker Image	2026-11-05T09:37:05.5033887Z #9 4.607 Collecting skops<1 (from mlflow->-r requirements.txt (line 5))
+deploy-to-gke	Build and Push Docker Image	2026-11-05T09:37:05.5034480Z #9 4.614   Downloading skops-0.16.0-py3-none-any.whl.metadata (4.3 kB)
+deploy-to-gke	Build and Push Docker Image	2026-11-05T09:37:05.7258663Z #9 4.987 Collecting sqlalchemy<3,>=1.4.0 (from mlflow->-r requirements.txt (line 5))
+deploy-to-gke	Build and Push Docker Image	2026-11-05T09:37:05.8288402Z #9 4.994   Downloading sqlalchemy-2.1.8-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl.metadata (9.7 kB)
+deploy-to-gke	Build and Push Docker Image	2026-11-05T09:37:05.8289499Z #9 5.036 Collecting anyio!=4.15.0,<5,>=3.6.2 (from mlflow-skinny==3.18.0->mlflow->-r requirements.txt (line 5))
+deploy-to-gke	Build and Push Docker Image	2026-11-05T09:37:05.8290257Z #9 5.043   Downloading anyio-4.16.0-py3-none-any.whl.metadata (4.7 kB)
+deploy-to-gke	Build and Push Docker Image	2026-11-05T09:37:05.8290913Z #9 5.065 Collecting cachetools<8,>=5.0.0 (from mlflow-skinny==3.18.0->mlflow->-r requirements.txt (line 5))
+deploy-to-gke	Build and Push Docker Image	2026-11-05T09:37:05.8291562Z #9 5.071   Downloading cachetools-7.2.8-py3-none-any.whl.metadata (5.5 kB)
+deploy-to-gke	Build and Push Docker Image	2026-11-05T09:37:05.8292158Z #9 5.090 Collecting cloudpickle<4 (from mlflow-skinny==3.18.0->mlflow->-r requirements.txt (line 5))
+deploy-to-gke	Build and Push Docker Image	2026-11-05T09:37:05.9392838Z #9 5.097   Downloading cloudpickle-3.1.2-py3-none-any.whl.metadata (7.1 kB)
+deploy-to-gke	Build and Push Docker Image	2026-11-05T09:37:05.9393627Z #9 5.135 Collecting databricks-sdk<1,>=0.20.0 (from mlflow-skinny==3.18.0->mlflow->-r requirements.txt (line 5))
+deploy-to-gke	Build and Push Docker Image	2026-11-05T09:37:05.9395016Z #9 5.141   Downloading databricks_sdk-0.162.0-py3-none-any.whl.metadata (44 kB)
+deploy-to-gke	Build and Push Docker Image	2026-11-05T09:37:05.9395897Z #9 5.143      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 44.3/44.3 kB 442.3 MB/s eta 0:00:00
+deploy-to-gke	Build and Push Docker Image	2026-11-05T09:37:05.9396488Z #9 5.200 Collecting fastapi<1 (from mlflow-skinny==3.18.0->mlflow->-r requirements.txt (line 5))
+deploy-to-gke	Build and Push Docker Image	2026-11-05T09:37:06.0508039Z #9 5.207   Downloading fastapi-0.162.0-py3-none-any.whl.metadata (26 kB)
+deploy-to-gke	Build and Push Docker Image	2026-11-05T09:37:06.0508793Z #9 5.238 Collecting gitpython<4,>=3.1.9 (from mlflow-skinny==3.18.0->mlflow->-r requirements.txt (line 5))
+deploy-to-gke	Build and Push Docker Image	2026-11-05T09:37:06.0509450Z #9 5.245   Downloading gitpython-3.2.1-py3-none-any.whl.metadata (13 kB)
+deploy-to-gke	Build and Push Docker Image	2026-11-05T09:37:06.0510099Z #9 5.282 Collecting importlib_metadata!=4.7.0,<11,>=3.7.0 (from mlflow-skinny==3.18.0->mlflow->-r requirements.txt (line 5))
+deploy-to-gke	Build and Push Docker Image	2026-11-05T09:37:06.0510813Z #9 5.289   Downloading importlib_metadata-10.1.0-py3-none-any.whl.metadata (4.5 kB)
+deploy-to-gke	Build and Push Docker Image	2026-11-05T09:37:06.0511468Z #9 5.312 Collecting opentelemetry-api<3,>=1.9.0 (from mlflow-skinny==3.18.0->mlflow->-r requirements.txt (line 5))
+deploy-to-gke	Build and Push Docker Image	2026-11-05T09:37:06.2271242Z #9 5.318   Downloading opentelemetry_api-1.45.2-py3-none-any.whl.metadata (1.4 kB)
+deploy-to-gke	Build and Push Docker Image	2026-11-05T09:37:06.2272232Z #9 5.342 Collecting opentelemetry-proto<3,>=1.9.0 (from mlflow-skinny==3.18.0->mlflow->-r requirements.txt (line 5))
+deploy-to-gke	Build and Push Docker Image	2026-11-05T09:37:06.2273127Z #9 5.348   Downloading opentelemetry_proto-1.45.2-py3-none-any.whl.metadata (2.3 kB)
+deploy-to-gke	Build and Push Docker Image	2026-11-05T09:37:06.2273913Z #9 5.370 Collecting opentelemetry-sdk<3,>=1.9.0 (from mlflow-skinny==3.18.0->mlflow->-r requirements.txt (line 5))
+deploy-to-gke	Build and Push Docker Image	2026-11-05T09:37:06.2274606Z #9 5.377   Downloading opentelemetry_sdk-1.45.2-py3-none-any.whl.metadata (1.6 kB)
+deploy-to-gke	Build and Push Docker Image	2026-11-05T09:37:06.2274994Z #9 5.488 Collecting protobuf<8,>=3.12.0 (from mlflow-skinny==3.18.0->mlflow->-r requirements.txt (line 5))
+deploy-to-gke	Build and Push Docker Image	2026-11-05T09:37:06.3272356Z #9 5.495   Downloading protobuf-7.36.2-cp310-abi3-manylinux2014_x86_64.whl.metadata (595 bytes)
+deploy-to-gke	Build and Push Docker Image	2026-11-05T09:37:06.3273137Z #9 5.582 Collecting pydantic<3,>=2.0.0 (from mlflow-skinny==3.18.0->mlflow->-r requirements.txt (line 5))
+deploy-to-gke	Build and Push Docker Image	2026-11-05T09:37:06.3273904Z #9 5.588   Downloading pydantic-2.14.3-py3-none-any.whl.metadata (141 kB)
+deploy-to-gke	Build and Push Docker Image	2026-11-05T09:37:06.4802428Z #9 5.591      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 141.5/141.5 kB 156.3 MB/s eta 0:00:00
+deploy-to-gke	Build and Push Docker Image	2026-11-05T09:37:06.5361000Z #9 5.797 Collecting python-dotenv<2,>=0.19.0 (from mlflow-skinny==3.18.0->mlflow->-r requirements.txt (line 5))
+deploy-to-gke	Build and Push Docker Image	2026-11-05T09:37:06.6577528Z #9 5.804   Downloading python_dotenv-1.2.4-py3-none-any.whl.metadata (29 kB)
+deploy-to-gke	Build and Push Docker Image	2026-11-05T09:37:06.6578269Z #9 5.821 Collecting python-multipart<1,>=0.0.18 (from mlflow-skinny==3.18.0->mlflow->-r requirements.txt (line 5))
+deploy-to-gke	Build and Push Docker Image	2026-11-05T09:37:06.6579212Z #9 5.827   Downloading python_multipart-0.0.33-py3-none-any.whl.metadata (6.3 kB)
+deploy-to-gke	Build and Push Docker Image	2026-11-05T09:37:06.6579901Z #9 5.856 Collecting pyyaml<7,>=5.1 (from mlflow-skinny==3.18.0->mlflow->-r requirements.txt (line 5))
+deploy-to-gke	Build and Push Docker Image	2026-11-05T09:37:06.6580711Z #9 5.863   Downloading pyyaml-6.0.3-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl.metadata (2.4 kB)
+deploy-to-gke	Build and Push Docker Image	2026-11-05T09:37:06.6581523Z #9 5.883 Collecting sqlparse<1,>=0.4.0 (from mlflow-skinny==3.18.0->mlflow->-r requirements.txt (line 5))
+deploy-to-gke	Build and Push Docker Image	2026-11-05T09:37:06.6582641Z #9 5.889   Downloading sqlparse-0.6.1-py3-none-any.whl.metadata (6.9 kB)
+deploy-to-gke	Build and Push Docker Image	2026-11-05T09:37:06.6583132Z #9 5.919 Collecting starlette<2 (from mlflow-skinny==3.18.0->mlflow->-r requirements.txt (line 5))
+deploy-to-gke	Build and Push Docker Image	2026-11-05T09:37:06.7792968Z #9 5.926   Downloading starlette-1.10.0-py3-none-any.whl.metadata (6.6 kB)
+deploy-to-gke	Build and Push Docker Image	2026-11-05T09:37:06.7793768Z #9 5.945 Collecting typing-extensions<5,>=4.0.0 (from mlflow-skinny==3.18.0->mlflow->-r requirements.txt (line 5))
+deploy-to-gke	Build and Push Docker Image	2026-11-05T09:37:06.7794575Z #9 5.951   Downloading typing_extensions-4.16.0-py3-none-any.whl.metadata (3.3 kB)
+deploy-to-gke	Build and Push Docker Image	2026-11-05T09:37:06.7795174Z #9 5.979 Collecting uvicorn<1 (from mlflow-skinny==3.18.0->mlflow->-r requirements.txt (line 5))
+deploy-to-gke	Build and Push Docker Image	2026-11-05T09:37:06.7795767Z #9 5.986   Downloading uvicorn-0.54.0-py3-none-any.whl.metadata (6.6 kB)
+deploy-to-gke	Build and Push Docker Image	2026-11-05T09:37:06.7796899Z #9 6.040 Collecting contourpy>=1.0.1 (from matplotlib->-r requirements.txt (line 6))
+deploy-to-gke	Build and Push Docker Image	2026-11-05T09:37:06.9408831Z #9 6.047   Downloading contourpy-1.3.3-cp311-cp311-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl.metadata (5.5 kB)
+deploy-to-gke	Build and Push Docker Image	2026-11-05T09:37:06.9409676Z #9 6.063 Collecting cycler>=0.10 (from matplotlib->-r requirements.txt (line 6))
+deploy-to-gke	Build and Push Docker Image	2026-11-05T09:37:06.9410208Z #9 6.070   Downloading cycler-0.12.1-py3-none-any.whl.metadata (3.8 kB)
+deploy-to-gke	Build and Push Docker Image	2026-11-05T09:37:06.9410755Z #9 6.202 Collecting fonttools>=4.28.2 (from matplotlib->-r requirements.txt (line 6))
+deploy-to-gke	Build and Push Docker Image	2026-11-05T09:37:07.1213387Z #9 6.209   Downloading fonttools-4.68.0-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.whl.metadata (139 kB)
+deploy-to-gke	Build and Push Docker Image	2026-11-05T09:37:07.1214867Z #9 6.210      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 139.9/139.9 kB 542.0 MB/s eta 0:00:00
+deploy-to-gke	Build and Push Docker Image	2026-11-05T09:37:07.1215631Z #9 6.259 Collecting kiwisolver>=1.3.1 (from matplotlib->-r requirements.txt (line 6))
+deploy-to-gke	Build and Push Docker Image	2026-11-05T09:37:07.1216509Z #9 6.266   Downloading kiwisolver-1.5.1-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.whl.metadata (5.2 kB)
+deploy-to-gke	Build and Push Docker Image	2026-11-05T09:37:07.1217324Z #9 6.382 Collecting pillow>=9 (from matplotlib->-r requirements.txt (line 6))
+deploy-to-gke	Build and Push Docker Image	2026-11-05T09:37:07.3389765Z #9 6.389   Downloading pillow-13.0.0-cp311-cp311-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl.metadata (9.1 kB)
+deploy-to-gke	Build and Push Docker Image	2026-11-05T09:37:07.3390528Z #9 6.441 Collecting altair!=5.4.0,!=5.4.1,<7,>=5.0.0 (from streamlit->-r requirements.txt (line 9))
+deploy-to-gke	Build and Push Docker Image	2026-11-05T09:37:07.3391072Z #9 6.448   Downloading altair-6.3.0-py3-none-any.whl.metadata (11 kB)
+deploy-to-gke	Build and Push Docker Image	2026-11-05T09:37:07.3391575Z #9 6.472 Collecting pydeck<1,>=0.8.0b4 (from streamlit->-r requirements.txt (line 9))
+deploy-to-gke	Build and Push Docker Image	2026-11-05T09:37:07.3391957Z #9 6.479   Downloading pydeck-0.9.3-py2.py3-none-any.whl.metadata (4.2 kB)
+deploy-to-gke	Build and Push Docker Image	2026-11-05T09:37:07.3392295Z #9 6.600 Collecting websockets<18,>=12.0.0 (from streamlit->-r requirements.txt (line 9))
+deploy-to-gke	Build and Push Docker Image	2026-11-05T09:37:07.4427067Z #9 6.607   Downloading websockets-17.4-cp311-cp311-manylinux1_x86_64.manylinux_2_28_x86_64.manylinux_2_5_x86_64.whl.metadata (6.3 kB)
+deploy-to-gke	Build and Push Docker Image	2026-11-05T09:37:07.4427972Z #9 6.644 Collecting watchdog<7,>=2.1.5 (from streamlit->-r requirements.txt (line 9))
+deploy-to-gke	Build and Push Docker Image	2026-11-05T09:37:07.4428631Z #9 6.651   Downloading watchdog-6.0.0-py3-none-manylinux2014_x86_64.whl.metadata (44 kB)
+deploy-to-gke	Build and Push Docker Image	2026-11-05T09:37:07.4429513Z #9 6.652      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 44.3/44.3 kB 456.9 MB/s eta 0:00:00
+deploy-to-gke	Build and Push Docker Image	2026-11-05T09:37:07.4430097Z #9 6.679 Collecting aiohappyeyeballs>=2.5.0 (from aiohttp<4,>=3.7.0->mlflow->-r requirements.txt (line 5))
+deploy-to-gke	Build and Push Docker Image	2026-11-05T09:37:07.4430721Z #9 6.685   Downloading aiohappyeyeballs-2.7.1-py3-none-any.whl.metadata (5.9 kB)
+deploy-to-gke	Build and Push Docker Image	2026-11-05T09:37:07.4431312Z #9 6.697 Collecting aiosignal>=1.4.0 (from aiohttp<4,>=3.7.0->mlflow->-r requirements.txt (line 5))
+deploy-to-gke	Build and Push Docker Image	2026-11-05T09:37:07.4431850Z #9 6.704   Downloading aiosignal-1.4.0-py3-none-any.whl.metadata (3.7 kB)
+deploy-to-gke	Build and Push Docker Image	2026-11-05T09:37:07.6458784Z #9 6.749 Collecting frozenlist>=1.1.1 (from aiohttp<4,>=3.7.0->mlflow->-r requirements.txt (line 5))
+deploy-to-gke	Build and Push Docker Image	2026-11-05T09:37:07.6459408Z #9 6.756   Downloading frozenlist-1.8.0-cp311-cp311-manylinux1_x86_64.manylinux_2_28_x86_64.manylinux_2_5_x86_64.whl.metadata (20 kB)
+deploy-to-gke	Build and Push Docker Image	2026-11-05T09:37:07.9160927Z #9 7.177 Collecting multidict<8.0,>=4.5 (from aiohttp<4,>=3.7.0->mlflow->-r requirements.txt (line 5))
+deploy-to-gke	Build and Push Docker Image	2026-11-05T09:37:08.1282035Z #9 7.184   Downloading multidict-7.2.1-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl.metadata (6.1 kB)
+deploy-to-gke	Build and Push Docker Image	2026-11-05T09:37:08.1282627Z #9 7.232 Collecting propcache>=0.2.0 (from aiohttp<4,>=3.7.0->mlflow->-r requirements.txt (line 5))
+deploy-to-gke	Build and Push Docker Image	2026-11-05T09:37:08.1283106Z #9 7.239   Downloading propcache-0.5.4-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl.metadata (25 kB)
+deploy-to-gke	Build and Push Docker Image	2026-11-05T09:37:08.1378461Z #9 7.399 Collecting yarl<2.0,>=1.25.1 (from aiohttp<4,>=3.7.0->mlflow->-r requirements.txt (line 5))
+deploy-to-gke	Build and Push Docker Image	2026-11-05T09:37:08.2754624Z #9 7.406   Downloading yarl-1.25.1-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl.metadata (111 kB)
+deploy-to-gke	Build and Push Docker Image	2026-11-05T09:37:08.2756117Z #9 7.407      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 111.6/111.6 kB 544.0 MB/s eta 0:00:00
+deploy-to-gke	Build and Push Docker Image	2026-11-05T09:37:08.2756883Z #9 7.444 Collecting Mako (from alembic!=1.10.0,<2->mlflow->-r requirements.txt (line 5))
+deploy-to-gke	Build and Push Docker Image	2026-11-05T09:37:08.2757505Z #9 7.451   Downloading mako-1.4.3-py3-none-any.whl.metadata (2.9 kB)
+deploy-to-gke	Build and Push Docker Image	2026-11-05T09:37:08.2758065Z #9 7.491 Collecting jsonschema>=3.0 (from altair!=5.4.0,!=5.4.1,<7,>=5.0.0->streamlit->-r requirements.txt (line 9))
+deploy-to-gke	Build and Push Docker Image	2026-11-05T09:37:08.2758578Z #9 7.498   Downloading jsonschema-4.26.0-py3-none-any.whl.metadata (7.6 kB)
+deploy-to-gke	Build and Push Docker Image	2026-11-05T09:37:08.2758953Z #9 7.537 Collecting narwhals>=2.4.0 (from altair!=5.4.0,!=5.4.1,<7,>=5.0.0->streamlit->-r requirements.txt (line 9))
+deploy-to-gke	Build and Push Docker Image	2026-11-05T09:37:08.3953360Z #9 7.543   Downloading narwhals-2.28.0-py3-none-any.whl.metadata (15 kB)
+deploy-to-gke	Build and Push Docker Image	2026-11-05T09:37:08.3954073Z #9 7.562 Collecting idna>=2.8 (from anyio!=4.15.0,<5,>=3.6.2->mlflow-skinny==3.18.0->mlflow->-r requirements.txt (line 5))
+deploy-to-gke	Build and Push Docker Image	2026-11-05T09:37:08.3954897Z #9 7.569   Downloading idna-3.20-py3-none-any.whl.metadata (7.2 kB)
+deploy-to-gke	Build and Push Docker Image	2026-11-05T09:37:08.3955458Z #9 7.656 Collecting cffi>=2.0.0 (from cryptography<51,>=43.0.0->mlflow->-r requirements.txt (line 5))
+deploy-to-gke	Build and Push Docker Image	2026-11-05T09:37:08.5081813Z #9 7.663   Downloading cffi-2.1.1-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.whl.metadata (2.5 kB)
+deploy-to-gke	Build and Push Docker Image	2026-11-05T09:37:08.5082988Z #9 7.710 Collecting urllib3>=1.26.0 (from docker<8,>=4.0.0->mlflow->-r requirements.txt (line 5))
+deploy-to-gke	Build and Push Docker Image	2026-11-05T09:37:08.5083811Z #9 7.717   Downloading urllib3-2.8.0-py3-none-any.whl.metadata (7.4 kB)
+deploy-to-gke	Build and Push Docker Image	2026-11-05T09:37:08.5084721Z #9 7.744 Collecting dictdiffer>=0.8.1 (from dvc-data<3.19.0,>=3.18.2->dvc->-r requirements.txt (line 4))
+deploy-to-gke	Build and Push Docker Image	2026-11-05T09:37:08.5085369Z #9 7.751   Downloading dictdiffer-0.10.0-py3-none-any.whl.metadata (2.9 kB)
+deploy-to-gke	Build and Push Docker Image	2026-11-05T09:37:08.5085840Z #9 7.769 Collecting diskcache>=5.2.1 (from dvc-data<3.19.0,>=3.18.2->dvc->-r requirements.txt (line 4))
+deploy-to-gke	Build and Push Docker Image	2026-11-05T09:37:08.7011046Z #9 7.776   Downloading diskcache-5.6.3-py3-none-any.whl.metadata (20 kB)
+deploy-to-gke	Build and Push Docker Image	2026-11-05T09:37:08.7011567Z #9 7.802 Collecting sqltrie<1,>=0.11.0 (from dvc-data<3.19.0,>=3.18.2->dvc->-r requirements.txt (line 4))
+deploy-to-gke	Build and Push Docker Image	2026-11-05T09:37:08.7011946Z #9 7.812   Downloading sqltrie-0.11.3-py3-none-any.whl.metadata (3.5 kB)
+deploy-to-gke	Build and Push Docker Image	2026-11-05T09:37:08.7080386Z #9 7.969 Collecting orjson<4,>=3 (from dvc-data<3.19.0,>=3.18.2->dvc->-r requirements.txt (line 4))
+deploy-to-gke	Build and Push Docker Image	2026-11-05T09:37:08.8673209Z #9 7.976   Downloading orjson-3.13.0-cp311-cp311-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (42 kB)
+deploy-to-gke	Build and Push Docker Image	2026-11-05T09:37:08.8674433Z #9 7.978      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 42.2/42.2 kB 311.9 MB/s eta 0:00:00
+deploy-to-gke	Build and Push Docker Image	2026-11-05T09:37:09.0092245Z #9 8.270 Collecting aiohttp-retry>=2.5.0 (from dvc-http>=2.29.0->dvc->-r requirements.txt (line 4))
+deploy-to-gke	Build and Push Docker Image	2026-11-05T09:37:09.1238407Z #9 8.277   Downloading aiohttp_retry-2.9.1-py3-none-any.whl.metadata (8.8 kB)
+deploy-to-gke	Build and Push Docker Image	2026-11-05T09:37:09.1239102Z #9 8.361 Collecting billiard<5.0,>=4.2.1 (from celery->dvc->-r requirements.txt (line 4))
+deploy-to-gke	Build and Push Docker Image	2026-11-05T09:37:09.1239740Z #9 8.367   Downloading billiard-4.3.2-py3-none-any.whl.metadata (5.0 kB)
+deploy-to-gke	Build and Push Docker Image	2026-11-05T09:37:09.1240303Z #9 8.385 Collecting vine<6.0,>=5.1.0 (from celery->dvc->-r requirements.txt (line 4))
+deploy-to-gke	Build and Push Docker Image	2026-11-05T09:37:09.2391888Z #9 8.391   Downloading vine-5.1.0-py3-none-any.whl.metadata (2.7 kB)
+deploy-to-gke	Build and Push Docker Image	2026-11-05T09:37:09.2392581Z #9 8.405 Collecting click-didyoumean>=0.3.0 (from celery->dvc->-r requirements.txt (line 4))
+deploy-to-gke	Build and Push Docker Image	2026-11-05T09:37:09.2393212Z #9 8.412   Downloading click_didyoumean-0.3.1-py3-none-any.whl.metadata (3.9 kB)
+deploy-to-gke	Build and Push Docker Image	2026-11-05T09:37:09.2393785Z #9 8.425 Collecting click-repl>=0.2.0 (from celery->dvc->-r requirements.txt (line 4))
+deploy-to-gke	Build and Push Docker Image	2026-11-05T09:37:09.2394512Z #9 8.431   Downloading click_repl-0.4.1-py3-none-any.whl.metadata (3.7 kB)
+deploy-to-gke	Build and Push Docker Image	2026-11-05T09:37:09.2395071Z #9 8.442 Collecting click-plugins>=1.1.1 (from celery->dvc->-r requirements.txt (line 4))
+deploy-to-gke	Build and Push Docker Image	2026-11-05T09:37:09.2395645Z #9 8.448   Downloading click_plugins-1.1.1.2-py2.py3-none-any.whl.metadata (6.5 kB)
+deploy-to-gke	Build and Push Docker Image	2026-11-05T09:37:09.2396325Z #9 8.463 Collecting tzlocal (from celery->dvc->-r requirements.txt (line 4))
+deploy-to-gke	Build and Push Docker Image	2026-11-05T09:37:09.2396640Z #9 8.470   Downloading tzlocal-5.4.5-py3-none-any.whl.metadata (7.7 kB)
+deploy-to-gke	Build and Push Docker Image	2026-11-05T09:37:09.2396980Z #9 8.500 Collecting atpublic (from flufl.lock<10,>=8.1.0->dvc->-r requirements.txt (line 4))
+deploy-to-gke	Build and Push Docker Image	2026-11-05T09:37:09.3461181Z #9 8.507   Downloading atpublic-9.0.0-py3-none-any.whl.metadata (2.6 kB)
+deploy-to-gke	Build and Push Docker Image	2026-11-05T09:37:09.3461917Z #9 8.588 Collecting graphql-core<3.3,>=3.1 (from graphene<4->mlflow->-r requirements.txt (line 5))
+deploy-to-gke	Build and Push Docker Image	2026-11-05T09:37:09.3462663Z #9 8.594   Downloading graphql_core-3.2.13-py3-none-any.whl.metadata (11 kB)
+deploy-to-gke	Build and Push Docker Image	2026-11-05T09:37:09.3463357Z #9 8.607 Collecting graphql-relay<3.3,>=3.1 (from graphene<4->mlflow->-r requirements.txt (line 5))
+deploy-to-gke	Build and Push Docker Image	2026-11-05T09:37:09.4478986Z #9 8.614   Downloading graphql_relay-3.2.0-py3-none-any.whl.metadata (12 kB)
+deploy-to-gke	Build and Push Docker Image	2026-11-05T09:37:09.4479640Z #9 8.619 Collecting python-dateutil>=2.8.2 (from pandas==2.2.2->-r requirements.txt (line 2))
+deploy-to-gke	Build and Push Docker Image	2026-11-05T09:37:09.4480229Z #9 8.626   Downloading python_dateutil-2.9.0.post0-py2.py3-none-any.whl.metadata (8.4 kB)
+deploy-to-gke	Build and Push Docker Image	2026-11-05T09:37:09.4480816Z #9 8.655 Collecting entrypoints (from gto<2,>=1.6.0->dvc->-r requirements.txt (line 4))
+deploy-to-gke	Build and Push Docker Image	2026-11-05T09:37:09.4481317Z #9 8.661   Downloading entrypoints-0.4.2-py3-none-any.whl.metadata (2.6 kB)
+deploy-to-gke	Build and Push Docker Image	2026-11-05T09:37:09.4481846Z #9 8.678 Collecting pydantic-settings>=2 (from gto<2,>=1.6.0->dvc->-r requirements.txt (line 4))
+deploy-to-gke	Build and Push Docker Image	2026-11-05T09:37:09.4482377Z #9 8.684   Downloading pydantic_settings-2.16.2-py3-none-any.whl.metadata (4.0 kB)
+deploy-to-gke	Build and Push Docker Image	2026-11-05T09:37:09.4482884Z #9 8.703 Collecting semver>=2.13.0 (from gto<2,>=1.6.0->dvc->-r requirements.txt (line 4))
+deploy-to-gke	Build and Push Docker Image	2026-11-05T09:37:09.4483357Z #9 8.709   Downloading semver-3.1.0-py3-none-any.whl.metadata (6.9 kB)
+deploy-to-gke	Build and Push Docker Image	2026-11-05T09:37:09.6618593Z #9 8.735 Collecting omegaconf (from dvc->-r requirements.txt (line 4))
+deploy-to-gke	Build and Push Docker Image	2026-11-05T09:37:09.6619146Z #9 8.741   Downloading omegaconf-2.3.1-py3-none-any.whl.metadata (4.5 kB)
+deploy-to-gke	Build and Push Docker Image	2026-11-05T09:37:09.6619544Z #9 8.753 Collecting antlr4-python3-runtime==4.9.* (from hydra-core>=1.1->dvc->-r requirements.txt (line 4))
+deploy-to-gke	Build and Push Docker Image	2026-11-05T09:37:09.6619953Z #9 8.760   Downloading antlr4-python3-runtime-4.9.3.tar.gz (117 kB)
+deploy-to-gke	Build and Push Docker Image	2026-11-05T09:37:09.6620553Z #9 8.761      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 117.0/117.0 kB 587.0 MB/s eta 0:00:00
+deploy-to-gke	Build and Push Docker Image	2026-11-05T09:37:09.6620841Z #9 8.773   Preparing metadata (setup.py): started
+deploy-to-gke	Build and Push Docker Image	2026-11-05T09:37:09.7230550Z #9 8.984   Preparing metadata (setup.py): finished with status 'done'
+deploy-to-gke	Build and Push Docker Image	2026-11-05T09:37:09.8424062Z #9 9.009 Collecting appdirs (from iterative-telemetry>=0.0.7->dvc->-r requirements.txt (line 4))
+deploy-to-gke	Build and Push Docker Image	2026-11-05T09:37:09.8424743Z #9 9.016   Downloading appdirs-1.4.4-py2.py3-none-any.whl.metadata (9.0 kB)
+deploy-to-gke	Build and Push Docker Image	2026-11-05T09:37:09.8425130Z #9 9.042 Collecting filelock (from iterative-telemetry>=0.0.7->dvc->-r requirements.txt (line 4))
+deploy-to-gke	Build and Push Docker Image	2026-11-05T09:37:09.8425506Z #9 9.048   Downloading filelock-4.2.9-py3-none-any.whl.metadata (2.3 kB)
+deploy-to-gke	Build and Push Docker Image	2026-11-05T09:37:09.8425832Z #9 9.104 Collecting amqp>=5.4.2 (from kombu->dvc->-r requirements.txt (line 4))
+deploy-to-gke	Build and Push Docker Image	2026-11-05T09:37:09.9807791Z #9 9.110   Downloading amqp-5.4.2-py3-none-any.whl.metadata (9.4 kB)
+deploy-to-gke	Build and Push Docker Image	2026-11-05T09:37:09.9808288Z #9 9.242 Collecting six>=1.5 (from python-dateutil>=2.8.2->pandas==2.2.2->-r requirements.txt (line 2))
+deploy-to-gke	Build and Push Docker Image	2026-11-05T09:37:10.0892844Z #9 9.248   Downloading six-1.17.0-py2.py3-none-any.whl.metadata (1.7 kB)
+deploy-to-gke	Build and Push Docker Image	2026-11-05T09:37:10.0893320Z #9 9.350 Collecting charset_normalizer<4,>=2 (from requests>=2.22->dvc->-r requirements.txt (line 4))
+deploy-to-gke	Build and Push Docker Image	2026-11-05T09:37:10.1919004Z #9 9.357   Downloading charset_normalizer-3.5.2-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl.metadata (46 kB)
+deploy-to-gke	Build and Push Docker Image	2026-11-05T09:37:10.1919906Z #9 9.359      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 46.4/46.4 kB 395.0 MB/s eta 0:00:00
+deploy-to-gke	Build and Push Docker Image	2026-11-05T09:37:10.1920268Z #9 9.385 Collecting certifi>=2023.5.7 (from requests>=2.22->dvc->-r requirements.txt (line 4))
+deploy-to-gke	Build and Push Docker Image	2026-11-05T09:37:10.1920637Z #9 9.392   Downloading certifi-2026.10.23-py3-none-any.whl.metadata (2.5 kB)
+deploy-to-gke	Build and Push Docker Image	2026-11-05T09:37:10.1921041Z #9 9.422 Collecting markdown-it-py>=2.2.0 (from rich>=12->dvc->-r requirements.txt (line 4))
+deploy-to-gke	Build and Push Docker Image	2026-11-05T09:37:10.1921392Z #9 9.428   Downloading markdown_it_py-4.2.0-py3-none-any.whl.metadata (7.4 kB)
+deploy-to-gke	Build and Push Docker Image	2026-11-05T09:37:10.1921758Z #9 9.447 Collecting pygments<3.0.0,>=2.13.0 (from rich>=12->dvc->-r requirements.txt (line 4))
+deploy-to-gke	Build and Push Docker Image	2026-11-05T09:37:10.1922098Z #9 9.453   Downloading pygments-2.21.0-py3-none-any.whl.metadata (2.5 kB)
+deploy-to-gke	Build and Push Docker Image	2026-11-05T09:37:10.3028891Z #9 9.564 Collecting pygit2>=1.14.0 (from scmrepo<4,>=3.5.2->dvc->-r requirements.txt (line 4))
+deploy-to-gke	Build and Push Docker Image	2026-11-05T09:37:10.4919806Z #9 9.571   Downloading pygit2-1.21.0-cp311-cp311-manylinux_2_26_x86_64.manylinux_2_28_x86_64.whl.metadata (3.7 kB)
+deploy-to-gke	Build and Push Docker Image	2026-11-05T09:37:10.4920342Z #9 9.592 Collecting asyncssh<3,>=2.13.1 (from scmrepo<4,>=3.5.2->dvc->-r requirements.txt (line 4))
+deploy-to-gke	Build and Push Docker Image	2026-11-05T09:37:10.4920711Z #9 9.599   Downloading asyncssh-2.24.1-py3-none-any.whl.metadata (9.8 kB)
+deploy-to-gke	Build and Push Docker Image	2026-11-05T09:37:10.4921068Z #9 9.653 Collecting prettytable>=3.9 (from skops<1->mlflow->-r requirements.txt (line 5))
+deploy-to-gke	Build and Push Docker Image	2026-11-05T09:37:10.4921456Z #9 9.660   Downloading prettytable-3.18.0-py3-none-any.whl.metadata (37 kB)
+deploy-to-gke	Build and Push Docker Image	2026-11-05T09:37:10.4921888Z #9 9.753 Collecting h11>=0.8 (from uvicorn<1->mlflow-skinny==3.18.0->mlflow->-r requirements.txt (line 5))
+deploy-to-gke	Build and Push Docker Image	2026-11-05T09:37:10.6292053Z #9 9.759   Downloading h11-0.16.0-py3-none-any.whl.metadata (8.3 kB)
+deploy-to-gke	Build and Push Docker Image	2026-11-05T09:37:10.6292510Z #9 9.890 Collecting pycparser (from cffi>=2.0.0->cryptography<51,>=43.0.0->mlflow->-r requirements.txt (line 5))
+deploy-to-gke	Build and Push Docker Image	2026-11-05T09:37:10.7898651Z #9 9.897   Downloading pycparser-3.12-py3-none-any.whl.metadata (9.7 kB)
+deploy-to-gke	Build and Push Docker Image	2026-11-05T09:37:10.7899691Z #9 9.959 Collecting prompt_toolkit>=3.0.36 (from click-repl>=0.2.0->celery->dvc->-r requirements.txt (line 4))
+deploy-to-gke	Build and Push Docker Image	2026-11-05T09:37:10.7900505Z #9 9.966   Downloading prompt_toolkit-3.0.53-py3-none-any.whl.metadata (6.4 kB)
+deploy-to-gke	Build and Push Docker Image	2026-11-05T09:37:10.7901371Z #9 10.05 Collecting google-auth~=2.0 (from databricks-sdk<1,>=0.20.0->mlflow-skinny==3.18.0->mlflow->-r requirements.txt (line 5))
+deploy-to-gke	Build and Push Docker Image	2026-11-05T09:37:10.8926558Z #9 10.06   Downloading google_auth-2.62.1-py3-none-any.whl.metadata (6.0 kB)
+deploy-to-gke	Build and Push Docker Image	2026-11-05T09:37:10.8927625Z #9 10.15 Collecting typing-inspection>=0.4.2 (from fastapi<1->mlflow-skinny==3.18.0->mlflow->-r requirements.txt (line 5))
+deploy-to-gke	Build and Push Docker Image	2026-11-05T09:37:10.8928823Z #9 10.15   Downloading typing_inspection-0.4.5-py3-none-any.whl.metadata (2.6 kB)
+deploy-to-gke	Build and Push Docker Image	2026-11-05T09:37:11.0640518Z #9 10.17 Collecting annotated-doc>=0.0.2 (from fastapi<1->mlflow-skinny==3.18.0->mlflow->-r requirements.txt (line 5))
+deploy-to-gke	Build and Push Docker Image	2026-11-05T09:37:11.0641314Z #9 10.17   Downloading annotated_doc-0.0.5-py3-none-any.whl.metadata (6.5 kB)
+deploy-to-gke	Build and Push Docker Image	2026-11-05T09:37:11.0641966Z #9 10.25 Collecting gitdb<5,>=4.0.1 (from gitpython<4,>=3.1.9->mlflow-skinny==3.18.0->mlflow->-r requirements.txt (line 5))
+deploy-to-gke	Build and Push Docker Image	2026-11-05T09:37:11.0642630Z #9 10.25   Downloading gitdb-4.0.12-py3-none-any.whl.metadata (1.2 kB)
+deploy-to-gke	Build and Push Docker Image	2026-11-05T09:37:11.2869138Z #9 10.33 Collecting zipp>=3.20 (from importlib_metadata!=4.7.0,<11,>=3.7.0->mlflow-skinny==3.18.0->mlflow->-r requirements.txt (line 5))
+deploy-to-gke	Build and Push Docker Image	2026-11-05T09:37:11.2870592Z #9 10.33   Downloading zipp-4.1.2-py3-none-any.whl.metadata (3.6 kB)
+deploy-to-gke	Build and Push Docker Image	2026-11-05T09:37:11.2871392Z #9 10.36 Collecting jsonschema-specifications>=2023.03.6 (from jsonschema>=3.0->altair!=5.4.0,!=5.4.1,<7,>=5.0.0->streamlit->-r requirements.txt (line 9))
+deploy-to-gke	Build and Push Docker Image	2026-11-05T09:37:11.2872292Z #9 10.37   Downloading jsonschema_specifications-2025.9.1-py3-none-any.whl.metadata (2.9 kB)
+deploy-to-gke	Build and Push Docker Image	2026-11-05T09:37:11.2873097Z #9 10.39 Collecting referencing>=0.28.4 (from jsonschema>=3.0->altair!=5.4.0,!=5.4.1,<7,>=5.0.0->streamlit->-r requirements.txt (line 9))
+deploy-to-gke	Build and Push Docker Image	2026-11-05T09:37:11.2873834Z #9 10.40   Downloading referencing-0.37.0-py3-none-any.whl.metadata (2.8 kB)
+deploy-to-gke	Build and Push Docker Image	2026-11-05T09:37:11.3033854Z #9 10.56 Collecting rpds-py>=0.25.0 (from jsonschema>=3.0->altair!=5.4.0,!=5.4.1,<7,>=5.0.0->streamlit->-r requirements.txt (line 9))
+deploy-to-gke	Build and Push Docker Image	2026-11-05T09:37:11.4556459Z #9 10.57   Downloading rpds_py-2026.9.1-cp311-cp311-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (4.1 kB)
+deploy-to-gke	Build and Push Docker Image	2026-11-05T09:37:11.4557360Z #9 10.60 Collecting mdurl~=0.1 (from markdown-it-py>=2.2.0->rich>=12->dvc->-r requirements.txt (line 4))
+deploy-to-gke	Build and Push Docker Image	2026-11-05T09:37:11.4557995Z #9 10.61   Downloading mdurl-0.1.2-py3-none-any.whl.metadata (1.6 kB)
+deploy-to-gke	Build and Push Docker Image	2026-11-05T09:37:11.4558775Z #9 10.72 Collecting opentelemetry-semantic-conventions==0.66b2 (from opentelemetry-sdk<3,>=1.9.0->mlflow-skinny==3.18.0->mlflow->-r requirements.txt (line 5))
+deploy-to-gke	Build and Push Docker Image	2026-11-05T09:37:11.5615946Z #9 10.72   Downloading opentelemetry_semantic_conventions-0.66b2-py3-none-any.whl.metadata (2.4 kB)
+deploy-to-gke	Build and Push Docker Image	2026-11-05T09:37:11.5616744Z #9 10.77 Collecting wcwidth>=0.3.5 (from prettytable>=3.9->skops<1->mlflow->-r requirements.txt (line 5))
+deploy-to-gke	Build and Push Docker Image	2026-11-05T09:37:11.5617453Z #9 10.78   Downloading wcwidth-0.9.4-cp310-abi3-manylinux2014_x86_64.manylinux_2_17_x86_64.whl.metadata (23 kB)
+deploy-to-gke	Build and Push Docker Image	2026-11-05T09:37:11.5618230Z #9 10.82 Collecting annotated-types>=0.6.0 (from pydantic<3,>=2.0.0->mlflow-skinny==3.18.0->mlflow->-r requirements.txt (line 5))
+deploy-to-gke	Build and Push Docker Image	2026-11-05T09:37:11.5618912Z #9 10.82   Downloading annotated_types-0.8.0-py3-none-any.whl.metadata (15 kB)
+deploy-to-gke	Build and Push Docker Image	2026-11-05T09:37:12.3348629Z #9 11.60 Collecting pydantic-core==2.50.4 (from pydantic<3,>=2.0.0->mlflow-skinny==3.18.0->mlflow->-r requirements.txt (line 5))
+deploy-to-gke	Build and Push Docker Image	2026-11-05T09:37:12.4922914Z #9 11.60   Downloading pydantic_core-2.50.4-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.whl.metadata (6.6 kB)
+deploy-to-gke	Build and Push Docker Image	2026-11-05T09:37:12.6588146Z #9 11.92 Collecting smmap<6,>=3.0.1 (from gitdb<5,>=4.0.1->gitpython<4,>=3.1.9->mlflow-skinny==3.18.0->mlflow->-r requirements.txt (line 5))
+deploy-to-gke	Build and Push Docker Image	2026-11-05T09:37:12.8668026Z #9 11.93   Downloading smmap-5.0.3-py3-none-any.whl.metadata (4.6 kB)
+deploy-to-gke	Build and Push Docker Image	2026-11-05T09:37:12.8668909Z #9 11.97 Collecting pyasn1-modules>=0.2.1 (from google-auth~=2.0->databricks-sdk<1,>=0.20.0->mlflow-skinny==3.18.0->mlflow->-r requirements.txt (line 5))
+deploy-to-gke	Build and Push Docker Image	2026-11-05T09:37:12.8669693Z #9 11.98   Downloading pyasn1_modules-0.4.2-py3-none-any.whl.metadata (3.5 kB)
+deploy-to-gke	Build and Push Docker Image	2026-11-05T09:37:12.8805692Z #9 12.14 Collecting pyasn1<0.7.0,>=0.6.1 (from pyasn1-modules>=0.2.1->google-auth~=2.0->databricks-sdk<1,>=0.20.0->mlflow-skinny==3.18.0->mlflow->-r requirements.txt (line 5))
+deploy-to-gke	Build and Push Docker Image	2026-11-05T09:37:12.9853241Z #9 12.15   Downloading pyasn1-0.6.5-py3-none-any.whl.metadata (8.4 kB)
+deploy-to-gke	Build and Push Docker Image	2026-11-05T09:37:12.9854433Z #9 12.19 Downloading scikit_learn-1.3.0-cp311-cp311-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (10.9 MB)
+deploy-to-gke	Build and Push Docker Image	2026-11-05T09:37:12.9855439Z #9 12.24    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 10.9/10.9 MB 279.3 MB/s eta 0:00:00
+deploy-to-gke	Build and Push Docker Image	2026-11-05T09:37:12.9856075Z #9 12.25 Downloading pandas-2.2.2-cp311-cp311-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (13.0 MB)
+deploy-to-gke	Build and Push Docker Image	2026-11-05T09:37:13.0877423Z #9 12.30    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 13.0/13.0 MB 235.8 MB/s eta 0:00:00
+deploy-to-gke	Build and Push Docker Image	2026-11-05T09:37:13.0877926Z #9 12.31 Downloading numpy-1.26.4-cp311-cp311-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (18.3 MB)
+deploy-to-gke	Build and Push Docker Image	2026-11-05T09:37:13.1936445Z #9 12.35    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 18.3/18.3 MB 500.5 MB/s eta 0:00:00
+deploy-to-gke	Build and Push Docker Image	2026-11-05T09:37:13.1936867Z #9 12.36 Downloading flask-3.1.3-py3-none-any.whl (103 kB)
+deploy-to-gke	Build and Push Docker Image	2026-11-05T09:37:13.1937491Z #9 12.36    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 103.4/103.4 kB 486.4 MB/s eta 0:00:00
+deploy-to-gke	Build and Push Docker Image	2026-11-05T09:37:13.1937780Z #9 12.36 Downloading dvc-3.67.1-py3-none-any.whl (470 kB)
+deploy-to-gke	Build and Push Docker Image	2026-11-05T09:37:13.1938120Z #9 12.37    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 470.1/470.1 kB 238.1 MB/s eta 0:00:00
+deploy-to-gke	Build and Push Docker Image	2026-11-05T09:37:13.1938409Z #9 12.37 Downloading mlflow-3.18.0-py3-none-any.whl (12.6 MB)
+deploy-to-gke	Build and Push Docker Image	2026-11-05T09:37:13.1938734Z #9 12.39    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 12.6/12.6 MB 626.0 MB/s eta 0:00:00
+deploy-to-gke	Build and Push Docker Image	2026-11-05T09:37:13.1939025Z #9 12.40 Downloading mlflow_skinny-3.18.0-py3-none-any.whl (4.4 MB)
+deploy-to-gke	Build and Push Docker Image	2026-11-05T09:37:13.1939366Z #9 12.41    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 4.4/4.4 MB 588.6 MB/s eta 0:00:00
+deploy-to-gke	Build and Push Docker Image	2026-11-05T09:37:13.1939662Z #9 12.42 Downloading mlflow_tracing-3.18.0-py3-none-any.whl (2.1 MB)
+deploy-to-gke	Build and Push Docker Image	2026-11-05T09:37:13.1939999Z #9 12.42    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 2.1/2.1 MB 647.1 MB/s eta 0:00:00
+deploy-to-gke	Build and Push Docker Image	2026-11-05T09:37:13.1940373Z #9 12.43 Downloading matplotlib-3.11.2-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.whl (9.9 MB)
+deploy-to-gke	Build and Push Docker Image	2026-11-05T09:37:13.2998461Z #9 12.45    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 9.9/9.9 MB 418.7 MB/s eta 0:00:00
+deploy-to-gke	Build and Push Docker Image	2026-11-05T09:37:13.2998920Z #9 12.46 Downloading seaborn-0.13.2-py3-none-any.whl (294 kB)
+deploy-to-gke	Build and Push Docker Image	2026-11-05T09:37:13.2999267Z #9 12.46    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 294.9/294.9 kB 635.4 MB/s eta 0:00:00
+deploy-to-gke	Build and Push Docker Image	2026-11-05T09:37:13.2999557Z #9 12.47 Downloading streamlit-1.66.1-py3-none-any.whl (10.4 MB)
+deploy-to-gke	Build and Push Docker Image	2026-11-05T09:37:13.2999895Z #9 12.49    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 10.4/10.4 MB 446.6 MB/s eta 0:00:00
+deploy-to-gke	Build and Push Docker Image	2026-11-05T09:37:13.3000301Z #9 12.50 Downloading aiohttp-3.14.5-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl (1.9 MB)
+deploy-to-gke	Build and Push Docker Image	2026-11-05T09:37:13.3000752Z #9 12.51    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1.9/1.9 MB 462.6 MB/s eta 0:00:00
+deploy-to-gke	Build and Push Docker Image	2026-11-05T09:37:13.3011263Z #9 12.51 Downloading alembic-1.20.1-py3-none-any.whl (270 kB)
+deploy-to-gke	Build and Push Docker Image	2026-11-05T09:37:13.3011676Z #9 12.52    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 270.4/270.4 kB 608.5 MB/s eta 0:00:00
+deploy-to-gke	Build and Push Docker Image	2026-11-05T09:37:13.3011972Z #9 12.52 Downloading altair-6.3.0-py3-none-any.whl (797 kB)
+deploy-to-gke	Build and Push Docker Image	2026-11-05T09:37:13.3012555Z #9 12.52    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 797.2/797.2 kB 386.5 MB/s eta 0:00:00
+deploy-to-gke	Build and Push Docker Image	2026-11-05T09:37:13.3012842Z #9 12.53 Downloading anyio-4.16.0-py3-none-any.whl (134 kB)
+deploy-to-gke	Build and Push Docker Image	2026-11-05T09:37:13.3013182Z #9 12.53    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 134.5/134.5 kB 530.2 MB/s eta 0:00:00
+deploy-to-gke	Build and Push Docker Image	2026-11-05T09:37:13.3013462Z #9 12.54 Downloading attrs-26.1.0-py3-none-any.whl (67 kB)
+deploy-to-gke	Build and Push Docker Image	2026-11-05T09:37:13.3013792Z #9 12.54    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 67.5/67.5 kB 529.7 MB/s eta 0:00:00
+deploy-to-gke	Build and Push Docker Image	2026-11-05T09:37:13.3014088Z #9 12.55 Downloading blinker-1.9.0-py3-none-any.whl (8.5 kB)
+deploy-to-gke	Build and Push Docker Image	2026-11-05T09:37:13.3014555Z #9 12.55 Downloading click-8.5.0-py3-none-any.whl (125 kB)
+deploy-to-gke	Build and Push Docker Image	2026-11-05T09:37:13.3014886Z #9 12.55    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 125.3/125.3 kB 538.1 MB/s eta 0:00:00
+deploy-to-gke	Build and Push Docker Image	2026-11-05T09:37:13.3015320Z #9 12.56 Downloading colorama-0.4.6-py2.py3-none-any.whl (25 kB)
+deploy-to-gke	Build and Push Docker Image	2026-11-05T09:37:13.3999454Z #9 12.57 Downloading configobj-5.0.9-py2.py3-none-any.whl (35 kB)
+deploy-to-gke	Build and Push Docker Image	2026-11-05T09:37:13.4000473Z #9 12.57 Downloading contourpy-1.3.3-cp311-cp311-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl (355 kB)
+deploy-to-gke	Build and Push Docker Image	2026-11-05T09:37:13.4001519Z #9 12.58    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 355.2/355.2 kB 620.6 MB/s eta 0:00:00
+deploy-to-gke	Build and Push Docker Image	2026-11-05T09:37:13.4002279Z #9 12.58 Downloading cryptography-50.0.2-cp311-abi3-manylinux_2_34_x86_64.whl (4.8 MB)
+deploy-to-gke	Build and Push Docker Image	2026-11-05T09:37:13.4003207Z #9 12.60    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 4.8/4.8 MB 398.0 MB/s eta 0:00:00
+deploy-to-gke	Build and Push Docker Image	2026-11-05T09:37:13.4003871Z #9 12.60 Downloading cycler-0.12.1-py3-none-any.whl (8.3 kB)
+deploy-to-gke	Build and Push Docker Image	2026-11-05T09:37:13.4004562Z #9 12.61 Downloading distro-1.9.0-py3-none-any.whl (20 kB)
+deploy-to-gke	Build and Push Docker Image	2026-11-05T09:37:13.4004971Z #9 12.62 Downloading docker-7.2.0-py3-none-any.whl (148 kB)
+deploy-to-gke	Build and Push Docker Image	2026-11-05T09:37:13.4005544Z #9 12.62    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 148.8/148.8 kB 609.4 MB/s eta 0:00:00
+deploy-to-gke	Build and Push Docker Image	2026-11-05T09:37:13.4006021Z #9 12.62 Downloading dpath-2.2.0-py3-none-any.whl (17 kB)
+deploy-to-gke	Build and Push Docker Image	2026-11-05T09:37:13.4006434Z #9 12.63 Downloading dvc_data-3.18.3-py3-none-any.whl (79 kB)
+deploy-to-gke	Build and Push Docker Image	2026-11-05T09:37:13.4006957Z #9 12.63    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 79.3/79.3 kB 570.9 MB/s eta 0:00:00
+deploy-to-gke	Build and Push Docker Image	2026-11-05T09:37:13.4007434Z #9 12.64 Downloading dvc_http-2.32.0-py3-none-any.whl (12 kB)
+deploy-to-gke	Build and Push Docker Image	2026-11-05T09:37:13.4007869Z #9 12.64 Downloading dvc_objects-5.2.0-py3-none-any.whl (33 kB)
+deploy-to-gke	Build and Push Docker Image	2026-11-05T09:37:13.4008318Z #9 12.65 Downloading dvc_render-1.0.2-py3-none-any.whl (22 kB)
+deploy-to-gke	Build and Push Docker Image	2026-11-05T09:37:13.4008767Z #9 12.66 Downloading dvc_studio_client-0.23.0-py3-none-any.whl (16 kB)
+deploy-to-gke	Build and Push Docker Image	2026-11-05T09:37:13.4009230Z #9 12.66 Downloading dvc_task-0.40.2-py3-none-any.whl (21 kB)
+deploy-to-gke	Build and Push Docker Image	2026-11-05T09:37:13.5009497Z #9 12.67 Downloading celery-5.6.3-py3-none-any.whl (451 kB)
+deploy-to-gke	Build and Push Docker Image	2026-11-05T09:37:13.5010108Z #9 12.67    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 451.2/451.2 kB 628.1 MB/s eta 0:00:00
+deploy-to-gke	Build and Push Docker Image	2026-11-05T09:37:13.5010440Z #9 12.68 Downloading flask_cors-6.0.5-py3-none-any.whl (16 kB)
+deploy-to-gke	Build and Push Docker Image	2026-11-05T09:37:13.5010729Z #9 12.68 Downloading flatten_dict-0.5.0-py3-none-any.whl (9.9 kB)
+deploy-to-gke	Build and Push Docker Image	2026-11-05T09:37:13.5011012Z #9 12.69 Downloading flufl_lock-9.2.0-py3-none-any.whl (11 kB)
+deploy-to-gke	Build and Push Docker Image	2026-11-05T09:37:13.5011393Z #9 12.69 Downloading fonttools-4.68.0-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.whl (5.5 MB)
+deploy-to-gke	Build and Push Docker Image	2026-11-05T09:37:13.5011822Z #9 12.71    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 5.5/5.5 MB 437.2 MB/s eta 0:00:00
+deploy-to-gke	Build and Push Docker Image	2026-11-05T09:37:13.5012118Z #9 12.72 Downloading fsspec-2026.9.0-py3-none-any.whl (221 kB)
+deploy-to-gke	Build and Push Docker Image	2026-11-05T09:37:13.5012453Z #9 12.72    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 221.7/221.7 kB 638.9 MB/s eta 0:00:00
+deploy-to-gke	Build and Push Docker Image	2026-11-05T09:37:13.5012734Z #9 12.72 Downloading funcy-2.1-py3-none-any.whl (29 kB)
+deploy-to-gke	Build and Push Docker Image	2026-11-05T09:37:13.5012997Z #9 12.73 Downloading grandalf-0.8-py3-none-any.whl (41 kB)
+deploy-to-gke	Build and Push Docker Image	2026-11-05T09:37:13.5013326Z #9 12.73    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 41.8/41.8 kB 375.8 MB/s eta 0:00:00
+deploy-to-gke	Build and Push Docker Image	2026-11-05T09:37:13.5013874Z #9 12.74 Downloading graphene-3.4.3-py2.py3-none-any.whl (114 kB)
+deploy-to-gke	Build and Push Docker Image	2026-11-05T09:37:13.5014391Z #9 12.74    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 114.9/114.9 kB 591.8 MB/s eta 0:00:00
+deploy-to-gke	Build and Push Docker Image	2026-11-05T09:37:13.5015057Z #9 12.75 Downloading gto-1.10.1-py3-none-any.whl (45 kB)
+deploy-to-gke	Build and Push Docker Image	2026-11-05T09:37:13.5015555Z #9 12.75    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 45.7/45.7 kB 454.9 MB/s eta 0:00:00
+deploy-to-gke	Build and Push Docker Image	2026-11-05T09:37:13.5015993Z #9 12.75 Downloading gunicorn-26.2.0-py3-none-any.whl (228 kB)
+deploy-to-gke	Build and Push Docker Image	2026-11-05T09:37:13.5016520Z #9 12.75    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 228.4/228.4 kB 611.3 MB/s eta 0:00:00
+deploy-to-gke	Build and Push Docker Image	2026-11-05T09:37:13.5016953Z #9 12.76 Downloading huey-3.5.4-py3-none-any.whl (135 kB)
+deploy-to-gke	Build and Push Docker Image	2026-11-05T09:37:13.6024616Z #9 12.76    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 135.4/135.4 kB 605.8 MB/s eta 0:00:00
+deploy-to-gke	Build and Push Docker Image	2026-11-05T09:37:13.6025136Z #9 12.77 Downloading hydra_core-1.3.8-py3-none-any.whl (168 kB)
+deploy-to-gke	Build and Push Docker Image	2026-11-05T09:37:13.6025681Z #9 12.77    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 168.9/168.9 kB 604.1 MB/s eta 0:00:00
+deploy-to-gke	Build and Push Docker Image	2026-11-05T09:37:13.6026206Z #9 12.78 Downloading iterative_telemetry-0.0.10-py3-none-any.whl (10 kB)
+deploy-to-gke	Build and Push Docker Image	2026-11-05T09:37:13.6026684Z #9 12.78 Downloading itsdangerous-2.2.0-py3-none-any.whl (16 kB)
+deploy-to-gke	Build and Push Docker Image	2026-11-05T09:37:13.6027046Z #9 12.79 Downloading jinja2-3.1.6-py3-none-any.whl (134 kB)
+deploy-to-gke	Build and Push Docker Image	2026-11-05T09:37:13.6027464Z #9 12.79    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 134.9/134.9 kB 588.4 MB/s eta 0:00:00
+deploy-to-gke	Build and Push Docker Image	2026-11-05T09:37:13.6027744Z #9 12.80 Downloading joblib-1.6.0-py3-none-any.whl (306 kB)
+deploy-to-gke	Build and Push Docker Image	2026-11-05T09:37:13.6028069Z #9 12.80    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 306.1/306.1 kB 629.3 MB/s eta 0:00:00
+deploy-to-gke	Build and Push Docker Image	2026-11-05T09:37:13.6028447Z #9 12.81 Downloading kiwisolver-1.5.1-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.whl (1.4 MB)
+deploy-to-gke	Build and Push Docker Image	2026-11-05T09:37:13.6028867Z #9 12.81    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1.4/1.4 MB 599.8 MB/s eta 0:00:00
+deploy-to-gke	Build and Push Docker Image	2026-11-05T09:37:13.6029150Z #9 12.82 Downloading kombu-5.7.0-py3-none-any.whl (266 kB)
+deploy-to-gke	Build and Push Docker Image	2026-11-05T09:37:13.6029474Z #9 12.82    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 266.6/266.6 kB 628.0 MB/s eta 0:00:00
+deploy-to-gke	Build and Push Docker Image	2026-11-05T09:37:13.6029765Z #9 12.82 Downloading vine-5.1.0-py3-none-any.whl (9.6 kB)
+deploy-to-gke	Build and Push Docker Image	2026-11-05T09:37:13.6030141Z #9 12.83 Downloading markupsafe-3.0.4-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl (22 kB)
+deploy-to-gke	Build and Push Docker Image	2026-11-05T09:37:13.6030537Z #9 12.84 Downloading networkx-3.6.1-py3-none-any.whl (2.1 MB)
+deploy-to-gke	Build and Push Docker Image	2026-11-05T09:37:13.6030865Z #9 12.84    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 2.1/2.1 MB 506.4 MB/s eta 0:00:00
+deploy-to-gke	Build and Push Docker Image	2026-11-05T09:37:13.6031150Z #9 12.85 Downloading omegaconf-2.3.1-py3-none-any.whl (79 kB)
+deploy-to-gke	Build and Push Docker Image	2026-11-05T09:37:13.6031478Z #9 12.85    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 79.5/79.5 kB 556.9 MB/s eta 0:00:00
+deploy-to-gke	Build and Push Docker Image	2026-11-05T09:37:13.6031757Z #9 12.86 Downloading pathspec-1.1.1-py3-none-any.whl (57 kB)
+deploy-to-gke	Build and Push Docker Image	2026-11-05T09:37:13.6032090Z #9 12.86    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 57.3/57.3 kB 535.3 MB/s eta 0:00:00
+deploy-to-gke	Build and Push Docker Image	2026-11-05T09:37:13.6032450Z #9 12.86 Downloading pillow-13.0.0-cp311-cp311-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl (7.1 MB)
+deploy-to-gke	Build and Push Docker Image	2026-11-05T09:37:13.8015795Z #9 12.88    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 7.1/7.1 MB 435.8 MB/s eta 0:00:00
+deploy-to-gke	Build and Push Docker Image	2026-11-05T09:37:13.8016230Z #9 12.89 Downloading platformdirs-4.14.5-py3-none-any.whl (35 kB)
+deploy-to-gke	Build and Push Docker Image	2026-11-05T09:37:13.8016866Z #9 12.89 Downloading protobuf-7.36.2-cp310-abi3-manylinux2014_x86_64.whl (343 kB)
+deploy-to-gke	Build and Push Docker Image	2026-11-05T09:37:13.8017259Z #9 12.90    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 343.2/343.2 kB 595.7 MB/s eta 0:00:00
+deploy-to-gke	Build and Push Docker Image	2026-11-05T09:37:13.8017705Z #9 12.90 Downloading psutil-7.2.2-cp36-abi3-manylinux2010_x86_64.manylinux_2_12_x86_64.manylinux_2_28_x86_64.whl (155 kB)
+deploy-to-gke	Build and Push Docker Image	2026-11-05T09:37:13.8018395Z #9 12.91    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 155.6/155.6 kB 453.7 MB/s eta 0:00:00
+deploy-to-gke	Build and Push Docker Image	2026-11-05T09:37:13.8018904Z #9 12.91 Downloading pyarrow-26.0.1-cp311-cp311-manylinux_2_28_x86_64.whl (55.0 MB)
+deploy-to-gke	Build and Push Docker Image	2026-11-05T09:37:13.8023197Z #9 13.06    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 55.0/55.0 MB 612.7 MB/s eta 0:00:00
+deploy-to-gke	Build and Push Docker Image	2026-11-05T09:37:13.9053982Z #9 13.07 Downloading pydeck-0.9.3-py2.py3-none-any.whl (11.4 MB)
+deploy-to-gke	Build and Push Docker Image	2026-11-05T09:37:13.9055346Z #9 13.10    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 11.4/11.4 MB 636.3 MB/s eta 0:00:00
+deploy-to-gke	Build and Push Docker Image	2026-11-05T09:37:13.9055851Z #9 13.11 Downloading pydot-4.0.1-py3-none-any.whl (37 kB)
+deploy-to-gke	Build and Push Docker Image	2026-11-05T09:37:13.9056334Z #9 13.11 Downloading pygtrie-2.6.2-py3-none-any.whl (33 kB)
+deploy-to-gke	Build and Push Docker Image	2026-11-05T09:37:13.9056781Z #9 13.12 Downloading pyparsing-3.3.3-py3-none-any.whl (126 kB)
+deploy-to-gke	Build and Push Docker Image	2026-11-05T09:37:13.9057368Z #9 13.12    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 126.4/126.4 kB 536.9 MB/s eta 0:00:00
+deploy-to-gke	Build and Push Docker Image	2026-11-05T09:37:13.9059137Z #9 13.13 Downloading python_dateutil-2.9.0.post0-py2.py3-none-any.whl (229 kB)
+deploy-to-gke	Build and Push Docker Image	2026-11-05T09:37:13.9060435Z #9 13.13    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 229.9/229.9 kB 584.0 MB/s eta 0:00:00
+deploy-to-gke	Build and Push Docker Image	2026-11-05T09:37:13.9061424Z #9 13.14 Downloading python_multipart-0.0.33-py3-none-any.whl (32 kB)
+deploy-to-gke	Build and Push Docker Image	2026-11-05T09:37:13.9062764Z #9 13.14 Downloading pytz-2026.6-py2.py3-none-any.whl (506 kB)
+deploy-to-gke	Build and Push Docker Image	2026-11-05T09:37:13.9063469Z #9 13.14    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 506.3/506.3 kB 626.2 MB/s eta 0:00:00
+deploy-to-gke	Build and Push Docker Image	2026-11-05T09:37:13.9064297Z #9 13.15 Downloading requests-2.34.2-py3-none-any.whl (73 kB)
+deploy-to-gke	Build and Push Docker Image	2026-11-05T09:37:13.9064913Z #9 13.15    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 73.1/73.1 kB 548.6 MB/s eta 0:00:00
+deploy-to-gke	Build and Push Docker Image	2026-11-05T09:37:13.9065405Z #9 13.16 Downloading rich-15.0.0-py3-none-any.whl (310 kB)
+deploy-to-gke	Build and Push Docker Image	2026-11-05T09:37:13.9067195Z #9 13.16    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 310.7/310.7 kB 605.1 MB/s eta 0:00:00
+deploy-to-gke	Build and Push Docker Image	2026-11-05T09:37:13.9067688Z #9 13.17 Downloading ruamel_yaml-0.19.1-py3-none-any.whl (118 kB)
+deploy-to-gke	Build and Push Docker Image	2026-11-05T09:37:14.0203982Z #9 13.17    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 118.1/118.1 kB 411.0 MB/s eta 0:00:00
+deploy-to-gke	Build and Push Docker Image	2026-11-05T09:37:14.0209092Z #9 13.18 Downloading scipy-1.17.1-cp311-cp311-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl (35.3 MB)
+deploy-to-gke	Build and Push Docker Image	2026-11-05T09:37:14.1248016Z #9 13.28    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 35.3/35.3 MB 304.3 MB/s eta 0:00:00
+deploy-to-gke	Build and Push Docker Image	2026-11-05T09:37:14.1248758Z #9 13.29 Downloading scmrepo-3.6.2-py3-none-any.whl (74 kB)
+deploy-to-gke	Build and Push Docker Image	2026-11-05T09:37:14.1249409Z #9 13.29    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 74.2/74.2 kB 535.3 MB/s eta 0:00:00
+deploy-to-gke	Build and Push Docker Image	2026-11-05T09:37:14.1249966Z #9 13.30 Downloading dulwich-1.2.21-cp311-cp311-manylinux_2_28_x86_64.whl (1.5 MB)
+deploy-to-gke	Build and Push Docker Image	2026-11-05T09:37:14.1250843Z #9 13.30    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1.5/1.5 MB 565.1 MB/s eta 0:00:00
+deploy-to-gke	Build and Push Docker Image	2026-11-05T09:37:14.1251318Z #9 13.31 Downloading shortuuid-1.0.13-py3-none-any.whl (10 kB)
+deploy-to-gke	Build and Push Docker Image	2026-11-05T09:37:14.1251765Z #9 13.31 Downloading shtab-1.13.0-py3-none-any.whl (22 kB)
+deploy-to-gke	Build and Push Docker Image	2026-11-05T09:37:14.1252195Z #9 13.32 Downloading skops-0.16.0-py3-none-any.whl (148 kB)
+deploy-to-gke	Build and Push Docker Image	2026-11-05T09:37:14.1252757Z #9 13.32    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 148.7/148.7 kB 580.9 MB/s eta 0:00:00
+deploy-to-gke	Build and Push Docker Image	2026-11-05T09:37:14.1254057Z #9 13.33 Downloading sqlalchemy-2.1.8-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl (4.7 MB)
+deploy-to-gke	Build and Push Docker Image	2026-11-05T09:37:14.1255022Z #9 13.34    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 4.7/4.7 MB 534.9 MB/s eta 0:00:00
+deploy-to-gke	Build and Push Docker Image	2026-11-05T09:37:14.1258189Z #9 13.34 Downloading starlette-1.10.0-py3-none-any.whl (80 kB)
+deploy-to-gke	Build and Push Docker Image	2026-11-05T09:37:14.1258802Z #9 13.35    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 80.6/80.6 kB 562.3 MB/s eta 0:00:00
+deploy-to-gke	Build and Push Docker Image	2026-11-05T09:37:14.1259315Z #9 13.35 Downloading tabulate-0.10.0-py3-none-any.whl (39 kB)
+deploy-to-gke	Build and Push Docker Image	2026-11-05T09:37:14.1259795Z #9 13.36 Downloading threadpoolctl-3.7.0-py3-none-any.whl (26 kB)
+deploy-to-gke	Build and Push Docker Image	2026-11-05T09:37:14.1260272Z #9 13.36 Downloading tomlkit-0.15.2-py3-none-any.whl (52 kB)
+deploy-to-gke	Build and Push Docker Image	2026-11-05T09:37:14.1260841Z #9 13.36    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 52.2/52.2 kB 471.8 MB/s eta 0:00:00
+deploy-to-gke	Build and Push Docker Image	2026-11-05T09:37:14.1261310Z #9 13.37 Downloading tqdm-4.70.1-py3-none-any.whl (80 kB)
+deploy-to-gke	Build and Push Docker Image	2026-11-05T09:37:14.1261865Z #9 13.37    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 80.2/80.2 kB 585.2 MB/s eta 0:00:00
+deploy-to-gke	Build and Push Docker Image	2026-11-05T09:37:14.1262378Z #9 13.38 Downloading typing_extensions-4.16.0-py3-none-any.whl (45 kB)
+deploy-to-gke	Build and Push Docker Image	2026-11-05T09:37:14.1262989Z #9 13.38    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 45.6/45.6 kB 464.1 MB/s eta 0:00:00
+deploy-to-gke	Build and Push Docker Image	2026-11-05T09:37:14.1263497Z #9 13.39 Downloading tzdata-2026.6-py2.py3-none-any.whl (348 kB)
+deploy-to-gke	Build and Push Docker Image	2026-11-05T09:37:14.2270392Z #9 13.39    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 348.2/348.2 kB 467.3 MB/s eta 0:00:00
+deploy-to-gke	Build and Push Docker Image	2026-11-05T09:37:14.2270851Z #9 13.39 Downloading uvicorn-0.54.0-py3-none-any.whl (87 kB)
+deploy-to-gke	Build and Push Docker Image	2026-11-05T09:37:14.2271195Z #9 13.40    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 87.4/87.4 kB 540.1 MB/s eta 0:00:00
+deploy-to-gke	Build and Push Docker Image	2026-11-05T09:37:14.2271493Z #9 13.40 Downloading voluptuous-0.16.0-py3-none-any.whl (31 kB)
+deploy-to-gke	Build and Push Docker Image	2026-11-05T09:37:14.2271803Z #9 13.41 Downloading watchdog-6.0.0-py3-none-manylinux2014_x86_64.whl (79 kB)
+deploy-to-gke	Build and Push Docker Image	2026-11-05T09:37:14.2272175Z #9 13.41    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 79.1/79.1 kB 545.9 MB/s eta 0:00:00
+deploy-to-gke	Build and Push Docker Image	2026-11-05T09:37:14.2272576Z #9 13.42 Downloading websockets-17.4-cp311-cp311-manylinux1_x86_64.manylinux_2_28_x86_64.manylinux_2_5_x86_64.whl (226 kB)
+deploy-to-gke	Build and Push Docker Image	2026-11-05T09:37:14.2273023Z #9 13.42    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 226.0/226.0 kB 580.2 MB/s eta 0:00:00
+deploy-to-gke	Build and Push Docker Image	2026-11-05T09:37:14.2273327Z #9 13.42 Downloading werkzeug-3.1.9-py3-none-any.whl (228 kB)
+deploy-to-gke	Build and Push Docker Image	2026-11-05T09:37:14.2273658Z #9 13.43    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 228.7/228.7 kB 614.7 MB/s eta 0:00:00
+deploy-to-gke	Build and Push Docker Image	2026-11-05T09:37:14.2274140Z #9 13.43 Downloading zc_lockfile-4.1-py3-none-any.whl (9.2 kB)
+deploy-to-gke	Build and Push Docker Image	2026-11-05T09:37:14.2274628Z #9 13.44 Downloading aiohappyeyeballs-2.7.1-py3-none-any.whl (15 kB)
+deploy-to-gke	Build and Push Docker Image	2026-11-05T09:37:14.2274929Z #9 13.45 Downloading aiohttp_retry-2.9.1-py3-none-any.whl (10.0 kB)
+deploy-to-gke	Build and Push Docker Image	2026-11-05T09:37:14.2275214Z #9 13.45 Downloading aiosignal-1.4.0-py3-none-any.whl (7.5 kB)
+deploy-to-gke	Build and Push Docker Image	2026-11-05T09:37:14.2275475Z #9 13.46 Downloading amqp-5.4.2-py3-none-any.whl (51 kB)
+deploy-to-gke	Build and Push Docker Image	2026-11-05T09:37:14.2275793Z #9 13.46    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 52.0/52.0 kB 444.0 MB/s eta 0:00:00
+deploy-to-gke	Build and Push Docker Image	2026-11-05T09:37:14.2276073Z #9 13.47 Downloading asyncssh-2.24.1-py3-none-any.whl (382 kB)
+deploy-to-gke	Build and Push Docker Image	2026-11-05T09:37:14.2276404Z #9 13.47    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 382.5/382.5 kB 608.6 MB/s eta 0:00:00
+deploy-to-gke	Build and Push Docker Image	2026-11-05T09:37:14.2276678Z #9 13.47 Downloading billiard-4.3.2-py3-none-any.whl (90 kB)
+deploy-to-gke	Build and Push Docker Image	2026-11-05T09:37:14.2277127Z #9 13.48    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 90.6/90.6 kB 478.5 MB/s eta 0:00:00
+deploy-to-gke	Build and Push Docker Image	2026-11-05T09:37:14.2277403Z #9 13.48 Downloading cachetools-7.2.8-py3-none-any.whl (19 kB)
+deploy-to-gke	Build and Push Docker Image	2026-11-05T09:37:14.2277687Z #9 13.49 Downloading certifi-2026.10.23-py3-none-any.whl (135 kB)
+deploy-to-gke	Build and Push Docker Image	2026-11-05T09:37:14.3288178Z #9 13.49    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 135.1/135.1 kB 609.9 MB/s eta 0:00:00
+deploy-to-gke	Build and Push Docker Image	2026-11-05T09:37:14.3288852Z #9 13.50 Downloading cffi-2.1.1-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.whl (217 kB)
+deploy-to-gke	Build and Push Docker Image	2026-11-05T09:37:14.3289521Z #9 13.50    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 217.8/217.8 kB 649.0 MB/s eta 0:00:00
+deploy-to-gke	Build and Push Docker Image	2026-11-05T09:37:14.3290223Z #9 13.50 Downloading charset_normalizer-3.5.2-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl (269 kB)
+deploy-to-gke	Build and Push Docker Image	2026-11-05T09:37:14.3290981Z #9 13.50    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 270.0/270.0 kB 615.0 MB/s eta 0:00:00
+deploy-to-gke	Build and Push Docker Image	2026-11-05T09:37:14.3291403Z #9 13.51 Downloading click_didyoumean-0.3.1-py3-none-any.whl (3.6 kB)
+deploy-to-gke	Build and Push Docker Image	2026-11-05T09:37:14.3291781Z #9 13.52 Downloading click_plugins-1.1.1.2-py2.py3-none-any.whl (11 kB)
+deploy-to-gke	Build and Push Docker Image	2026-11-05T09:37:14.3292075Z #9 13.52 Downloading click_repl-0.4.1-py3-none-any.whl (14 kB)
+deploy-to-gke	Build and Push Docker Image	2026-11-05T09:37:14.3292363Z #9 13.53 Downloading cloudpickle-3.1.2-py3-none-any.whl (22 kB)
+deploy-to-gke	Build and Push Docker Image	2026-11-05T09:37:14.3292652Z #9 13.54 Downloading databricks_sdk-0.162.0-py3-none-any.whl (1.2 MB)
+deploy-to-gke	Build and Push Docker Image	2026-11-05T09:37:14.3292997Z #9 13.54    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1.2/1.2 MB 630.7 MB/s eta 0:00:00
+deploy-to-gke	Build and Push Docker Image	2026-11-05T09:37:14.3293286Z #9 13.55 Downloading dictdiffer-0.10.0-py3-none-any.whl (16 kB)
+deploy-to-gke	Build and Push Docker Image	2026-11-05T09:37:14.3293562Z #9 13.55 Downloading diskcache-5.6.3-py3-none-any.whl (45 kB)
+deploy-to-gke	Build and Push Docker Image	2026-11-05T09:37:14.3293892Z #9 13.55    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 45.5/45.5 kB 496.3 MB/s eta 0:00:00
+deploy-to-gke	Build and Push Docker Image	2026-11-05T09:37:14.3294315Z #9 13.56 Downloading fastapi-0.162.0-py3-none-any.whl (148 kB)
+deploy-to-gke	Build and Push Docker Image	2026-11-05T09:37:14.3294660Z #9 13.56    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 148.9/148.9 kB 602.2 MB/s eta 0:00:00
+deploy-to-gke	Build and Push Docker Image	2026-11-05T09:37:14.3295061Z #9 13.57 Downloading frozenlist-1.8.0-cp311-cp311-manylinux1_x86_64.manylinux_2_28_x86_64.manylinux_2_5_x86_64.whl (231 kB)
+deploy-to-gke	Build and Push Docker Image	2026-11-05T09:37:14.3295708Z #9 13.57    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 231.1/231.1 kB 628.0 MB/s eta 0:00:00
+deploy-to-gke	Build and Push Docker Image	2026-11-05T09:37:14.3295992Z #9 13.57 Downloading gitpython-3.2.1-py3-none-any.whl (231 kB)
+deploy-to-gke	Build and Push Docker Image	2026-11-05T09:37:14.3296326Z #9 13.58    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 231.5/231.5 kB 620.8 MB/s eta 0:00:00
+deploy-to-gke	Build and Push Docker Image	2026-11-05T09:37:14.3296608Z #9 13.58 Downloading graphql_core-3.2.13-py3-none-any.whl (268 kB)
+deploy-to-gke	Build and Push Docker Image	2026-11-05T09:37:14.3296950Z #9 13.58    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 268.2/268.2 kB 599.3 MB/s eta 0:00:00
+deploy-to-gke	Build and Push Docker Image	2026-11-05T09:37:14.3297237Z #9 13.59 Downloading graphql_relay-3.2.0-py3-none-any.whl (16 kB)
+deploy-to-gke	Build and Push Docker Image	2026-11-05T09:37:14.4333965Z #9 13.60 Downloading h11-0.16.0-py3-none-any.whl (37 kB)
+deploy-to-gke	Build and Push Docker Image	2026-11-05T09:37:14.4334829Z #9 13.60 Downloading idna-3.20-py3-none-any.whl (69 kB)
+deploy-to-gke	Build and Push Docker Image	2026-11-05T09:37:14.4336011Z #9 13.60    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 69.6/69.6 kB 432.5 MB/s eta 0:00:00
+deploy-to-gke	Build and Push Docker Image	2026-11-05T09:37:14.4336740Z #9 13.61 Downloading importlib_metadata-10.1.0-py3-none-any.whl (32 kB)
+deploy-to-gke	Build and Push Docker Image	2026-11-05T09:37:14.4337478Z #9 13.62 Downloading jsonschema-4.26.0-py3-none-any.whl (90 kB)
+deploy-to-gke	Build and Push Docker Image	2026-11-05T09:37:14.4337936Z #9 13.62    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 90.6/90.6 kB 543.9 MB/s eta 0:00:00
+deploy-to-gke	Build and Push Docker Image	2026-11-05T09:37:14.4338252Z #9 13.62 Downloading markdown_it_py-4.2.0-py3-none-any.whl (91 kB)
+deploy-to-gke	Build and Push Docker Image	2026-11-05T09:37:14.4338598Z #9 13.63    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 91.7/91.7 kB 580.2 MB/s eta 0:00:00
+deploy-to-gke	Build and Push Docker Image	2026-11-05T09:37:14.4339009Z #9 13.63 Downloading multidict-7.2.1-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl (510 kB)
+deploy-to-gke	Build and Push Docker Image	2026-11-05T09:37:14.4339469Z #9 13.63    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 510.1/510.1 kB 636.1 MB/s eta 0:00:00
+deploy-to-gke	Build and Push Docker Image	2026-11-05T09:37:14.4339756Z #9 13.64 Downloading narwhals-2.28.0-py3-none-any.whl (490 kB)
+deploy-to-gke	Build and Push Docker Image	2026-11-05T09:37:14.4340161Z #9 13.64    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 490.6/490.6 kB 605.1 MB/s eta 0:00:00
+deploy-to-gke	Build and Push Docker Image	2026-11-05T09:37:14.4340483Z #9 13.65 Downloading opentelemetry_api-1.45.2-py3-none-any.whl (60 kB)
+deploy-to-gke	Build and Push Docker Image	2026-11-05T09:37:14.4340837Z #9 13.65    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 60.3/60.3 kB 521.5 MB/s eta 0:00:00
+deploy-to-gke	Build and Push Docker Image	2026-11-05T09:37:14.4341250Z #9 13.66 Downloading opentelemetry_proto-1.45.2-py3-none-any.whl (72 kB)
+deploy-to-gke	Build and Push Docker Image	2026-11-05T09:37:14.4341740Z #9 13.66    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 72.5/72.5 kB 472.3 MB/s eta 0:00:00
+deploy-to-gke	Build and Push Docker Image	2026-11-05T09:37:14.4342040Z #9 13.67 Downloading opentelemetry_sdk-1.45.2-py3-none-any.whl (141 kB)
+deploy-to-gke	Build and Push Docker Image	2026-11-05T09:37:14.4342387Z #9 13.67    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 141.8/141.8 kB 608.5 MB/s eta 0:00:00
+deploy-to-gke	Build and Push Docker Image	2026-11-05T09:37:14.4342720Z #9 13.67 Downloading opentelemetry_semantic_conventions-0.66b2-py3-none-any.whl (206 kB)
+deploy-to-gke	Build and Push Docker Image	2026-11-05T09:37:14.4343101Z #9 13.67    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 206.3/206.3 kB 611.1 MB/s eta 0:00:00
+deploy-to-gke	Build and Push Docker Image	2026-11-05T09:37:14.4343464Z #9 13.68 Downloading orjson-3.13.0-cp311-cp311-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (130 kB)
+deploy-to-gke	Build and Push Docker Image	2026-11-05T09:37:14.4343869Z #9 13.68    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 130.5/130.5 kB 598.2 MB/s eta 0:00:00
+deploy-to-gke	Build and Push Docker Image	2026-11-05T09:37:14.4344497Z #9 13.69 Downloading prettytable-3.18.0-py3-none-any.whl (37 kB)
+deploy-to-gke	Build and Push Docker Image	2026-11-05T09:37:14.4344890Z #9 13.69 Downloading propcache-0.5.4-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl (235 kB)
+deploy-to-gke	Build and Push Docker Image	2026-11-05T09:37:14.5346583Z #9 13.70    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 235.4/235.4 kB 559.9 MB/s eta 0:00:00
+deploy-to-gke	Build and Push Docker Image	2026-11-05T09:37:14.5347248Z #9 13.70 Downloading pydantic-2.14.3-py3-none-any.whl (494 kB)
+deploy-to-gke	Build and Push Docker Image	2026-11-05T09:37:14.5348085Z #9 13.70    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 494.1/494.1 kB 662.1 MB/s eta 0:00:00
+deploy-to-gke	Build and Push Docker Image	2026-11-05T09:37:14.5348798Z #9 13.71 Downloading pydantic_core-2.50.4-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.whl (2.3 MB)
+deploy-to-gke	Build and Push Docker Image	2026-11-05T09:37:14.5349540Z #9 13.72    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 2.3/2.3 MB 510.1 MB/s eta 0:00:00
+deploy-to-gke	Build and Push Docker Image	2026-11-05T09:37:14.5350292Z #9 13.72 Downloading pydantic_settings-2.16.2-py3-none-any.whl (81 kB)
+deploy-to-gke	Build and Push Docker Image	2026-11-05T09:37:14.5350880Z #9 13.72    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 82.0/82.0 kB 539.6 MB/s eta 0:00:00
+deploy-to-gke	Build and Push Docker Image	2026-11-05T09:37:14.5351335Z #9 13.73 Downloading pygit2-1.21.0-cp311-cp311-manylinux_2_26_x86_64.manylinux_2_28_x86_64.whl (4.9 MB)
+deploy-to-gke	Build and Push Docker Image	2026-11-05T09:37:14.5351750Z #9 13.76    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 4.9/4.9 MB 212.4 MB/s eta 0:00:00
+deploy-to-gke	Build and Push Docker Image	2026-11-05T09:37:14.5352043Z #9 13.76 Downloading pygments-2.21.0-py3-none-any.whl (1.3 MB)
+deploy-to-gke	Build and Push Docker Image	2026-11-05T09:37:14.5352375Z #9 13.77    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1.3/1.3 MB 612.0 MB/s eta 0:00:00
+deploy-to-gke	Build and Push Docker Image	2026-11-05T09:37:14.5352659Z #9 13.77 Downloading python_dotenv-1.2.4-py3-none-any.whl (23 kB)
+deploy-to-gke	Build and Push Docker Image	2026-11-05T09:37:14.5353052Z #9 13.78 Downloading pyyaml-6.0.3-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl (806 kB)
+deploy-to-gke	Build and Push Docker Image	2026-11-05T09:37:14.5353497Z #9 13.78    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 806.6/806.6 kB 626.7 MB/s eta 0:00:00
+deploy-to-gke	Build and Push Docker Image	2026-11-05T09:37:14.5353784Z #9 13.79 Downloading semver-3.1.0-py3-none-any.whl (18 kB)
+deploy-to-gke	Build and Push Docker Image	2026-11-05T09:37:14.5354048Z #9 13.80 Downloading six-1.17.0-py2.py3-none-any.whl (11 kB)
+deploy-to-gke	Build and Push Docker Image	2026-11-05T09:37:14.6384312Z #9 13.80 Downloading sqlparse-0.6.1-py3-none-any.whl (51 kB)
+deploy-to-gke	Build and Push Docker Image	2026-11-05T09:37:14.6385146Z #9 13.80    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 51.2/51.2 kB 504.5 MB/s eta 0:00:00
+deploy-to-gke	Build and Push Docker Image	2026-11-05T09:37:14.6385705Z #9 13.81 Downloading sqltrie-0.11.3-py3-none-any.whl (17 kB)
+deploy-to-gke	Build and Push Docker Image	2026-11-05T09:37:14.6386152Z #9 13.82 Downloading urllib3-2.8.0-py3-none-any.whl (135 kB)
+deploy-to-gke	Build and Push Docker Image	2026-11-05T09:37:14.6386722Z #9 13.82    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 135.7/135.7 kB 617.8 MB/s eta 0:00:00
+deploy-to-gke	Build and Push Docker Image	2026-11-05T09:37:14.6387391Z #9 13.82 Downloading yarl-1.25.1-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl (117 kB)
+deploy-to-gke	Build and Push Docker Image	2026-11-05T09:37:14.6388149Z #9 13.82    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 117.7/117.7 kB 595.1 MB/s eta 0:00:00
+deploy-to-gke	Build and Push Docker Image	2026-11-05T09:37:14.6388662Z #9 13.83 Downloading appdirs-1.4.4-py2.py3-none-any.whl (9.6 kB)
+deploy-to-gke	Build and Push Docker Image	2026-11-05T09:37:14.6389104Z #9 13.84 Downloading atpublic-9.0.0-py3-none-any.whl (11 kB)
+deploy-to-gke	Build and Push Docker Image	2026-11-05T09:37:14.6389602Z #9 13.84 Downloading entrypoints-0.4.2-py3-none-any.whl (5.3 kB)
+deploy-to-gke	Build and Push Docker Image	2026-11-05T09:37:14.6389883Z #9 13.85 Downloading filelock-4.2.9-py3-none-any.whl (164 kB)
+deploy-to-gke	Build and Push Docker Image	2026-11-05T09:37:14.6390233Z #9 13.85    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 164.7/164.7 kB 573.0 MB/s eta 0:00:00
+deploy-to-gke	Build and Push Docker Image	2026-11-05T09:37:14.6390512Z #9 13.86 Downloading mako-1.4.3-py3-none-any.whl (80 kB)
+deploy-to-gke	Build and Push Docker Image	2026-11-05T09:37:14.6390839Z #9 13.86    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 80.2/80.2 kB 579.3 MB/s eta 0:00:00
+deploy-to-gke	Build and Push Docker Image	2026-11-05T09:37:14.6391120Z #9 13.87 Downloading tzlocal-5.4.5-py3-none-any.whl (18 kB)
+deploy-to-gke	Build and Push Docker Image	2026-11-05T09:37:14.6391394Z #9 13.87 Downloading annotated_doc-0.0.5-py3-none-any.whl (5.3 kB)
+deploy-to-gke	Build and Push Docker Image	2026-11-05T09:37:14.6391682Z #9 13.88 Downloading annotated_types-0.8.0-py3-none-any.whl (13 kB)
+deploy-to-gke	Build and Push Docker Image	2026-11-05T09:37:14.6391958Z #9 13.88 Downloading gitdb-4.0.12-py3-none-any.whl (62 kB)
+deploy-to-gke	Build and Push Docker Image	2026-11-05T09:37:14.6392389Z #9 13.89    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 62.8/62.8 kB 498.1 MB/s eta 0:00:00
+deploy-to-gke	Build and Push Docker Image	2026-11-05T09:37:14.6392675Z #9 13.89 Downloading google_auth-2.62.1-py3-none-any.whl (267 kB)
+deploy-to-gke	Build and Push Docker Image	2026-11-05T09:37:14.6393022Z #9 13.89    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 268.0/268.0 kB 618.6 MB/s eta 0:00:00
+deploy-to-gke	Build and Push Docker Image	2026-11-05T09:37:14.6393346Z #9 13.90 Downloading jsonschema_specifications-2025.9.1-py3-none-any.whl (18 kB)
+deploy-to-gke	Build and Push Docker Image	2026-11-05T09:37:14.8704970Z #9 13.91 Downloading mdurl-0.1.2-py3-none-any.whl (10.0 kB)
+deploy-to-gke	Build and Push Docker Image	2026-11-05T09:37:14.8705551Z #9 13.91 Downloading prompt_toolkit-3.0.53-py3-none-any.whl (392 kB)
+deploy-to-gke	Build and Push Docker Image	2026-11-05T09:37:14.8706407Z #9 13.91    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 392.3/392.3 kB 464.2 MB/s eta 0:00:00
+deploy-to-gke	Build and Push Docker Image	2026-11-05T09:37:14.8706882Z #9 13.92 Downloading referencing-0.37.0-py3-none-any.whl (26 kB)
+deploy-to-gke	Build and Push Docker Image	2026-11-05T09:37:14.8707441Z #9 13.93 Downloading rpds_py-2026.9.1-cp311-cp311-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (375 kB)
+deploy-to-gke	Build and Push Docker Image	2026-11-05T09:37:14.8708151Z #9 13.93    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 375.4/375.4 kB 647.8 MB/s eta 0:00:00
+deploy-to-gke	Build and Push Docker Image	2026-11-05T09:37:14.8708601Z #9 13.94 Downloading typing_inspection-0.4.5-py3-none-any.whl (14 kB)
+deploy-to-gke	Build and Push Docker Image	2026-11-05T09:37:14.8708987Z #9 13.94 Downloading wcwidth-0.9.4-cp310-abi3-manylinux2014_x86_64.manylinux_2_17_x86_64.whl (785 kB)
+deploy-to-gke	Build and Push Docker Image	2026-11-05T09:37:14.8709394Z #9 13.95    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 785.9/785.9 kB 652.9 MB/s eta 0:00:00
+deploy-to-gke	Build and Push Docker Image	2026-11-05T09:37:14.8709670Z #9 13.95 Downloading zipp-4.1.2-py3-none-any.whl (10 kB)
+deploy-to-gke	Build and Push Docker Image	2026-11-05T09:37:14.8709944Z #9 13.96 Downloading pycparser-3.12-py3-none-any.whl (62 kB)
+deploy-to-gke	Build and Push Docker Image	2026-11-05T09:37:14.8710267Z #9 13.96    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 62.6/62.6 kB 524.7 MB/s eta 0:00:00
+deploy-to-gke	Build and Push Docker Image	2026-11-05T09:37:14.8710558Z #9 13.97 Downloading pyasn1_modules-0.4.2-py3-none-any.whl (181 kB)
+deploy-to-gke	Build and Push Docker Image	2026-11-05T09:37:14.8710896Z #9 13.97    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 181.3/181.3 kB 615.3 MB/s eta 0:00:00
+deploy-to-gke	Build and Push Docker Image	2026-11-05T09:37:14.8711170Z #9 13.97 Downloading smmap-5.0.3-py3-none-any.whl (24 kB)
+deploy-to-gke	Build and Push Docker Image	2026-11-05T09:37:14.8711434Z #9 13.98 Downloading pyasn1-0.6.5-py3-none-any.whl (84 kB)
+deploy-to-gke	Build and Push Docker Image	2026-11-05T09:37:14.8711754Z #9 13.98    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 84.8/84.8 kB 566.2 MB/s eta 0:00:00
+deploy-to-gke	Build and Push Docker Image	2026-11-05T09:37:14.9754541Z #9 14.24 Building wheels for collected packages: antlr4-python3-runtime
+deploy-to-gke	Build and Push Docker Image	2026-11-05T09:37:15.1263357Z #9 14.24   Building wheel for antlr4-python3-runtime (setup.py): started
+deploy-to-gke	Build and Push Docker Image	2026-11-05T09:37:15.1354612Z #9 14.40   Building wheel for antlr4-python3-runtime (setup.py): finished with status 'done'
+deploy-to-gke	Build and Push Docker Image	2026-11-05T09:37:15.2879520Z #9 14.40   Created wheel for antlr4-python3-runtime: filename=antlr4_python3_runtime-4.9.3-py3-none-any.whl size=144590 sha256=ec0c3d920284e106b81f0cbef185538b151f70e34ec93adbcfcc1d3b0b5fa6ec
+deploy-to-gke	Build and Push Docker Image	2026-11-05T09:37:15.2880276Z #9 14.40   Stored in directory: /tmp/pip-ephem-wheel-cache-19ikz939/wheels/1a/97/32/461f837398029ad76911109f07047fde1d7b661a147c7c56d1
+deploy-to-gke	Build and Push Docker Image	2026-11-05T09:37:15.2880690Z #9 14.40 Successfully built antlr4-python3-runtime
+deploy-to-gke	Build and Push Docker Image	2026-11-05T09:37:15.7221091Z #9 14.98 Installing collected packages: pytz, huey, funcy, appdirs, antlr4-python3-runtime, zipp, zc.lockfile, websockets, wcwidth, watchdog, voluptuous, vine, urllib3, tzlocal, tzdata, typing-extensions, tqdm, tomlkit, threadpoolctl, tabulate, sqlparse, smmap, six, shtab, shortuuid, semver, ruamel.yaml, rpds-py, pyyaml, python-multipart, python-dotenv, pyparsing, pygtrie, pygments, pycparser, pyasn1, pyarrow, psutil, protobuf, propcache, platformdirs, pillow, pathspec, orjson, numpy, networkx, narwhals, multidict, mdurl, markupsafe, kiwisolver, itsdangerous, idna, h11, gunicorn, graphql-core, fsspec, frozenlist, fonttools, flatten-dict, filelock, entrypoints, dvc-render, dpath, distro, diskcache, dictdiffer, cycler, configobj, colorama, cloudpickle, click, charset_normalizer, certifi, cachetools, blinker, billiard, attrs, atpublic, annotated-types, annotated-doc, aiohappyeyeballs, yarl, werkzeug, uvicorn, typing-inspection, sqltrie, sqlalchemy, scipy, requests, referencing, python-dateutil, pydot, pydantic-core, pyasn1-modules, prompt_toolkit, prettytable, opentelemetry-proto, opentelemetry-api, omegaconf, markdown-it-py, Mako, joblib, jinja2, importlib_metadata, graphql-relay, grandalf, gitdb, flufl.lock, dvc-objects, dulwich, contourpy, click-plugins, click-didyoumean, cffi, anyio, amqp, aiosignal, starlette, scikit-learn, rich, pygit2, pydeck, pydantic, pandas, opentelemetry-semantic-conventions, matplotlib, kombu, jsonschema-specifications, iterative-telemetry, hydra-core, graphene, gitpython, flask, dvc-studio-client, dvc-data, docker, cryptography, click-repl, alembic, aiohttp, skops, seaborn, pydantic-settings, opentelemetry-sdk, jsonschema, google-auth, Flask-CORS, fastapi, celery, asyncssh, aiohttp-retry, scmrepo, dvc-task, dvc-http, databricks-sdk, altair, streamlit, mlflow-tracing, mlflow-skinny, gto, mlflow, dvc
+deploy-to-gke	Build and Push Docker Image	2026-11-05T09:37:39.8771796Z #9 39.14 Successfully installed Flask-CORS-6.0.5 Mako-1.4.3 aiohappyeyeballs-2.7.1 aiohttp-3.14.5 aiohttp-retry-2.9.1 aiosignal-1.4.0 alembic-1.20.1 altair-6.3.0 amqp-5.4.2 annotated-doc-0.0.5 annotated-types-0.8.0 antlr4-python3-runtime-4.9.3 anyio-4.16.0 appdirs-1.4.4 asyncssh-2.24.1 atpublic-9.0.0 attrs-26.1.0 billiard-4.3.2 blinker-1.9.0 cachetools-7.2.8 celery-5.6.3 certifi-2026.10.23 cffi-2.1.1 charset_normalizer-3.5.2 click-8.5.0 click-didyoumean-0.3.1 click-plugins-1.1.1.2 click-repl-0.4.1 cloudpickle-3.1.2 colorama-0.4.6 configobj-5.0.9 contourpy-1.3.3 cryptography-50.0.2 cycler-0.12.1 databricks-sdk-0.162.0 dictdiffer-0.10.0 diskcache-5.6.3 distro-1.9.0 docker-7.2.0 dpath-2.2.0 dulwich-1.2.21 dvc-3.67.1 dvc-data-3.18.3 dvc-http-2.32.0 dvc-objects-5.2.0 dvc-render-1.0.2 dvc-studio-client-0.23.0 dvc-task-0.40.2 entrypoints-0.4.2 fastapi-0.162.0 filelock-4.2.9 flask-3.1.3 flatten-dict-0.5.0 flufl.lock-9.2.0 fonttools-4.68.0 frozenlist-1.8.0 fsspec-2026.9.0 funcy-2.1 gitdb-4.0.12 gitpython-3.2.1 google-auth-2.62.1 grandalf-0.8 graphene-3.4.3 graphql-core-3.2.13 graphql-relay-3.2.0 gto-1.10.1 gunicorn-26.2.0 h11-0.16.0 huey-3.5.4 hydra-core-1.3.8 idna-3.20 importlib_metadata-10.1.0 iterative-telemetry-0.0.10 itsdangerous-2.2.0 jinja2-3.1.6 joblib-1.6.0 jsonschema-4.26.0 jsonschema-specifications-2025.9.1 kiwisolver-1.5.1 kombu-5.7.0 markdown-it-py-4.2.0 markupsafe-3.0.4 matplotlib-3.11.2 mdurl-0.1.2 mlflow-3.18.0 mlflow-skinny-3.18.0 mlflow-tracing-3.18.0 multidict-7.2.1 narwhals-2.28.0 networkx-3.6.1 numpy-1.26.4 omegaconf-2.3.1 opentelemetry-api-1.45.2 opentelemetry-proto-1.45.2 opentelemetry-sdk-1.45.2 opentelemetry-semantic-conventions-0.66b2 orjson-3.13.0 pandas-2.2.2 pathspec-1.1.1 pillow-13.0.0 platformdirs-4.14.5 prettytable-3.18.0 prompt_toolkit-3.0.53 propcache-0.5.4 protobuf-7.36.2 psutil-7.2.2 pyarrow-26.0.1 pyasn1-0.6.5 pyasn1-modules-0.4.2 pycparser-3.12 pydantic-2.14.3 pydantic-core-2.50.4 pydantic-settings-2.16.2 pydeck-0.9.3 pydot-4.0.1 pygit2-1.21.0 pygments-2.21.0 pygtrie-2.6.2 pyparsing-3.3.3 python-dateutil-2.9.0.post0 python-dotenv-1.2.4 python-multipart-0.0.33 pytz-2026.6 pyyaml-6.0.3 referencing-0.37.0 requests-2.34.2 rich-15.0.0 rpds-py-2026.9.1 ruamel.yaml-0.19.1 scikit-learn-1.3.0 scipy-1.17.1 scmrepo-3.6.2 seaborn-0.13.2 semver-3.1.0 shortuuid-1.0.13 shtab-1.13.0 six-1.17.0 skops-0.16.0 smmap-5.0.3 sqlalchemy-2.1.8 sqlparse-0.6.1 sqltrie-0.11.3 starlette-1.10.0 streamlit-1.66.1 tabulate-0.10.0 threadpoolctl-3.7.0 tomlkit-0.15.2 tqdm-4.70.1 typing-extensions-4.16.0 typing-inspection-0.4.5 tzdata-2026.6 tzlocal-5.4.5 urllib3-2.8.0 uvicorn-0.54.0 vine-5.1.0 voluptuous-0.16.0 watchdog-6.0.0 wcwidth-0.9.4 websockets-17.4 werkzeug-3.1.9 yarl-1.25.1 zc.lockfile-4.1 zipp-4.1.2
+deploy-to-gke	Build and Push Docker Image	2026-11-05T09:37:40.0999648Z #9 39.14 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+deploy-to-gke	Build and Push Docker Image	2026-11-05T09:37:40.1000290Z #9 39.21 
+deploy-to-gke	Build and Push Docker Image	2026-11-05T09:37:40.1000502Z #9 39.21 [notice] A new release of pip is available: 24.0 -> 26.3
+deploy-to-gke	Build and Push Docker Image	2026-11-05T09:37:40.1000786Z #9 39.21 [notice] To update, run: pip install --upgrade pip
+deploy-to-gke	Build and Push Docker Image	2026-11-05T09:37:45.0920314Z #9 DONE 44.4s
+deploy-to-gke	Build and Push Docker Image	2026-11-05T09:37:45.2586933Z 
+deploy-to-gke	Build and Push Docker Image	2026-11-05T09:37:45.2587687Z #10 [5/6] COPY app.py .
+deploy-to-gke	Build and Push Docker Image	2026-11-05T09:37:45.2588133Z #10 DONE 0.0s
+deploy-to-gke	Build and Push Docker Image	2026-11-05T09:37:45.2588352Z 
+deploy-to-gke	Build and Push Docker Image	2026-11-05T09:37:45.2588606Z #11 [6/6] COPY model.pkl .
+deploy-to-gke	Build and Push Docker Image	2026-11-05T09:37:45.2588873Z #11 DONE 0.0s
+deploy-to-gke	Build and Push Docker Image	2026-11-05T09:37:45.2589005Z 
+deploy-to-gke	Build and Push Docker Image	2026-11-05T09:37:45.2589145Z #12 exporting to image
+deploy-to-gke	Build and Push Docker Image	2026-11-05T09:37:45.2589422Z #12 exporting layers
+deploy-to-gke	Build and Push Docker Image	2026-11-05T09:37:48.6208784Z #12 exporting layers 3.5s done
+deploy-to-gke	Build and Push Docker Image	2026-11-05T09:37:48.6350086Z #12 writing image sha256:13be9640724fa4b061d020011e353ef254af8723c3f1e98c9364264633586e4d done
+deploy-to-gke	Build and Push Docker Image	2026-11-05T09:37:48.6350687Z #12 naming to gcr.io/mlops-icai-a2265f/mlops-api:latest done
+deploy-to-gke	Build and Push Docker Image	2026-11-05T09:37:48.6350951Z #12 DONE 3.5s
+deploy-to-gke	Build and Push Docker Image	2026-11-05T09:37:48.9769154Z The push refers to repository [gcr.io/mlops-icai-a2265f/mlops-api]
+deploy-to-gke	Build and Push Docker Image	2026-11-05T09:37:49.0221160Z 107640dd02c0: Preparing
+deploy-to-gke	Build and Push Docker Image	2026-11-05T09:37:49.0221510Z 6546b3c63688: Preparing
+deploy-to-gke	Build and Push Docker Image	2026-11-05T09:37:49.0223070Z a071ae9fb571: Preparing
+deploy-to-gke	Build and Push Docker Image	2026-11-05T09:37:49.0223384Z 6d006dba913f: Preparing
+deploy-to-gke	Build and Push Docker Image	2026-11-05T09:37:49.0223636Z 0edb5087b469: Preparing
+deploy-to-gke	Build and Push Docker Image	2026-11-05T09:37:49.0223880Z 34b1ae7ada64: Preparing
+deploy-to-gke	Build and Push Docker Image	2026-11-05T09:37:49.0224043Z 2fb9adeb99a2: Preparing
+deploy-to-gke	Build and Push Docker Image	2026-11-05T09:37:49.0224359Z 15239e16ba8b: Preparing
+deploy-to-gke	Build and Push Docker Image	2026-11-05T09:37:49.0224539Z a5d6d345f6af: Preparing
+deploy-to-gke	Build and Push Docker Image	2026-11-05T09:37:49.0224694Z 34b1ae7ada64: Waiting
+deploy-to-gke	Build and Push Docker Image	2026-11-05T09:37:49.0227141Z 2fb9adeb99a2: Waiting
+deploy-to-gke	Build and Push Docker Image	2026-11-05T09:37:49.0227398Z 15239e16ba8b: Waiting
+deploy-to-gke	Build and Push Docker Image	2026-11-05T09:37:49.0227778Z a5d6d345f6af: Waiting
+deploy-to-gke	Build and Push Docker Image	2026-11-05T09:37:50.1715795Z 6d006dba913f: Pushed
+deploy-to-gke	Build and Push Docker Image	2026-11-05T09:37:50.2818952Z 6546b3c63688: Pushed
+deploy-to-gke	Build and Push Docker Image	2026-11-05T09:37:50.3368960Z 107640dd02c0: Pushed
+deploy-to-gke	Build and Push Docker Image	2026-11-05T09:37:50.3477579Z 0edb5087b469: Pushed
+deploy-to-gke	Build and Push Docker Image	2026-11-05T09:37:51.1627165Z 34b1ae7ada64: Layer already exists
+deploy-to-gke	Build and Push Docker Image	2026-11-05T09:37:51.2126112Z 2fb9adeb99a2: Layer already exists
+deploy-to-gke	Build and Push Docker Image	2026-11-05T09:37:51.3196482Z a5d6d345f6af: Layer already exists
+deploy-to-gke	Build and Push Docker Image	2026-11-05T09:37:51.4460771Z 15239e16ba8b: Layer already exists
+deploy-to-gke	Build and Push Docker Image	2026-11-05T09:38:14.0250828Z a071ae9fb571: Pushed
+deploy-to-gke	Build and Push Docker Image	2026-11-05T09:38:15.8999969Z latest: digest: sha256:723b56e4c074d1f4d2e71b8ed5c108542ceef1db9780203f11cf6ff877e1f483 size: 2201
+deploy-to-gke	Deploy to GKE	﻿2026-11-05T09:38:15.9055503Z ##[group]Run kubectl apply -f deployment.yaml
+deploy-to-gke	Deploy to GKE	2026-11-05T09:38:15.9055906Z [36;1mkubectl apply -f deployment.yaml[0m
+deploy-to-gke	Deploy to GKE	2026-11-05T09:38:15.9056117Z [36;1mkubectl apply -f service.yaml[0m
+deploy-to-gke	Deploy to GKE	2026-11-05T09:38:15.9056399Z [36;1m# :latest no cambia el spec -> forzar que los pods vuelvan a descargar la imagen[0m
+deploy-to-gke	Deploy to GKE	2026-11-05T09:38:15.9056720Z [36;1mkubectl rollout restart deployment/mlops-api-deployment[0m
+deploy-to-gke	Deploy to GKE	2026-11-05T09:38:15.9057030Z [36;1mkubectl rollout status deployment/mlops-api-deployment --timeout=180s[0m
+deploy-to-gke	Deploy to GKE	2026-11-05T09:38:15.9073387Z shell: /usr/bin/bash -e ***0***
+deploy-to-gke	Deploy to GKE	2026-11-05T09:38:15.9073569Z env:
+deploy-to-gke	Deploy to GKE	2026-11-05T09:38:15.9073761Z   pythonLocation: /opt/hostedtoolcache/Python/3.11.18/x64
+deploy-to-gke	Deploy to GKE	2026-11-05T09:38:15.9074045Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.11.18/x64/lib/pkgconfig
+deploy-to-gke	Deploy to GKE	2026-11-05T09:38:15.9074729Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.11.18/x64
+deploy-to-gke	Deploy to GKE	2026-11-05T09:38:15.9074984Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.11.18/x64
+deploy-to-gke	Deploy to GKE	2026-11-05T09:38:15.9075234Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.11.18/x64
+deploy-to-gke	Deploy to GKE	2026-11-05T09:38:15.9075539Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.11.18/x64/lib
+deploy-to-gke	Deploy to GKE	2026-11-05T09:38:15.9075937Z   CLOUDSDK_AUTH_CREDENTIAL_FILE_OVERRIDE: /home/runner/work/mlops-practica-icai/mlops-practica-icai/gha-creds-ad4b96aa0c62c5b2.json
+deploy-to-gke	Deploy to GKE	2026-11-05T09:38:15.9076446Z   GOOGLE_APPLICATION_CREDENTIALS: /home/runner/work/mlops-practica-icai/mlops-practica-icai/gha-creds-ad4b96aa0c62c5b2.json
+deploy-to-gke	Deploy to GKE	2026-11-05T09:38:15.9076913Z   GOOGLE_GHA_CREDS_PATH: /home/runner/work/mlops-practica-icai/mlops-practica-icai/gha-creds-ad4b96aa0c62c5b2.json
+deploy-to-gke	Deploy to GKE	2026-11-05T09:38:15.9077247Z   CLOUDSDK_CORE_PROJECT: mlops-icai-a2265f
+deploy-to-gke	Deploy to GKE	2026-11-05T09:38:15.9077452Z   CLOUDSDK_PROJECT: mlops-icai-a2265f
+deploy-to-gke	Deploy to GKE	2026-11-05T09:38:15.9077649Z   GCLOUD_PROJECT: mlops-icai-a2265f
+deploy-to-gke	Deploy to GKE	2026-11-05T09:38:15.9077843Z   GCP_PROJECT: mlops-icai-a2265f
+deploy-to-gke	Deploy to GKE	2026-11-05T09:38:15.9078041Z   GOOGLE_CLOUD_PROJECT: mlops-icai-a2265f
+deploy-to-gke	Deploy to GKE	2026-11-05T09:38:15.9078273Z   CLOUDSDK_METRICS_ENVIRONMENT: github-actions-setup-gcloud
+deploy-to-gke	Deploy to GKE	2026-11-05T09:38:15.9078519Z   CLOUDSDK_METRICS_ENVIRONMENT_VERSION: 2.2.1
+deploy-to-gke	Deploy to GKE	2026-11-05T09:38:15.9078719Z ##[endgroup]
+deploy-to-gke	Deploy to GKE	2026-11-05T09:38:17.1813465Z deployment.apps/mlops-api-deployment created
+deploy-to-gke	Deploy to GKE	2026-11-05T09:38:18.4258515Z service/mlops-api-service created
+deploy-to-gke	Deploy to GKE	2026-11-05T09:38:19.1298067Z deployment.apps/mlops-api-deployment restarted
+deploy-to-gke	Deploy to GKE	2026-11-05T09:38:19.7867277Z Waiting for deployment "mlops-api-deployment" rollout to finish: 1 old replicas are pending termination...
+deploy-to-gke	Deploy to GKE	2026-11-05T09:38:39.3197277Z Waiting for deployment "mlops-api-deployment" rollout to finish: 1 old replicas are pending termination...
+deploy-to-gke	Deploy to GKE	2026-11-05T09:38:39.4013841Z Waiting for deployment "mlops-api-deployment" rollout to finish: 1 old replicas are pending termination...
+deploy-to-gke	Deploy to GKE	2026-11-05T09:38:39.4931902Z deployment "mlops-api-deployment" successfully rolled out
+deploy-to-gke	Post Authenticate to Google Cloud	﻿2026-11-05T09:38:39.5022631Z Post job cleanup.
+deploy-to-gke	Post Authenticate to Google Cloud	2026-11-05T09:38:39.5640687Z Removed exported credentials at "/home/runner/work/mlops-practica-icai/mlops-practica-icai/gha-creds-ad4b96aa0c62c5b2.json".
+deploy-to-gke	Post Setup Python	﻿2026-11-05T09:38:39.5739616Z Post job cleanup.
+deploy-to-gke	Post Setup Python	2026-11-05T09:38:39.6546320Z (node:3491) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.
+deploy-to-gke	Post Setup Python	2026-11-05T09:38:39.6546833Z (Use `node --trace-deprecation ...` to show where the warning was created)
+deploy-to-gke	Post Checkout code	﻿2026-11-05T09:38:39.6666332Z Post job cleanup.
+deploy-to-gke	Post Checkout code	2026-11-05T09:38:39.7255262Z [command]/usr/bin/git version
+deploy-to-gke	Post Checkout code	2026-11-05T09:38:39.7276869Z git version 2.56.0
+deploy-to-gke	Post Checkout code	2026-11-05T09:38:39.7300355Z Temporarily overriding HOME='/home/runner/work/_temp/b9797800-5935-4bb8-add2-9dfa4a6d8a65' before making global git config changes
+deploy-to-gke	Post Checkout code	2026-11-05T09:38:39.7301607Z Adding repository directory to the temporary git global config as a safe directory
+deploy-to-gke	Post Checkout code	2026-11-05T09:38:39.7304421Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/mlops-practica-icai/mlops-practica-icai
+deploy-to-gke	Post Checkout code	2026-11-05T09:38:39.7338272Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+deploy-to-gke	Post Checkout code	2026-11-05T09:38:39.7370117Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+deploy-to-gke	Post Checkout code	2026-11-05T09:38:39.7571960Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+deploy-to-gke	Post Checkout code	2026-11-05T09:38:39.7604917Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+deploy-to-gke	Post Checkout code	2026-11-05T09:38:39.7809352Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+deploy-to-gke	Post Checkout code	2026-11-05T09:38:39.7837239Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+deploy-to-gke	Complete job	﻿2026-11-05T09:38:39.8161971Z Cleaning up orphan processes
+deploy-to-gke	Complete job	2026-11-05T09:38:39.8414951Z ##[warning]Node.js 20 is deprecated. The following actions target Node.js 20 but are being forced to run on Node.js 24: actions/checkout@v4, actions/setup-python@v5, google-github-actions/auth@c200f3691d83b41bf9bbd8638997a462592937ed, google-github-actions/setup-gcloud@e427ad8a34f8676edf47cf7d7925499adf3eb74f, iterative/setup-dvc@175771be1dc3d119268e00a896b52a4b77decb5e. For more information see: https://github.blog/changelog/2025-09-19-deprecation-of-node-20-on-github-actions-runners/
