@@ -25,14 +25,16 @@ services:
     volumes:
       - ./prometheus.yaml:/etc/prometheus/prometheus.yml
     ports:
-      - "9090:9090"
+      - "127.0.0.1:9090:9090"
     restart: unless-stopped
 
   grafana:
     image: grafana/grafana:latest
     container_name: grafana
+    # Solo en localhost: el enunciado pide usuario/contraseña admin/admin, así que
+    # Grafana (y Prometheus) no se publican en la red
     ports:
-      - "3000:3000"
+      - "127.0.0.1:3000:3000"
     environment:
       - GF_SECURITY_ADMIN_PASSWORD=admin
     depends_on:
