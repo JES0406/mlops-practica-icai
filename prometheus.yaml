@@ -1,0 +1,13 @@
+global:
+  scrape_interval: 5s
+
+scrape_configs:
+  # Métricas del propio servidor Prometheus (práctica Prometheus/Grafana)
+  - job_name: "prometheus"
+    static_configs:
+      - targets: ["prometheus:9090"]
+
+  # Métricas del modelo expuestas por la API en /metrics (práctica Observabilidad)
+  - job_name: "mlops-api"
+    static_configs:
+      - targets: ["mlops-api:5000"]
