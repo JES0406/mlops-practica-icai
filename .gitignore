@@ -6,3 +6,4 @@ mlflow.db
 /confusion_matrix.png
 # Dashboards de Grafana provisionados (Unit 7)
 !grafana-provisioning/dashboards/*.json
+!cloud-monitoring/*.json

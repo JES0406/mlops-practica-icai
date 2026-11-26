@@ -1,0 +1,93 @@
+{
+  "displayName": "Predicciones IRIS (GMP)",
+  "mosaicLayout": {
+    "columns": 48,
+    "tiles": [
+      {
+        "xPos": 0, "yPos": 0, "width": 48, "height": 16,
+        "widget": {
+          "title": "Predicciones por especie — última hora (Top List)",
+          "timeSeriesTable": {
+            "metricVisualization": "BAR",
+            "dataSets": [
+              {
+                "timeSeriesQuery": {
+                  "timeSeriesFilter": {
+                    "filter": "metric.type=\"prometheus.googleapis.com/iris_prediction_count_total/counter\" resource.type=\"prometheus_target\"",
+                    "aggregation": {
+                      "alignmentPeriod": "3600s",
+                      "perSeriesAligner": "ALIGN_DELTA",
+                      "crossSeriesReducer": "REDUCE_SUM",
+                      "groupByFields": ["metric.label.\"species\""]
+                    }
+                  }
+                },
+                "tableTemplate": "${metric.labels.species}"
+              }
+            ]
+          }
+        }
+      },
+      {
+        "xPos": 0, "yPos": 16, "width": 16, "height": 16,
+        "widget": {
+          "title": "setosa — última hora (Gauge)",
+          "scorecard": {
+            "gaugeView": { "lowerBound": 0, "upperBound": 50 },
+            "timeSeriesQuery": {
+              "timeSeriesFilter": {
+                "filter": "metric.type=\"prometheus.googleapis.com/iris_prediction_count_total/counter\" resource.type=\"prometheus_target\" metric.label.\"species\"=\"setosa\"",
+                "aggregation": {
+                  "alignmentPeriod": "3600s",
+                  "perSeriesAligner": "ALIGN_DELTA",
+                  "crossSeriesReducer": "REDUCE_SUM",
+                  "groupByFields": ["metric.label.\"species\""]
+                }
+              }
+            }
+          }
+        }
+      },
+      {
+        "xPos": 16, "yPos": 16, "width": 16, "height": 16,
+        "widget": {
+          "title": "versicolor — última hora (Gauge)",
+          "scorecard": {
+            "gaugeView": { "lowerBound": 0, "upperBound": 50 },
+            "timeSeriesQuery": {
+              "timeSeriesFilter": {
+                "filter": "metric.type=\"prometheus.googleapis.com/iris_prediction_count_total/counter\" resource.type=\"prometheus_target\" metric.label.\"species\"=\"versicolor\"",
+                "aggregation": {
+                  "alignmentPeriod": "3600s",
+                  "perSeriesAligner": "ALIGN_DELTA",
+                  "crossSeriesReducer": "REDUCE_SUM",
+                  "groupByFields": ["metric.label.\"species\""]
+                }
+              }
+            }
+          }
+        }
+      },
+      {
+        "xPos": 32, "yPos": 16, "width": 16, "height": 16,
+        "widget": {
+          "title": "virginica — última hora (Gauge)",
+          "scorecard": {
+            "gaugeView": { "lowerBound": 0, "upperBound": 50 },
+            "timeSeriesQuery": {
+              "timeSeriesFilter": {
+                "filter": "metric.type=\"prometheus.googleapis.com/iris_prediction_count_total/counter\" resource.type=\"prometheus_target\" metric.label.\"species\"=\"virginica\"",
+                "aggregation": {
+                  "alignmentPeriod": "3600s",
+                  "perSeriesAligner": "ALIGN_DELTA",
+                  "crossSeriesReducer": "REDUCE_SUM",
+                  "groupByFields": ["metric.label.\"species\""]
+                }
+              }
+            }
+          }
+        }
+      }
+    ]
+  }
+}
