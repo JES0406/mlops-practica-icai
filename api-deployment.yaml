@@ -21,3 +21,10 @@ spec:
         # Puerto con nombre: el PodMonitoring de Managed Prometheus lo referencia por "metrics"
         - name: metrics
           containerPort: 5000
+        # Ready solo cuando Flask ya escucha (cargar sklearn + modelo tarda unos segundos);
+        # sin esto el rollout termina antes y el smoke test recibe "Connection refused"
+        readinessProbe:
+          tcpSocket:
+            port: metrics
+          initialDelaySeconds: 2
+          periodSeconds: 2
