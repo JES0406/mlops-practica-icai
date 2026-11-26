@@ -1,0 +1,14 @@
+# resource.type="k8s_container" labels."k8s-pod/app"="mlops-api" severity="INFO"  (ultimas 6 h)
+     12 INFO
+
+# resource.type="k8s_container" labels."k8s-pod/app"="mlops-api" severity>=INFO  (ultimas 6 h)
+    743 ERROR
+     12 INFO
+
+# ejemplos ERROR (stderr de Flask/werkzeug y sklearn)
+ERROR	10.52.1.4 - - [26/Nov/2026 13:05:38] "GET /metrics HTTP/1.1" 200 -
+ERROR	10.52.1.4 - - [26/Nov/2026 13:05:08] "GET /metrics HTTP/1.1" 200 -
+ERROR	10.52.1.4 - - [26/Nov/2026 13:04:38] "GET /metrics HTTP/1.1" 200 -
+ERROR	10.52.1.4 - - [26/Nov/2026 13:04:08] "GET /metrics HTTP/1.1" 200 -
+ERROR	10.52.1.4 - - [26/Nov/2026 13:03:38] "GET /metrics HTTP/1.1" 200 -
+ERROR	10.52.1.4 - - [26/Nov/2026 13:03:08] "GET /metrics HTTP/1.1" 200 -

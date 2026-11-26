@@ -1,0 +1,12 @@
+currentMasterVersion: 1.36.4-gke.2377000
+currentNodeCount: 2
+loggingConfig:
+  componentConfig:
+    enableComponents:
+    - SYSTEM_COMPONENTS
+    - WORKLOADS
+monitoringConfig:
+  managedPrometheusConfig:
+    enabled: true
+name: mlops-gke-cluster
+status: RUNNING

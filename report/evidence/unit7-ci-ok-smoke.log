@@ -1,0 +1,7 @@
+deployment "mlops-api-deployment" successfully rolled out
+deployment "mlops-web-deployment" successfully rolled out
+iris_prediction_count_total***species="setosa"*** 2.0
+mlops-api-pod-monitor   7m17s
+Web: http://35.255.3.84
+HTTP 200
+WebSocket: HTTP/1.1 101 Switching Protocols

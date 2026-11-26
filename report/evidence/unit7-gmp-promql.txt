@@ -1,0 +1,11 @@
+# PromQL contra Google Managed Prometheus (API /prometheus/api/v1/query)
+# fecha: 2026-11-26T13:04:58Z
+# query: sum by (species) (iris_prediction_count_total)
+{'species': 'setosa'} 19
+{'species': 'versicolor'} 27
+{'species': 'virginica'} 25
+
+# query: iris_prediction_count_total (series con etiquetas)
+{'cluster': 'mlops-gke-cluster', 'job': 'mlops-api-pod-monitor', 'namespace': 'default', 'pod': 'mlops-api-deployment-6b5779b5b7-n6726', 'species': 'setosa'} 19
+{'cluster': 'mlops-gke-cluster', 'job': 'mlops-api-pod-monitor', 'namespace': 'default', 'pod': 'mlops-api-deployment-6b5779b5b7-n6726', 'species': 'versicolor'} 27
+{'cluster': 'mlops-gke-cluster', 'job': 'mlops-api-pod-monitor', 'namespace': 'default', 'pod': 'mlops-api-deployment-6b5779b5b7-n6726', 'species': 'virginica'} 25

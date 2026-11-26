@@ -1,0 +1,33 @@
+apiVersion: monitoring.googleapis.com/v1
+kind: PodMonitoring
+metadata:
+  annotations:
+    kubectl.kubernetes.io/last-applied-configuration: |
+      {"apiVersion":"monitoring.googleapis.com/v1","kind":"PodMonitoring","metadata":{"annotations":{},"name":"mlops-api-pod-monitor","namespace":"default"},"spec":{"endpoints":[{"interval":"30s","path":"/metrics","port":"metrics"}],"selector":{"matchLabels":{"app":"mlops-api"}}}}
+  creationTimestamp: "2026-11-26T09:31:16Z"
+  generation: 1
+  name: mlops-api-pod-monitor
+  namespace: default
+  resourceVersion: "1795685476309407015"
+  uid: 86d848d7-037e-40a0-b561-b4b9ab20ea4e
+spec:
+  endpoints:
+  - interval: 30s
+    path: /metrics
+    port: metrics
+  selector:
+    matchLabels:
+      app: mlops-api
+  targetLabels:
+    metadata:
+    - container
+    - pod
+    - top_level_controller_name
+    - top_level_controller_type
+status:
+  conditions:
+  - lastTransitionTime: "2026-11-26T09:31:16Z"
+    lastUpdateTime: "2026-11-26T09:31:16Z"
+    status: "True"
+    type: ConfigurationCreateSuccess
+  observedGeneration: 1

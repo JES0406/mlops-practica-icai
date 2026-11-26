@@ -1,0 +1,15 @@
+NAME                                                    STATUS   ROLES    AGE     VERSION               INTERNAL-IP   EXTERNAL-IP      OS-IMAGE                             KERNEL-VERSION      CONTAINER-RUNTIME
+node/gke-mlops-gke-cluster-default-pool-9a1de228-0l35   Ready    <none>   4h43m   v1.36.4-gke.2377000   10.128.0.7    35.253.37.125    Container-Optimized OS from Google   6.12.110+ (amd64)   containerd://2.2.7
+node/gke-mlops-gke-cluster-default-pool-9a1de228-n32h   Ready    <none>   4h43m   v1.36.4-gke.2377000   10.128.0.6    35.223.111.156   Container-Optimized OS from Google   6.12.110+ (amd64)   containerd://2.2.7
+
+NAME                                        READY   STATUS    RESTARTS   AGE     IP           NODE                                               NOMINATED NODE   READINESS GATES
+pod/mlops-api-deployment-6b5779b5b7-n6726   1/1     Running   0          3h26m   10.52.1.10   gke-mlops-gke-cluster-default-pool-9a1de228-0l35   <none>           <none>
+pod/mlops-web-deployment-7849c58c-2fm5h     1/1     Running   0          3h26m   10.52.1.11   gke-mlops-gke-cluster-default-pool-9a1de228-0l35   <none>           <none>
+
+NAME                        TYPE           CLUSTER-IP      EXTERNAL-IP   PORT(S)        AGE     SELECTOR
+service/kubernetes          ClusterIP      34.118.224.1    <none>        443/TCP        4h45m   <none>
+service/mlops-api-service   ClusterIP      34.118.233.16   <none>        5000/TCP       3h32m   app=mlops-api
+service/mlops-web-service   LoadBalancer   34.118.229.8    35.255.3.84   80:32060/TCP   3h32m   app=mlops-web
+
+NAME                                                            AGE
+podmonitoring.monitoring.googleapis.com/mlops-api-pod-monitor   3h32m

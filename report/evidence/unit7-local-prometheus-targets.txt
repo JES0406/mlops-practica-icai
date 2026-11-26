@@ -1,0 +1,3 @@
+# Prometheus local: activeTargets
+mlops-api http://mlops-api:5000/metrics up
+prometheus http://prometheus:9090/metrics up

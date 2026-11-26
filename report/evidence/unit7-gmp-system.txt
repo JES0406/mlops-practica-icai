@@ -1,0 +1,4 @@
+NAME                           READY   STATUS    RESTARTS   AGE
+collector-649p9                2/2     Running   0          4h43m
+collector-gqcwt                2/2     Running   0          4h43m
+gmp-operator-dcc4f6dd9-wqw97   1/1     Running   0          4h44m
