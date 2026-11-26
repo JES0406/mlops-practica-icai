@@ -18,4 +18,6 @@ spec:
       - name: mlops-api
         image: gcr.io/mlops-icai-a2265f/mlops-api:latest
         ports:
-        - containerPort: 5000
+        # Puerto con nombre: el PodMonitoring de Managed Prometheus lo referencia por "metrics"
+        - name: metrics
+          containerPort: 5000

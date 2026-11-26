@@ -1,0 +1,15 @@
+# pod-monitoring.yaml — Google Cloud Managed Service for Prometheus (GMP)
+# scrapea /metrics de los pods de la API cada 30 s
+apiVersion: monitoring.googleapis.com/v1
+kind: PodMonitoring
+metadata:
+  name: mlops-api-pod-monitor
+  namespace: default
+spec:
+  selector:
+    matchLabels:
+      app: mlops-api          # debe coincidir con las etiquetas del Pod (api-deployment.yaml)
+  endpoints:
+    - port: metrics           # nombre del containerPort del Deployment
+      path: /metrics
+      interval: 30s
